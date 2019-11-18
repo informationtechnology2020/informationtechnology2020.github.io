@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Hands-on practices. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="VD">
+    	<link rel="shortcut icon" href="http://krebner.com/security.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+</head>
+<body oncontextmenu="alert('We all have to step up our IT studies. Our future depends on that.');return false;" onselectstart="return false" ondragstart="return false">
+<br>
+<div class="container" style="font-size: 150%;font-family: cursive;">
+
+	<div   style="text-align:center"> Network+ Exercises.</div>
+
+	<div>
+        <br>
+        <blockquote>
+            <legend><span style="color: blue;"> The first set of exercises has to be done on the command line interface.</span> </legend>
+              Optional:  <span style="color: green"> Change the terminal color and font size to make it more comfortable.    </span>  
+        </blockquote>
+        <hr>
+		<ol type="I">
+
+			<li><h3>Find your computer name by typing:
+				<code>hostname	</code>
+
+			</h3></li><br>
+
+			<li><h3>Find your login user account:
+				<code>whoami	</code>
+
+			</h3></li><br>
+
+			<li><h3>Find your IP address, subnet mask and default gateway:
+				<code>ipconfig	</code>
+
+			</h3></li><br>
+
+			<li><h3>Find your DHCP and DNS servers:
+				<code>ipconfig /all	</code>. A more specific way is shown in the next two exercises below:
+
+			</h3></li><br>
+            
+            <li><h3>
+				<code>ipconfig /all | find /i "DHCP Server"	</code>
+
+			</h3></li><br>
+            
+            <li><h3>
+				<code>ipconfig /all | find /i "DNS Server"	</code>
+
+			</h3></li><br>
+
+			<li><h3> Release your IPv4 address (and renew it):
+				<code>ipconfig /release & ipconfig /renew	</code>
+
+			</h3></li><br>
+            
+            <li><h3> Release your IPv6 address (and renew it):
+				<code>ipconfig /release6 & ipconfig /renew6	</code>
+
+			</h3></li><br>
+
+			<li><h3> Show your DNS cached information:
+				<code>ipconfig /displaydns	</code>
+
+			</h3></li><br>
+
+			<li><h3> Clear your DNS cached information:
+				<code>	ipconfig /flushdns</code>
+
+			</h3></li><br>
+
+			<li><h3> Register your DNS server (needed when you have to use a new DNS server): 
+				<code> ipconfig /registernds	</code>. You may be required to "elevate" your account. Just right click on the cmd.exe
+                and run it as an administrator.
+
+			</h3></li><br>
+
+			<li><h3> Ping your default gateway IP address (I'm assuming it's 192.168.7.254, but yours may be different):
+				<code>ping 192.168.7.254	</code>
+
+			</h3></li><br>
+
+			<li><h3> Ping your default gateway 65 times:
+				<code>ping -n 65 192.168.7.254	</code>. You can stop the pinging by pressing <kbd>CTRL</kbd> <kbd>C</kbd>.
+
+			</h3></li><br>
+
+			<li><h3> Ping your default gateway 100 times and send/receive 1000 bytes (instead of 32):
+				<code>ping -n 65 -l 1000 192.168.7.254	</code>
+
+			</h3></li><br>
+            
+            <li><h3> Ping the Wall Street Journal web site:
+				<code>ping  www.wsj.com	</code>
+                </h3></li><br>
+
+			<li><h3> Ping the Wall Street Journal web site using IPv4:
+				<code>ping -4 www.wsj.com	</code>
+                </h3></li><br>
+                
+            <li><h3> Ping the Wall Street Journal web site using IPv6:
+				<code>ping -6 www.wsj.com	</code>
+                
+
+			</h3></li><br>
+
+			<li><h3> Find the host name for this IP address <strong>1.1.1.1</strong>:
+				<code>ping -a 1.1.1.1	</code>
+
+			</h3></li><br>
+
+			<li><h3> Find the host name for this IP address <strong>2600:1406:d000:38a::356e</strong>:
+				<code>ping -a 2600:1406:d000:38a::356e	</code>
+
+			</h3></li><br>
+
+			<li><h3>Ping https://www.intelligence.gov/ permanently:
+				<code>ping -t https://www.intelligence.gov/	</code>
+
+			</h3></li><br>
+
+			<li><h3>Using the <i>netsh.exe</i> command to find out your IP address(es):
+				<code>netsh interface ip show address	</code>
+
+			</h3></li><br>
+
+			<li><h3>Filtering the output of the netsh.exe to get your IP address(es):
+				<code>netsh interface ip show address | findstr "IP Address"	</code>
+
+			</h3></li><br>
+
+			<li><h3>Using the WMIC (Windows Management Instrumentation Command) to find your IP address(es):
+				<code>wmic NICCONFIG WHERE IPEnabled=true GET IPAddress	</code>. Do not worry too much about this 
+                command. It won't be on the N+ exam! It's just for your knowledge.
+
+			</h3></li><br>
+            
+            <li><h3>Get your MAC address (your NIC's physical address):
+				<code>getmac	</code>
+
+			</h3></li><br>
+            
+            <li><h3>Get your MAC address (your NIC's physical address):
+				<code>ipconfig /all | findstr "Physical"	</code>
+
+			</h3></li><br>
+            
+            <li><h3>Find the logical and physical IP addresses of your local subnet:
+				<code>arp -g	</code>
+
+			</h3></li><br>
+            
+            <li><h3>Find the logical and physical IP addresses of your local subnet in a more verbose way:
+				<code>arp -va	</code>
+
+			</h3></li><br>
+            
+            <li><h3>Finding NetBIOS over TCP/IP statistics:
+				<code>	nbtstat -n </code>
+
+			</h3></li><br>
+            
+            <li><h3>Finding NetBIOS over TCP/IP statistics every five seconds:
+				<code>	nbtstat -n  <strong>5</strong></code>
+
+			</h3></li><br>
+            
+            <li><h3>Using <strong>netstat.exe </strong> for displaying protocol statistics and current TCP/IP network connections:
+				<code>netstat	</code>
+
+			</h3></li><br>
+            
+            <li><h3>Using netstat switches to get more information about your network connections:
+				<code> netstat -ano	</code>
+
+			</h3></li><br>
+            
+            <li><h3>To get even more information using netstat.exe (it requires elevation):
+				<code> netstat -b	</code>
+
+			</h3></li><br>
+            
+            <li><h3>To get even MORE information using netstat.exe (it requires elevation):
+				<code> netstat -bano	</code>
+
+			</h3></li><br>
+            
+            <li><h3>To trace the route taken from your computer to cadem.org:
+				<code>tracert cadem.org	</code>
+
+			</h3></li><br>
+            
+            <li><h3>To trace the route taken from your computer to cagop.org:
+				<code>tracert cagop.org	</code>
+
+			</h3></li><br>
+            
+            <li><h3>To get information about network latency and network loss at intermediate hops between a source (your computer) and destination:
+				<code> pathping cve.mitre.org	</code>. Be patient, it will take some minutes.
+
+			</h3></li><br>
+            
+            <li><h3>To ping a range of IP address (just once per IP), starting at 54.236.189.60 thru 54.236.189.67: &nbsp; &nbsp;
+				<code>for /l %i in (60,1,67) do ping -a -n 1 54.236.189.%i	</code>
+
+			</h3></li><br>
+            
+            <!--
+            <li><h3>
+				<code>	</code>
+
+			</h3></li><br>
+            -->
+
+		</ol>
+        <hr>
+
+
+	</div>
+
+
+
+</div>
+<div class="container-fluid">
+    <img src="https://informationtechnology2020.github.io/pi.jpg" class="img img-fluid">
+</div>
+
+<!-- These Javascript links are required for the proper functionality of Bootstrap. And they should always be placed at the very end, near to the closing body tag. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+  
