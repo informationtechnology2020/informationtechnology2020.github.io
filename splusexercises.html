@@ -1,2 +1,135 @@
+<!DOCTYPE html>
 
- Under construction. Coming soon.
+<html lang = "en">
+   
+   <head>
+   
+      <meta charset = "utf-8">
+      <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	  <link rel="icon" href="https://informationtechnology2020.github.io/security.ico" type="image/x-icon" />
+      
+      <title> Security+ labs.</title>
+      
+      
+      <link href = "https://informationtechnology2020.github.io/bootstrap4.css" rel = "stylesheet">
+      
+		<style>
+		  body {background-color:white;}
+		</style>
+      
+   </head>
+   
+   <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+       <br>
+      
+
+		<div class="container" style="font-size: 150%">
+		
+            <div style="text-align:center">
+                <strong>Security+ Exercises.</strong> <br>
+                <br>
+                
+            </div>
+				
+			
+			<div style="text-align:left">
+				<blockquote><legend><strong>Exercise 1: &nbsp;</strong>Working the Microsoft PowerShell. </legend>
+                    <br>
+				<a href="http://bfy.tw/qdB" class="btn btn-success btn-lg btn-block"  target="_blank">
+                    <strong>What's the PowerShell (PS)?</strong></a>
+				
+				</blockquote>
+            </div>
+			
+			<br>
+
+			
+			<p>Go to the Powershell <img src="https://informationtechnology2020.github.io/ps.png"> and write the <strong>commandlets</strong> shown below.
+			</p>
+			<br>
+			
+			<p><code>	get-netipconfiguration				</code></p>
+			
+			<p><code>	get-netipaddress				</code></p>
+			
+			<p><code>	get-netipaddress | sort interfaceindex				</code></p>
+            
+            <p><code>Get-NetAdapterHardwareInfo</code></p>
+            
+            <p><code>Get-NetAdapter | ft Name, DriverName, DriverVersion, DriverInformation, DriverFileName</code></p>
+			
+			<p><code>	get-nettcpconnection				</code></p>
+            
+            <p><code>	Get-NetTCPConnection | Group State, RemotePort | Sort Count | FT Count, Name –Autosize	
+                </code></p>
+            
+            
+            
+            <p><code>Get-DnsClientCache | format-table</code></p>
+            
+            <p><code> Clear-DnsClientCache</code></p>
+            
+            <p><code>Get-DnsClientCache | ft</code></p>
+			
+			<p><code>	test-netconnection www.yahoo.com				</code></p>
+			
+			<p><code>	test-netconnection www.microsoft.com			</code></p>
+			
+			
+			<p><code>		test-netconnection www.nsa.gov			</code></p>
+			
+			<p><code>	test-netconnection www.yahoo.com  -traceroute				</code></p>
+            
+            <p><code>	Test-NetConnection -ComputerName www.fbi.gov -InformationLevel Detailed 				</code></p>
+			
+			
+			<p><code>	get-netneighbor				</code></p>
+			
+			<p><code>	get-netipinterface				</code></p>
+			
+			<p><code>	get-netipv4protocol				</code></p>
+			
+			<p><code>		get-netipv6protocol				</code></p>
+			
+			<p><code>		get-netroute			</code></p>
+			
+			<p><code>	resolve-dnsname idt.edu </code></p>
+				
+			
+			<p><code>	resolve-dnsname idt.edu    -type mx				</code></p>
+			
+			
+			<p><code>		$psversiontable			</code></p>
+			
+			
+			
+			<br>
+			
+			
+			
+			
+			
+			
+			 </div>
+	  
+      <script src="https://html5css3es10.github.io/jquery.js"> </script>
+<script src="https://html5css3es10.github.io/popper.js"> </script>
+<script src="https://html5css3es10.github.io/bootstrap4.js"> </script>
+	  
+	  <div class="container-fluid">
+            <marquee> 
+          <a href="https://www.thomasmaurer.ch/2016/02/basic-networking-powershell-cmdlets-cheatsheet-to-replace-netsh-ipconfig-nslookup-and-more/" target="_blank" class="btn btn-warning">
+          More info about the PS
+          </a>
+          &nbsp;
+         <a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/telligent.evolution.components.attachments/01/3813/00/00/03/64/82/43/Windows%20PowerShell%20equivalents%20for%20common%20networking%20commands.pdf" target="_blank" class="btn btn-info">
+                A PowerShell Cheatsheet</a>
+        <a href="https://channel9.msdn.com/Series/Getting-Started-with-Microsoft-PowerShell?l=r54IrOWy_2304984382" target="_blank" class="btn btn-primary">Getting started with PS - Jeff Snover (PS creator)</a>
+                <a href="https://ss64.com/ps/" target="_blank" class="btn btn-danger">SS64</a>
+                <a href="https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6" target="_blank" class="btn btn-success">Technet</a>
+          </marquee>
+    </div>
+      
+   </body>
+</html>
