@@ -173,5 +173,82 @@
        <br>
          <a href="https://en.wikipedia.org/wiki/Comparison_of_web_server_software" target="_blank" class="btn btn-block btn-secondary">Web Servers (a lot of them!)</a>
     </div> 
+    <br>
+    <hr>
+     <div class="container" style="font-size: 150%">
+    <br>
+         <div style="text-align:left">
+				<blockquote><legend><strong>Exercise 3: &nbsp;</strong>Using a keylogger (written in C#). </legend>
+                    <br>
+				<a href="https://www.webopedia.com/TERM/K/keylogger.html" class="btn btn-success btn-lg btn-block"  target="_blank">
+                    <strong>What's a keylogger?</strong></a>
+				
+				</blockquote>
+        </div>
+			
+    <br>
+        <ol type="I">   
+
+            <li>Go to the command line and type:</li>
+
+                <ul>
+                    <li><code>cd %homedrive%%homepath%\Desktop</code></li>
+                    <li><code>mkdir Spy</code></li>
+                    <li><code>cd Spy</code></li>
+                    <li><code>type nul > svchost.txt</code></li>
+
+                </ul>
+            
+        </ol>
+        <ol type="I" start="2">
+                <li> Open the svchost.txt file with notepad and copy/paste the C# code from
+                        <a href="https://tinyurl.com/vfkpk25" target="_blank"> here</a>. Save the file
+                        and close it. Close the command line interface too.
+                </li>
+                <li> Go back to the command line and type: <code>sysdm.cpl</code>. Go to <i>Advanced</i>, 
+                    <i>Environment Variables</i>, <i>Path</i>, <i>Edit</i>, <i>New</i> and add this:
+                    <code>;c:\windows\microsoft.net\framework64\v4.0.30319;</code> and click OK. 
+                    Notice that the PATH variable is both on the user variables and the system
+                    variables. So you have to modify both. To verify that you did it right, go
+                    back to the command line and type: <code>path</code>. You should be able
+                    to see the entry you just typed. 
+                </li>
+
+                <li>
+                    Go back to the command prompt and type:<br>
+                    <code> cd %homedrive%%homepath%\Desktop\Spy </code> <br>
+                    <code>csc svchost</code><br>
+                    <code>dir</code> <br>
+                    If you now have two files (svchost.txt and svchost.exe) then you can continue 
+                    with the exercise. 
+                </li>
+                <li>
+                    Still on the command line (at the same place you were before) type: <br>
+                    <code>tasklist | find /i "svchost"</code>. Notice that there are a lot of svchost.exe running 
+                    on the background.
+                </li>
+                <li>
+                    Type this on the command prompt: <code>svchost.exe</code>. Now the keylogger is running... 
+                </li>
+                <li>
+                    Open a web browser and visit https://mail.yahoo.com/. Sign in as  <strong>bradparscale</strong>
+                     and use any long password you want. It won't work. We are just testing the keylogger. 
+                </li>
+                <li>
+                    Go back again to the command prompt and type: <br>
+                    <code>type kgb4u.txt </code> <br>
+                    Notice that the keylogger recorded what you've typed. Close the file and 
+                    type <code>tasklist | find /i "svchost"</code>. Do you notice the new svchost.exe
+                    (the keylogger) running?
+                </li>  
+                <li>
+                    Visit https://www.virustotal.com/gui/home/upload and upload the svchost.exe file. 
+                    What info did you get about the file? 
+                </li>
+                <li>C'est fini.</li>
+        </ol>
+        <br>
+        <hr>
+    </div>
    </body>
 </html>
