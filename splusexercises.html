@@ -258,6 +258,67 @@
             A nice wifi deauthorizer</a>
         </marquee>
         <hr>
+         <h4></h4>
+         <div class="container" style="font-size: 100%">
+    <br>
+         <div style="text-align:left">
+				<blockquote><legend><strong>Exercise 4: &nbsp;</strong>Using the NMAP (Network Mapper) tool.</legend>
+                    <br>
+				<a href="https://en.wikipedia.org/wiki/Nmap" class="btn btn-success btn-lg btn-block"  target="_blank">
+                    <strong>What's NMAP?</strong></a>
+				
+				</blockquote>
+            </div>
+			
+			<br>
+       <ol type="I">
+           <li>Download NMAP from <a href="https://nmap.org/dist/nmap-7.80-setup.exe"> here </a>
+           and install it. Use common sense if prompted for any parallel installation of additional software.</li>
+           <li>Go to the command prompt and enjoy using this great tool. Type:
+           
+                <code>nmap -6 -F mail.yahoo.com</code> <br>
+               
+               What ports are open? Which other addresses were detected, but not scanned?
+           
+           </li>
+           <li>Visit this website
+            <a href="https://urlscan.io/result/2fb9ffb7-474c-4aa3-8284-24079ec6f933" target="_blank">
+               https://urlscan.io/result/2fb9ffb7-474c-4aa3-8284-24079ec6f933</a> and notice the IPv6 address and to whom it belongs. 
+           </li>
+           <li>Now type: <br>
+               <code>nmap -F -6 2606:4700::6812:9444</code> <br>
+               What ports are open? Is that common?         
+           
+           </li>
+           <li>And now type (paying attention to open ports, additional IP addresses):<br>
+               <code>nmap -F -6 www.berniesanders.com</code><br>
+               <code>nmap -F -6 www.elizabethwarren.com</code><br>
+               <code>nmap -F www.elizabethwarren.com</code><br>
+               <code>nmap -F www.joebiden.com</code>
+           
+           </li>
+           <li>You'll find out interesting info now, just type:<br>
+               <code>nmap -sV -T4 -O -F --version-light 192.0.66.2</code><br>
+               Notice the web server being used. Which OS (operating system) was most probably found? What's the probability of having found the right OS? Do you know which web site you're analyzing? FYI, just see <a href="https://urlscan.io/result/39d4437c-7124-4490-bb93-34f590622825" target="_blank"> this</a>. Interesting?
+           
+           </li>
+           <li>More fun (but be patient, it may take a couple of minutes): <br>
+               <code>nmap -A 143.228.126.60</code> <br>
+               Who's that? <br>
+               And visit <a href="https://www.ultratools.com/tools/ipWhoisLookupResult" target="_blank">https://www.ultratools.com/tools/ipWhoisLookupResult</a>, enter <strong>143.228.126.60</strong> and press the <kbd>Go>></kbd> orange button.
+           
+           </li>
+           <li>
+            Visit <a href="https://urlscan.io/search/#151.101.1.127" target="_blank"> this website</a>.
+                Who's that? Just look at the very first record.<br> 
+               Now a quick scan: <br>
+               <code>nmap -T4 -F 151.101.1.127</code>
+           </li>
+       </ol>
+             <br>
+         <a href="https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/" target="_blank" class="btn btn-block btn-secondary">NMAP cheatsheet 1</a> 
+             <a href="https://blogs.sans.org/pen-testing/files/2013/10/NmapCheatSheetv1.1.pdf" target="_blank" class="btn btn-block btn-secondary">NMAP cheatsheet 2</a>
+         </div>
     </div>
    </body>
 </html>
