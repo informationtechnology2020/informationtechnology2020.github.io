@@ -63,15 +63,21 @@
     <style>
         body {
             background-size:100% auto;
+			background-color: #000;
             background-image: url("https://informationtechnology2020.github.io/beach.jpg");
         }
     </style>  
     <script>
         function nextPage(){
-            var x = document.getElementById("txtPassword").nodeValue;
-                if (x = "Pa$$w0rd"){
-                    window.location.replace("https://informationtechnology2020.github.io/frontpage.html")
-                }
+			let x = document.getElementById("txtPassword").value;
+			
+			
+                if (x === "Pa$$w0rd"){
+                    window.location.replace("https://informationtechnology2020.github.io/frontpage.html");
+				}
+				else {
+					alert("Wrong password. Please type it again.");
+				}
                 
         }
       
@@ -103,12 +109,6 @@
         <strong>Continue</strong></button>
 	</div>
 </div>
-
-
-	
-
-
-
 </div>
 
 <script src="https://informationtechnology2020.github.io/jquery.js"> </script>
