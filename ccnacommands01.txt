@@ -23,7 +23,8 @@ network 192.168.2.0
 network 10.0.0.0
 exit
 exit
-copy run start (and click ENTER twice).
+copy run start
+ (and click ENTER twice).
 
 ---------------------------------------------------
 Router 1.
@@ -50,11 +51,15 @@ network 10.0.0.0
 network 20.0.0.0
 exit
 exit
-copy run start (and click ENTER twice).
+copy run start
+ (and click ENTER twice).
 
 ----------------------------------------
 Router 2.
 --------
+
+enable
+configure terminal
 
 int gig0/0
 ip address 192.168.4.254 255.255.255.0
@@ -75,13 +80,17 @@ network 20.0.0.0
 network 30.0.0.0
 exit
 exit
-copy run start (and click ENTER twice).
+copy run start
+ (and click ENTER twice).
 
 
 -------------------------------
 
 Router 3.
 --------
+
+enable
+configure terminal
 
 int gig0/0
 ip address 192.168.5.254 255.255.255.0
@@ -102,5 +111,6 @@ network 192.168.6.0
 network 30.0.0.0
 exit
 exit
-copy run start (and click ENTER twice).
+copy run start
+ (and click ENTER twice).
 
