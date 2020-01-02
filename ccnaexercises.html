@@ -28,19 +28,46 @@
 			<br>
 	</div>
 
+</div>
+<div class="container" style="text-align:left;font-size: 150%;" >
+
+<strong>Exercise 1:</strong>&nbsp; Assignment of IPv4 addresses to PCs and Cisco routers. <br>
+Create the network shown below and assign IPv4 addresses. For <strong>each	</strong> of the routers you can use this syntax: <br>
+<code>enable</code><br>
+<code>configure terminal</code><br>
+<code>int gig0/0 </code> ---you'll do the same with the other interfaces gig0/1 and gig0/2<br> 
+<code>ip address x.y.z.s  255.a.b.c </code> ---where x, y, z, s, a, b, c are shown on the picture.<br>
+<code>no shutdown</code><br>
+After configuring each router's interfaces you can save the configuration by typing: <br>
+<code>do copy run start </code> ---and press ENTER twice.<br>
+Now press <kbd>CTRL</kbd> <kbd>Z</kbd> <br>
+To verify the interfaces' configuration just type:<br>
+<code>show ip int brief</code>
+
+
+</div>
+<br>
+<div class="container" style="text-align:left;font-size: 150%;" >
+<strong>Exercise 2:</strong>&nbsp; Testing IPv4 addresses assignment. <br>
+<br>
+On each PC go to the terminal and type: <code>ipconfig</code> <br>
+From each PC ping its default gateway (the router IPv4 address): <code>ping w.x.y.z</code><br>
+<br>
+<img src="https://informationtechnology2020.github.io/four.networks.template.png" class="img img-fluid">
 	
 
+</div>
 
-
-
-
-
-
-	</div>
-
-	
-
-
+<div class="container" style="text-align:left;font-size: 150%;" >
+	<strong>Exercise 3:</strong>&nbsp; Saving the PKT file and creating copies. <br>
+	<br>
+	Save the file as myTemplate.pkt. Close the Packet Tracer. <br>
+	Go to the command line and type:<br>
+	<code> cd %homedrive%%homepath%\Cisco Packet Tracer 6.2sv\saves         </code><br>
+	<code>copy myTemplate.pkt staticrouting.pkt</code> <br>
+	<code>copy myTemplate.pkt riprouting.pkt</code> <br>
+	<code>copy myTemplate.pkt eigrprouting.pkt</code> <br>
+	<code>copy myTemplate.pkt ospfrouting.pkt</code> <br>
 
 </div>
 
