@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <title> CCNA Simulations and Simlets. </title>
+	<link rel="shortcut icon" href="https://informationtechnology2020.github.io/security.ico" />
+	<link rel="stylesheet" href="https://informationtechnology2020.github.io/bootstrap4.css">
+	   
+    
+
+</head>
+<body>
+<br>
+<div class="container">
+
+	<div   style="text-align:center;font-size: 200%;"> <strong>CCNA Simlets and Simulations.</strong>  </div>
+	<br>
+	<br>
+	<div style="text-align:left;font-size: 125%;"> 
+		<p>
+			<strong>OSPF Neighbor Simlet.</strong> &nbsp; Based on <a href="https://www.9tut.com/ospf-neighbor-sim#more-2243" target="_blank">this</a> 9tut question.
+		
+		<p>
+			This <i>simlet</i> is a set of four questions  about basic troubleshooting of an OSPF network. Remember that we are not supposed
+			to reconfigure the shown routers in order to solve the issues. We just need to demonstrate that we have figured out 
+			what the problems are. In reality, we are answering four multiple choice questions. However, we still have to type 
+			some commands on the routers, otherwise we won't get full credit for the answers, even if they are correctly answered.
+		
+		<br>
+		<img src="https://informationtechnology2020.github.io/ospfquestion1.png" class="img img-fluid">
+		<br>
+		<p>
+			<strong>Note:</strong> &nbsp;
+			Type <code>show run</code> on every single router. And run <code>show ip ospf int &lt;<i>interface</i> &gt;</code> on
+			the "problematic" interfaces, like on Router4 S1/0, Router3 S1/0, Router3 S1/1, Router5 S1/0. Again, review the posted link above.
+		</p>
+
+		<p>
+			<strong>Question 1:</strong> &nbsp; &nbsp;After typing the <i>show</i> commands, we discover that there's an <i>area</i> mismatch:
+			&nbsp; interface S1/0 of R3 is in area 0  while interface s1/0 of R4 is in area 2.
+		</p>
+		<br>
+		<p>
+			<strong>Question 2:</strong>&nbsp; &nbsp; The ospf hello-interval is different in R3 and R5. It's 50 on R3 and 10 (default value) in R5.
+		</p>
+		<br>
+		<p>
+			<strong>Question 3:</strong>&nbsp;&nbsp; After running <i>show run</i> on R1 and R2, we could see that the hello-interval and dead-interval are different. 
+			That's the problem.
+		</p>
+		<br>
+		<p>
+			<strong>Question 4:</strong>&nbsp; &nbsp;The real problem here is that R6 uses the same router-id of R3 (192.168.3.3) so OSPF neighborship cannot be established.
+		</p>
+		<br>
+		<hr>
+	</div>
+
+	
+
+
+
+</div>
+
+<script src="https://informationtechnology2020.github.io/jquery.js"> </script>
+<script src="https://informationtechnology2020.github.io/popper.js"> </script>
+<script src="https://informationtechnology2020.github.io/bootstrap4.js"> </script>
+</body>
+</html>
+
+  
