@@ -1,0 +1,193 @@
+	Assignment of IP addresses on routers:
+	-------------------------------------
+
+	Left router:
+	-----------
+
+		enable 
+		configure terminal
+
+		int gig0/0
+		ip address 192.168.1.254  255.255.255.0
+		no shutdown
+
+		int gig0/1
+		ip address 192.168.2.254  255.255.255.0
+		no shutdown
+
+		int gig0/2
+		ip address 10.0.0.1  255.0.0.0
+		no shutdown
+
+		^Z
+		copy run start  (and click ENTER twice)
+
+	Right router:
+	------------
+
+		enable 
+		configure terminal
+
+		int gig0/0
+		ip address 192.168.3.254  255.255.255.0
+		no shutdown
+
+		int gig0/1
+		ip address 192.168.4.254  255.255.255.0
+		no shutdown
+
+		int gig0/2
+		ip address 10.0.0.2  255.0.0.0
+		no shutdown
+
+		^Z
+		copy run start  (and click ENTER twice)
+_______________________________________________________________________
+
+	Configuration of Static Routing.
+	-------------------------------
+
+	Left router:
+	-----------
+
+		enable
+		configure terminal
+
+		ip route  192.168.3.0  255.255.255.0  10.0.0.2
+		ip route  192.168.4.0  255.255.255.0  10.0.0.2
+
+		ip route    0.0.0.0      0.0.0.0      10.0.0.2
+
+		^Z
+		copy run start  (and click ENTER twice)
+
+	Right router:
+	------------
+
+		enable
+		configure terminal
+
+		ip route  192.168.1.0  255.255.255.0  10.0.0.1
+		ip route  192.168.2.0  255.255.255.0  10.0.0.1
+
+		ip route    0.0.0.0      0.0.0.0      10.0.0.1
+
+		^Z
+		copy run start  (and click ENTER twice)
+
+_______________________________________________________________________
+
+	Configuration of Dynamic Routing using RIPv2.
+	--------------------------------------------
+
+	Left Router:
+	-----------
+
+		enable
+		config t
+		
+		router rip
+		version 2
+		network 192.168.1.0
+		network 192.168.2.0
+		network 10.0.0.0
+
+		^Z
+		copy run start  (and click ENTER twice)
+
+	Right Router:
+	-----------
+
+		enable
+		config t
+		
+		router rip
+		version 2
+		network 192.168.3.0
+		network 192.168.4.0
+		network 10.0.0.0
+
+		^Z
+		copy run start  (and click ENTER twice)
+
+		
+
+
+_______________________________________________________________________
+
+	Configuration of Dynamic Routing using EIGRP.
+	--------------------------------------------
+
+	Left Router:
+	-----------
+
+		enable
+		config t
+		
+		router eigrp 10
+		
+		network 192.168.1.0 255.255.255.0
+		network 192.168.2.0 255.255.255.0
+		network 10.0.0.0      255.0.0.0
+
+		^Z
+		copy run start  (and click ENTER twice)
+
+	Right Router:
+	-----------
+
+		enable
+		config t
+		
+		router eigrp 10
+		
+		network 192.168.3.0 255.255.255.0
+		network 192.168.4.0 255.255.255.0
+		network 10.0.0.0      255.0.0.0
+
+		^Z
+		copy run start  (and click ENTER twice)
+
+		
+
+_______________________________________________________________________
+
+	Configuration of Dynamic Routing using OSPF.
+	--------------------------------------------
+
+	Left Router:
+	-----------
+
+		enable
+		config t
+		
+		router ospf 5
+		
+		network 192.168.1.0 255.255.255.0 area 0
+		network 192.168.2.0 255.255.255.0 area 0
+		network 10.0.0.0      255.0.0.0   area 0
+
+		^Z
+		copy run start  (and click ENTER twice)
+
+	Right Router:
+	-----------
+
+		enable
+		config t
+		
+		router ospf 5
+		
+		network 192.168.3.0 255.255.255.0 area 0
+		network 192.168.4.0 255.255.255.0 area 0
+		network 10.0.0.0      255.0.0.0   area 0
+
+		^Z
+		copy run start  (and click ENTER twice)
+
+
+
+		
+
+
+
