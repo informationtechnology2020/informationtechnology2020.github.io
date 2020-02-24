@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <title> Write a title here. </title>
+	<link rel="shortcut icon" href="https://informationtechnology2020.github.io/security.ico" />
+	<link rel="stylesheet" href="https://informationtechnology2020.github.io/bootstrap4.css">
+<script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>	   
+    
+
+</head>
+<body style="background-color: black">
+<br>
+<div class="container">
+
+	<div   style="text-align:center;"> <h1 style="color: lightblue"> Slides. </h1>
+    <br>
+    
+    <a href="https://informationtechnology2020.github.io/ceh00001.pdf" target="_blank"
+       class="btn btn-lg btn-block btn-primary">
+        Introduction to systems hacking
+    </a>
+        <a href="https://informationtechnology2020.github.io/ceh00002.pdf" target="_blank"
+       class="btn btn-lg btn-block btn-primary">
+        Footprinting and reconnaissance
+    </a>
+    
+    <a href="https://informationtechnology2020.github.io/ceh00003.pdf" target="_blank"
+       class="btn btn-lg btn-block btn-primary">
+        Scanning networks
+    </a>
+        
+    <a href="https://informationtechnology2020.github.io/ceh00004.pdf" target="_blank"
+       class="btn btn-lg btn-block btn-primary">
+        Enumeration
+    </a>
+        
+    <a href="https://informationtechnology2020.github.io/ceh00005.pdf" target="_blank"
+       class="btn btn-lg btn-block btn-primary">
+        System hacking
+    </a>
+    
+    
+    
+    
+    
+    </div>
+
+	
+
+
+
+</div>
+
+<script src="https://informationtechnology2020.github.io/jquery.js"> </script>
+<script src="https://informationtechnology2020.github.io/popper.js"> </script>
+<script src="https://informationtechnology2020.github.io/bootstrap4.js"> </script>
+</body>
+</html>
+
+  
