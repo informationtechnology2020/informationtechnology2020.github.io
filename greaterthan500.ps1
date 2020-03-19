@@ -1,0 +1,1 @@
+Get-ChildItem -Path C:\ -Recurse | Where-Object {$_.length/1MB -gt 500} | select fullname,@{n="Size MB";e={$_.length/1MB}}
