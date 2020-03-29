@@ -3,27 +3,73 @@
 <html lang="en">
 <head>
 	 <meta charset="utf-8">
-    	 <title> Labs. </title>
+    	 <title> Command Line Interface. </title>
 	<link rel="shortcut icon" href="https://informationtechnology2020.github.io/security.ico" />
 	<link rel="stylesheet" href="https://informationtechnology2020.github.io/bootstrap4.css">
 	   
     
 
 </head>
-<body>
+<body oncontextmenu="alert('Smile. Life is too short to be anything but happy!');return false;" onselectstart="return false" ondragstart="return false">
 <br>
-<div class="container-fluid">
+<div class="container">
 
-	<div   style="text-align:center"> <h1> ... </h1> </div>
+	<div   style="text-align:center"> <h1> Using CLI (cmd.exe) commands to find out information about our systems.</h1> </div>
+<br>
+    <blockquote class="blockquote text-center">
+        <legend><strong>Recommendation:</strong></legend>
+        <h4>Change your command line settings: font, font color, layout, so as to feel more comfortable. 
+        Just right click on the left corner and go to properties.</h4>
+    </blockquote>
 <br>
 <br>
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
+<h2>Exercise 1:   &nbsp; Basic commands. Type them. </h2>
 	
+<h3><code> winver                     </code></h3>
+    
+<h3><code>  systeminfo                    </code></h3>
+<h3><code>  dxdiag                    </code></h3>
+<h3><code>  msinfo32                    </code></h3>
+    
+    
+<br>
 
-
+<h2>Exercise 2:   &nbsp; WMIC (Windows Management Instrumentation Console) commands. Type them, trying to make sense of what you typed. </h2>    
+    
+    <h3><code> wmic  baseboard   list brief /format:list                     </code></h3>  
+    <h3><code> wmic  bios       list brief /format:list                     </code></h3>  
+    <h3><code> wmic  computersystem   list brief /format:list                     </code></h3>  
+    <h3><code> wmic  cpu    list brief /format:list                     </code></h3>  
+    <h3><code> wmic  memorychip   list brief /format:list                     </code></h3>  
+    <h3><code> wmic  diskdrive   list brief /format:list                     </code></h3>  
+    <h3><code> wmic  desktopmonitor   list brief /format:list                     </code></h3>  
+     
+    <h3><code> wmic logicaldisk    list brief /format:list                     </code></h3>  
+    <h3><code> wmic memphysical    list brief /format:list                     </code></h3>  
+    <h3><code> wmic nic    list brief /format:list                     </code></h3>  
+    <h3><code> wmic os    list brief /format:list                     </code></h3>  
+    <h3><code> wmic pagefile    list brief /format:list                     </code></h3>  
+    
+    <h3><code> wmic recoveros    list brief /format:list                     </code></h3>  
+    <h3><code> wmic  systemslot   list brief /format:list                     </code></h3>  
+     <h3><code> wmic  irq   list brief /format:list                 </code>----note: devmgmt.msc is better for this.</h3>
+     <h3><code> wmic port    list brief /format:list              </code>----note: devmgmt.msc is better for this.</h3> 
+    <h3><code> wmic     /?                     </code> ---note: for your reference.</h3>  
+    
+<br>
+<hr>
+<br>
+<h2>Exercise 3:   &nbsp; Displaying environment variables. </h2>
+    
+    <h3><code> echo %computername%                     </code></h3> 
+    <h3><code> echo %os%                     </code></h3> 
+    <h3><code> echo %processor_architecture%                     </code></h3> 
+    <h3><code> echo %processor_identifier%                     </code></h3> 
+    <h3><code> echo %processor_level%                    </code></h3> 
+    <h3><code> echo %processor_revision%                    </code></h3> 
+    <h3><code> echo %number_of_processors%                     </code></h3> 
+    <h3><code> set                     </code>---note: for your reference</h3> 
+    
 
 </div>
 
