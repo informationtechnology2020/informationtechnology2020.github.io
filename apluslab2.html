@@ -1,26 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	 <meta charset="utf-8">
-    	 <title> Labs. </title>
+    	 <title> Hardware info using PS. </title>
 	<link rel="shortcut icon" href="https://informationtechnology2020.github.io/security.ico" />
 	<link rel="stylesheet" href="https://informationtechnology2020.github.io/bootstrap4.css">
 	   
     
 
 </head>
-<body>
-<br>
+<body oncontextmenu="alert('Smile. Life is too short to be anything but happy!');return false;" onselectstart="return false" ondragstart="return false">
+	<br>
 <div class="container-fluid">
 
-	<div   style="text-align:center"> <h1> ... </h1> </div>
+	<div   style="text-align:center"> <h1> Using the PowerShell to get information about a computer. </h1>
+										
+	</div>
 <br>
+<hr>
+<h3>Exercise 1: &nbsp; Listing Desktop Settings.</h3>
+	<code><h3> Get-CimInstance -ClassName Win32_Desktop | format-list			</h3></code>
+
+<h3>Exercise 2: &nbsp; Listing BIOS Information.</h3>
+	<code><h3> Get-CimInstance -ClassName Win32_BIOS			</h3></code>
+
+<h3>Exercise 3: &nbsp; Listing Processor Information.</h3>
+	<code><h3> Get-CimInstance -ClassName Win32_Processor | Select-Object -ExcludeProperty "CIM*"	| format-list		</h3></code>
+	<code><h3> Get-CimInstance -ClassName Win32_ComputerSystem | Select-Object -Property SystemType			</h3></code>
+
+<h3>Exercise 4: &nbsp; Listing Computer Manufacturer and Model.</h3>
+	<code><h3>	Get-CimInstance -ClassName Win32_ComputerSystem | format-list		</h3></code>
+	
+<h3>Exercise 5: &nbsp; Listing Installed Hotfixes.</h3>
+	<code><h3>	Get-CimInstance -ClassName Win32_QuickFixEngineering		</h3></code>
+	<code><h3> 	Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixID 			</h3></code>
+	<code><h3>		Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixId | Select-Object -Property HotFixId </h3></code>
+
+<h3>Exercise 6: &nbsp; Listing Operating System Version Information.</h3>
+	<code><h3> Get-CimInstance -ClassName Win32_OperatingSystem |   Select-Object -Property BuildNumber,BuildType,OSType,ServicePackMajorVersion,ServicePackMinorVersion			</h3></code>
+	<code><h3> Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object -Property Build*,OSType,ServicePack*			</h3></code>
+<h3>Exercise 7: &nbsp; Listing Local Users and Owner.</h3>
+	<code><h3> Get-CimInstance -ClassName Win32_OperatingSystem |  Select-Object -Property NumberOfLicensedUsers,NumberOfUsers,RegisteredUser | filter-list			</h3></code>
+	<code><h3> Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object -Property *user*	 | filter-list		</h3></code>
+
+<h3>Exercise 8: &nbsp; Getting Available Disk Space.</h3>
+	<code><h3>	Get-CimInstance -ClassName Win32_LogicalDisk -Filter "DriveType=3" | filter-list		</h3></code>
+	<code><h3>	Get-CimInstance -ClassName Win32_LogicalDisk -Filter "DriveType=3" |   Measure-Object -Property FreeSpace,Size -Sum |     Select-Object -Property Property,Sum		</h3></code>
+
+<h3>Exercise 9: &nbsp; Getting Logon Session Information.</h3>
+	<code><h3>	Get-CimInstance -ClassName Win32_ComputerSystem -Property UserName		</h3></code>	
+
+<h3>Exercise 10: &nbsp; Getting the User Logged on to a Computer.</h3>
+	<code><h3>	Get-CimInstance -ClassName Win32_ComputerSystem -Property UserName	</h3></code>
+
+<h3>Exercise 11: &nbsp; Getting Local Time from a Computer.</h3>
+	<code><h3>   Get-CimInstance -ClassName Win32_LocalTime				</h3></code>
+
+<h3>Exercise 12: &nbsp; Displaying Service Status.</h3>
+	<code><h3>	Get-CimInstance -ClassName Win32_Service | Select-Object -Property Status,Name,DisplayName		</h3></code>
+	<code><h3>	Get-CimInstance -ClassName Win32_Service | Format-Table -Property Status,Name,DisplayName -AutoSize -Wrap </h3></code>
+
 <br>
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
+<a href="https://docs.microsoft.com/en-us/powershell/scripting/samples/collecting-information-about-computers?view=powershell-7" target="_blank">
+	<img src="https://informationtechnology2020.github.io/2020.svg" class="img img-fluid">
+</a>
 	
 
 
