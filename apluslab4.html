@@ -3,24 +3,152 @@
 <html lang="en">
 <head>
 	 <meta charset="utf-8">
-    	 <title> Labs. </title>
+    	 <title> Networking with PS. </title>
 	<link rel="shortcut icon" href="https://informationtechnology2020.github.io/security.ico" />
 	<link rel="stylesheet" href="https://informationtechnology2020.github.io/bootstrap4.css">
 	   
     
 
 </head>
-<body>
+<body oncontextmenu="alert('We all have to step up our IT studies. Our future depends on that.');return false;" onselectstart="return false" ondragstart="return false">
+	<br>
+	<div class="container-fluid" style="font-size: 150%;font-family: cursive;">
+	
+		<div   style="text-align:center"> <h1>PowerShell Networking Commands.</h1></div>
 <br>
-<div class="container-fluid">
+<br>
+<ol type="i"> <h2><b>Basic Networking PowerShell cmdlets</b></h2>
 
-	<div   style="text-align:center"> <h1> ... </h1> </div>
+    <br>
+	<li><h3>Get the IP Configuration (ipconfig with PowerShell):&nbsp;
+		<code>   Get-NetIPConfiguration 	</code>
+	</h3></li>
+    <br>
+
+    <li><h3>List all Network Adapters:&nbsp;
+		<code>  Get-NetAdapter | format-list  	</code>
+	</h3></li>
+    <br>
+    
+	<li><h3>Get a specific network adapter by name :&nbsp;
+		<code>  Get-NetAdapter -Name *Ethernet* | format-list   	</code>
+	</h3></li>
+    <br>
+
+    <li><h3> Get more information VLAN ID, Speed, Connection status :&nbsp;
+		<code>   Get-NetAdapter | ft Name, Status, Linkspeed, VlanID  	</code>
+	</h3></li>
+    <br>
+    
+	<li><h3> Get driver information:&nbsp;
+		<code> Get-NetAdapter | ft Name, DriverName, DriverVersion, DriverInformation, DriverFileName | format-list   	</code>
+	</h3></li>
+    <br>
+
+    <li><h3>Get adapter hardware information. This can be really usefull when you need to know the PCI slot of the NIC.:&nbsp;
+		<code>  Get-NetAdapterHardwareInfo  	</code>
+	</h3></li>
+    <br>
+    
+	<li><h3> Disable and Enable a Network Adapter (assuming that the name is Wi-Fi, yours may be different):&nbsp;
+        <code> Disable-NetAdapter -Name "Wi-Fi"   	</code>
+		<code> Enable-NetAdapter -Name "Wi-Fi"   	</code>
+	</h3></li>
+    <br>
+
+    <li><h3> Rename a Network Adapter (requires elevation!):&nbsp;
+		<code> Rename-NetAdapter -Name "Wi-Fi" -NewName "Wireless"   	</code>
+	</h3></li>
+    <br>
+
+ </ol>
+
+<br>
+<hr>
+<br>
+<ol type="i"> <h2><b>IP Configuration using PowerShell</b></h2>
+ <br> 
+<li><h3>Get IP and DNS address information		:&nbsp;
+		<code> Get-NetAdapter -Name "Ethernet" | Get-NetIPAddress   	</code>
+</h3></li>
+<br>
+
+<li><h3>Get IP address only		:&nbsp;
+		<code>  (Get-NetAdapter -Name "Ethernet" | Get-NetIPAddress).IPv4Address   	</code>
+</h3></li>
+<br>
+
+<li><h3>	Get DNS Server Address information	:&nbsp;
+		<code>  Get-NetAdapter -Name "Ethernet" | Get-DnsClientServerAddress  	</code>
+</h3></li>
+<br>
+
+<li><h3>	Set interface to DHCP (requires elevation)	:&nbsp;
+		<code>  Set-NetIPInterface -InterfaceAlias "Wireless" -Dhcp Enabled  	</code>
+</h3></li>
+<br>
+    
+<li><h3>List DNS Cache:		:&nbsp;
+		<code> Get-DnsClientCache   	</code>
+</h3></li>
+<br>
+
+<li><h3>Clear DNS Cache		:&nbsp;
+		<code> Clear-DnsClientCache   	</code>
+</h3></li>
+<br>
+    
+<li><h3>List DNS Cache (notice the difference)		:&nbsp;
+		<code> Get-DnsClientCache   	</code>
+</h3></li>
+<br>
+    
+    
+    
+</ol>
+
+<br>
+<hr>
+<br>
+<ol type="i"> <h2><b>Ping with PowerShell</b></h2>
+ <br>
+    
+<li><h3> Simple ping		:&nbsp;
+		<code>  Test-Connection intelligence.gov  	</code>
+</h3></li>
+<br>
+
+<li><h3> Another way to ping		:&nbsp;
+		<code> Test-NetConnection -ComputerName intelligence.gov   	</code>
+</h3></li>
+<br>
+
+<li><h3> Yet another way		:&nbsp;
+		<code> Test-NetConnection -ComputerName intelligence.gov -InformationLevel Detailed   	</code>
+</h3></li>
+<br>
+    
+    
+    
+    
+    
+    
+ </ol>
+
+
+
+
 <br>
 <br>
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
+        <i><strong>We'll do more PS on another exercise ..., stay tuned.</strong></i>
+
+
+
+
+
+
+<img src="https://informationtechnology2020.github.io/nic0.jpg" class="img img-fluid">
+
 	
 
 
