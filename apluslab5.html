@@ -3,24 +3,145 @@
 <html lang="en">
 <head>
 	 <meta charset="utf-8">
-    	 <title> Labs. </title>
+    	 <title> Networking with PS. </title>
 	<link rel="shortcut icon" href="https://informationtechnology2020.github.io/security.ico" />
 	<link rel="stylesheet" href="https://informationtechnology2020.github.io/bootstrap4.css">
 	   
     
 
 </head>
-<body>
+<body oncontextmenu="alert('We all have to step up our IT studies. Our future depends on that.');return false;" onselectstart="return false" ondragstart="return false">
+	<br>
+	<div class="container-fluid" style="font-size: 150%;font-family: cursive;">
+	
+		<div   style="text-align:center"> <h1>PowerShell Networking Commands - Part II.</h1></div>
 <br>
-<div class="container-fluid">
+<br>
+<ol type="i"> <h2><b>Ping with PowerShell</b></h2>
+ <br>
+    
+<li><h3> Simple ping		:&nbsp;
+		<code>  Test-Connection www.akamai.com  	</code>
+</h3></li>
+<br>
 
-	<div   style="text-align:center"> <h1> ... </h1> </div>
+<li><h3> Pinging multiple IP addresses		:&nbsp;
+		<code> 28..31 | % { Test-NetConnection -ComputerName 206.13.$_.12 } | FT -AutoSize  	</code>
+</h3></li>
+<br>
+</ol>
 <br>
 <br>
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
+        
+<ol type="i"> <h2><b>Tracing the route to a target.</b></h2>
+ <br>
+    
+<li><h3> TraceRoute (similar to tracert.exe)		:&nbsp;
+		<code>  Test-NetConnection www.yahoo.co.jp -TraceRoute   	</code>
+</h3></li>
+<br>
+</ol>
+
+<br>
+<br>
+        
+<ol type="i"> <h2><b>Port scanning.</b></h2>
+ <br>
+    
+<li><h3> Is port 80 open?		:&nbsp;
+		<code>  Test-NetConnection -ComputerName www.idt.edu -Port 80   	</code>
+</h3></li>
+<br>
+    
+<li><h3> Is port 80 open?		:&nbsp;
+		<code>  Test-NetConnection -ComputerName www.idt.edu -CommonTCPPort HTTP
+   	</code>
+</h3></li>
+<br>
+    
+ <br>
+    
+<li><h3> Is port 80 open?		:&nbsp;
+		<code>  Test-NetConnection -ComputerName www.gratisexam.com -Port 80   	</code>
+</h3></li>
+<br>
+    
+<li><h3> Is port 80 open?		:&nbsp;
+		<code>  Test-NetConnection -ComputerName www.gratisexam.com -CommonTCPPort HTTP
+   	</code>
+</h3></li>
+<br>
+
+    <br>
+    
+<li><h3> Is port 22 open?		:&nbsp;
+		<code>  Test-NetConnection -ComputerName 104.62.30.178 -Port 22
+   	</code>
+</h3></li>
+<br>
+    
+</ol>
+    
+ <br>
+<br>
+        
+<ol type="i"> <h2><b> Querying DNS (there are better tools, but PS is OK for this task).</b></h2>
+ <br>
+    
+<li><h3> Name Server Lookup		:&nbsp;<br>
+		<code>  Resolve-DnsName www.wsj.com   	</code> <br>
+        <code>  Resolve-DnsName www.nytimes.com   	</code><br>
+        <code>  Resolve-DnsName www.lapdonline.org    	</code><br>
+</h3></li>
+<br>
+    
+    <br>
+    
+<li><h3> Name Server Lookup	for specific DNS records	:&nbsp;<br>
+		<code>  Resolve-DnsName www.wsj.com  MX -Server 1.1.1.1 | format-list 	</code> <br>
+    <code>  Resolve-DnsName www.wsj.com  MX -Server 8.8.8.8 | format-list 	</code> <br>
+        <code>  Resolve-DnsName www.nytimes.com  MX -Server 1.1.1.1 | format-list 	</code><br>
+        <code>  Resolve-DnsName www.lapdonline.org  MX -Server 1.1.1.1 | format-list  	</code><br>    
+   <code>   Resolve-DnsName www.idtlearning.com -Type MX -Server 1.1.1.1 | format-list  </code><br>
+    
+</h3></li>
+<br>
+</ol>
+
+<br>
+<br>   
+ <ol type="i"> <h2><b> Listing existing connections (like netstat.exe).</b></h2>
+ <br>
+    <li><h3> All connections to my computer           :&nbsp;<br>
+        <code>  Get-NetTCPConnection                          </code>    <br>
+    </h3></li>
+     
+      <li><h3> All established connections to my computer           :&nbsp;<br>
+        <code>  Get-NetTCPConnection –State Established                        </code>    <br>
+    </h3></li>
+     
+</ol>
+    
+    
+    
+ 
+<hr>
+<br>
+
+
+
+
+
+<br>
+<br>
+        
+
+
+
+
+
+<img src="https://informationtechnology2020.github.io/nic1.jpg" class="img img-fluid">
+
 	
 
 
