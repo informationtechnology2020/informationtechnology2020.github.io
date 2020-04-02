@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	 <meta charset="utf-8">
-    	 <title> Labs. </title>
+    	 <title> Linux basics. </title>
 	<link rel="shortcut icon" href="https://informationtechnology2020.github.io/security.ico" />
 	<link rel="stylesheet" href="https://informationtechnology2020.github.io/bootstrap4.css">
 	   
@@ -12,15 +11,101 @@
 </head>
 <body>
 <br>
-<div class="container-fluid">
+<div class="container">
 
-	<div   style="text-align:center"> <h1> ... </h1> </div>
-<br>
-<br>
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
+	<div   style="text-align:center"> <h1> Working with common Linux commands. </h1> </div>
+    <br>
+    <hr>
+        <h3 style="font-family: cursive">
+            We'll use an online JavaScript emulator created by  Fabrice Bellard (google him) to run a lot of Linux 
+            bash commands. It's not the whole 9 yards, but it's a good alternative to a Linux virtual machine to get started with basic commands. In the
+            future we'll create a Linux VM (an easy task to accomplish). In the meantime visit 
+            <a href="https://bellard.org/jslinux/vm.html?url=buildroot-x86.cfg" target="_blank"> this website</a>,
+             wait half a minute and start typing the commands shown below. Try to make sense of what you're writing. 
+            Remember that <a href="https://lmgtfy.com/" target="_blank">LMGTFY</a> is out there to help you. Your instructor does not believe in spoon feeding. 
+        </h3>
+    <hr>
+
+<code><h3> cd ~         </h3></code> <br>  
+<code><h3> pwd        </h3></code> <br>  
+<code><h3> mkdir Europe        </h3></code> <br>  
+<code><h3> cd Europe        </h3></code> <br>  
+<code><h3> mkdir Western        </h3></code> <br>  
+<code><h3> mkdir Eastern        </h3></code> <br>  
+<code><h3> cd Western        </h3></code> <br>  
+<code><h3> touch Portugal.txt        </h3></code> <br>  
+<code><h3> touch Spain.txt        </h3></code> <br>  
+<code><h3> pwd        </h3></code> <br>  
+<code><h3>  cd ..       </h3></code> <br>  
+<code><h3> cd Eastern        </h3></code> <br>  
+<code><h3> touch Romania.txt        </h3></code> <br>  
+<code><h3> touch Hungary.txt        </h3></code> <br>  
+<code><h3> pwd        </h3></code> <br>  
+<code><h3>  cd ~       </h3></code> <br>  
+<code><h3> pwd        </h3></code> <br>  
+<code><h3> tree Europe        </h3></code> <br>  
+<code><h3>  clear       </h3></code> <br>  
+<code><h3> ls -l        </h3></code> <br>  
+<code><h3> ls -ls        </h3></code> <br>  
+<code><h3>  ls -lh       </h3></code> <br>  
+<code><h3>  ls -shaltr       </h3></code> <br>  
+<code><h3> clear        </h3></code> <br>  
+<code><h3>  rm -r Europe       </h3></code> <br>  
+<code><h3>  ls -l       </h3></code> <br>  
+<code><h3> df -mh        </h3></code> <br>  
+<code><h3> clear        </h3></code> <br>  
+<code><h3> uname -r        </h3></code> <br>  
+<code><h3> uname -a        </h3></code> <br>  
+<code><h3> uname -v        </h3></code> <br>  
+<code><h3> ps        </h3></code> <br>  
+<code><h3> ip addr        </h3></code> <br>  
+<code><h3> clear        </h3></code> <br>  
+<code><h3> mkdir pasadena        </h3></code> <br>  
+<code><h3> cd pasadena        </h3></code> <br>  
+<code><h3> clear        </h3></code> <br>  
+<code><h3> touch abcd.txt        </h3></code> <br>  
+<code><h3> ls -l        </h3></code> <br>  
+<code><h3> rm abcd.txt        </h3></code> <br>  
+<code><h3> ls -l        </h3></code> <br>  
+<code><h3>  touch test1.txt test2.txt test3.txt       </h3></code> <br>  
+<code><h3>  echo cpu stands for central processing unit > test1.txt       </h3></code> <br>  
+<code><h3>  echo ram stands for random access memory > test2.txt       </h3></code> <br>  
+<code><h3>  echo rom stands for read only memory > test3.txt       </h3></code> <br>  
+<code><h3>   ls -lh      </h3></code> <br>  
+<code><h3>  cat test1.txt       </h3></code> <br>  
+<code><h3>  cat test2.txt       </h3></code> <br>  
+<code><h3>  cat test3.txt       </h3></code> <br>  
+<code><h3>  cat *.txt        </h3></code> <br>  
+<code><h3>  cat *.txt > test4.txt       </h3></code> <br>  
+<code><h3>   cat test4.txt      </h3></code> <br>  
+<code><h3>  cat test4.txt | grep memory       </h3></code> <br>  
+<code><h3>   cat test4.txt | grep read      </h3></code> <br>  
+<code><h3>  cp test4.txt test5.txt       </h3></code> <br>  
+<code><h3>   ls -lh      </h3></code> <br>  
+<code><h3> echo ubuntu is a popular linux distro >> test5.txt        </h3></code> <br>  
+<code><h3>  mv test5.txt test6.txt       </h3></code> <br>  
+<code><h3>  ls -lh       </h3></code> <br>  
+<code><h3>  yes burrito de asada       </h3></code> <br>  
+<code><h3> echo portugal >> europe.txt        </h3></code> <br>  
+<code><h3> echo spain >> europe.txt        </h3></code> <br>  
+<code><h3>  echo germany >> europe.txt        </h3></code> <br>  
+<code><h3>  echo france >> europe.txt        </h3></code> <br>  
+<code><h3> echo croatia >> europe.txt         </h3></code> <br>  
+<code><h3> echo romania >> europe.txt         </h3></code> <br>  
+<code><h3>   cat europe.txt      </h3></code> <br>  
+<code><h3>  sort europe.txt       </h3></code> <br>  
+<code><h3>  touch i.sh       </h3></code> <br>  
+<code><h3> echo ip addr > i.sh        </h3></code> <br>  
+<code><h3>  ls -l       </h3></code> <br>  
+<code><h3>  chmod +x i.sh       </h3></code> <br>  
+<code><h3>  ls -l       </h3></code> <br>  
+<code><h3>   ./i.sh      </h3></code> <br>  
+<code><h3>  clear       </h3></code> <br>  
+<code><h3>  history       </h3></code> <br>  
+<code><h3>  cd ~       </h3></code> <br>  
+<code><h3>  ls -l       </h3></code> <br>  
+<code><h3>  tcc -o victor hello.c       </h3></code> <br>  
+<code><h3>  ./victor       </h3></code> <br>  
 	
 
 
