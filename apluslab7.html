@@ -1,9 +1,10 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	 <meta charset="utf-8">
-    	 <title> Labs. </title>
+    	 <title> This time only: copy and paste </title>
 	<link rel="shortcut icon" href="https://informationtechnology2020.github.io/security.ico" />
 	<link rel="stylesheet" href="https://informationtechnology2020.github.io/bootstrap4.css">
 	   
@@ -14,14 +15,36 @@
 <br>
 <div class="container-fluid">
 
-	<div   style="text-align:center"> <h1> ... </h1> </div>
-<br>
-<br>
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-<img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
-	
+	<div   style="text-align:center"> <h1> Our first Python application. </h1> </div>
+    
+    <strong>We've already discussed why we all should learn to code in Python. This will be the first in a series of exercises to practice coding.</strong> <br>
+    
+    <hr>
+    <h2>Create a new text file on your desktop named: <strong>tobinary.py</strong>. Make sure that the file extension is .py and not .txt</h2>
+    <h2>Go to the command prompt and type: <br>
+        <code>cd %homedrive%%homepath%\desktop</code>
+        <br>
+        <code>dir *.py</code><br>
+        <code>notepad tobinary.py</code>
+    </h2>
+<h2> Write the code shown below, take your time. Make sure it's exactly the same. The instructor cannot see your code. Save it. Close Notepad.</h2>
+    <br>
+<h4><code>  first = int(input("Enter the first decimal byte: "))      </code></h4>
+<h4><code>   second = int(input("Enter the second decimal byte: "))     </code></h4>
+ <h4><code>  third = int(input("Enter the third decimal byte: "))      </code></h4>   
+<h4><code>  fourth = int(input("Enter the fourth decimal byte: "))      </code></h4>    
+<h4><code>   print(format(first,'b').zfill(8) + ' ' + format(second,'b').zfill(8) + ' ' + format(third,'b').zfill(8) + ' ' + format(fourth,'b').zfill(8))     </code></h4>    
+    
+  <br>
+    <h2>On the command line just type:<br>
+        <code>python tobinary.py</code>
+    </h2>
+    <br>
+    <h2>Example: 170.170.170.170 results into 10101010 10101010 10101010 10101010, &nbsp; try your own numbers.</h2>
+
+
+
+
 
 
 
