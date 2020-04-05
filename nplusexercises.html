@@ -7,7 +7,7 @@
 	<meta name="description" content="Information Technology">
     	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
     	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="http://krebner.com/security.ico" />
+    	<link rel="shortcut icon" href="https://krebner.com/security.ico" />
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta charset="utf-8">
@@ -17,18 +17,18 @@
 </head>
 <body oncontextmenu="alert('We all have to step up our IT studies. Our future depends on that.');return false;" onselectstart="return false" ondragstart="return false">
 <br>
-<div class="container" style="font-size: 150%;font-family: cursive;">
+<div class="container-fluid" style="font-size: 150%;font-family: cursive;">
 
-	<div   style="text-align:center"> Network+ Exercises.</div>
+	<div   style="text-align:center"> <strong>Network+ Exercises.</strong></div>
 
 	<div>
         <br>
         <blockquote>
-            <legend><span style="color: blue;"> The first set of exercises has to be done on the command line interface.</span> </legend>
+            <legend><span style="color: blue;"> These exercises have to be done on the command line interface.</span> </legend>
               Optional:  <span style="color: green"> Change the terminal color and font size to make it more comfortable.    </span>  
         </blockquote>
         <hr>
-		<ol type="I">
+		<ol type="i">
 
 			<li><h3>Find your computer name by typing:
 				<code>hostname	</code>
@@ -120,8 +120,18 @@
 
 			</h3></li><br>
 
-			<li><h3> Find the host name for this IP address <strong>2600:1406:d000:38a::356e</strong>:
-				<code>ping -a 2600:1406:d000:38a::356e	</code>
+			<li><h3> Find the host name for this IP address <strong>8.8.8.8</strong>:
+				<code>ping -a 8.8.8.8	</code>
+
+			</h3></li><br>
+            
+            <li><h3> Find the host name for this IP address <strong>8.8.4.4</strong>:
+				<code>ping -a 8.8.4.4	</code>
+
+			</h3></li><br>
+            
+            <li><h3> Find the host name for this IP address <strong>206.13.29.12</strong>:
+				<code>ping -a 206.13.29.12	</code>
 
 			</h3></li><br>
 
@@ -140,9 +150,9 @@
 
 			</h3></li><br>
 
-			<li><h3>Using the WMIC (Windows Management Instrumentation Command) to find your IP address(es):
+			<li><h3>Using the WMIC (Windows Management Instrumentation Command Line) to find your IP address(es):
 				<code>wmic NICCONFIG WHERE IPEnabled=true GET IPAddress	</code>. Do not worry too much about this 
-                command. It won't be on the N+ exam! It's just for your knowledge.
+                command. Remember that we said in class, hopefully you were there paying attention, that the <strong>wmic </strong> command is being deprecated. The recommended way to work on the terminal is using the PowerShell.
 
 			</h3></li><br>
             
@@ -161,8 +171,8 @@
 
 			</h3></li><br>
             
-            <li><h3>Find the logical and physical IP addresses of your local subnet in a more verbose way:
-				<code>arp -va	</code>
+           <li><h3>Find the logical and physical IP addresses of your local subnet:
+				<code>arp -a	</code>
 
 			</h3></li><br>
             
@@ -216,6 +226,14 @@
 
 			</h3></li><br>
             
+            <li><h3> Using telnet to have some fun (see picture below to know how to install telnet on your system):
+                 
+				<code> telnet towel.blinkenlights.nl 23	</code>
+
+			</h3></li><br>
+            <br>
+            <img src="https://informationtechnology2020.github.io/telnet.installation.png" class="img img-fluid">
+            
             <!--
             <li><h3>
 				<code>	</code>
@@ -232,15 +250,15 @@
 
 
 </div>
-<div class="container">
+<div class="container-fluid">
 	<a href="https://informationtechnology2020.github.io/packettracer01.html" target="_blank" class="btn btn-primary btn-block btn-lg">
-		Simulating a network with the Packet Tracer.
+		Next exercise: &nbsp; &nbsp;Simulating a network with the Cisco Packet Tracer.
 	</a>
 	</div>
 <div class="container-fluid">
-    <img src="https://informationtechnology2020.github.io/pi.jpg" class="img img-fluid">
+    
 </div>
-
+<img src="https://informationtechnology2020.github.io/pi.jpg" class="img img-fluid">
 <!-- These Javascript links are required for the proper functionality of Bootstrap. And they should always be placed at the very end, near to the closing body tag. -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
