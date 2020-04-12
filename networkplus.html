@@ -7,12 +7,51 @@
 	<meta name="description" content="Information Technology">
     	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
     	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://krebner.com/security.ico" />
+    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+   <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script> 
     
 </head>
 <body oncontextmenu="alert('Smile. Stay healthy. Stay safe. Stay home. Study!');return false;" onselectstart="return false" ondragstart="return false"
@@ -151,19 +190,26 @@
                 <br>
     
                 <div class="row">
-                    <div class="col-md-12">
-                         <br>
+                    <div class="col-md-6">
+                         
                 <a href="http://gaia.cs.umass.edu/kurose-ross-ppt-6e/" target="_blank"
                    class="btn btn-lg btn-default btn-block border border-primary">
                     <strong>
                     <span style="color: whitesmoke;">
-						Slides from the James Kurose & Keith Ross <i>Computer Networking</i> book, which have 
-                    been shared to the general public by the authors. So get them! 
+						Slides by  James Kurose & Keith Ross (authors)
 					</span>
                     </strong>
                 </a>
                     
                     
+                    </div>
+                    <div class="col-md-6">
+                        <a href="https://informationtechnology2020.github.io/nmiscelaneous.html" target="_blank"
+                           class="btn btn-lg btn-default btn-block border border-primary">
+                        <span style="color: whitesmoke;">
+                            <strong>Miscelaneous Links about Networking</strong>
+                        </span>
+                        </a>
                     </div>
                             
                 </div>
