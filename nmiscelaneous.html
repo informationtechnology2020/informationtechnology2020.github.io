@@ -9,6 +9,47 @@
     <style>
         body{font-family: cursive; background-color: floralwhite;color: blueviolet; font-size: 300%;}
     </style>
+    
+    <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
 
 </head>
 <body oncontextmenu="alert('Study as much as you can!');return false;" onselectstart="return false" ondragstart="return false">
@@ -89,10 +130,21 @@ Cisco QoS
 <a href="https://www.computerworld.com/article/2593382/networking-packet-switched-vs-circuit-switched-networks.html" target="_blank" class="btn btn-default btn-lg">
 <strong>Packet Switched vs Circuit Switched Networks</strong>
 </a>
+    
+<a href="https://www.opennetworking.org/sdn-definition/" target="_blank" class="btn btn-default btn-lg">
+<strong>SDN?</strong>
+</a>
 
 <a href="https://www.opennetworking.org/images/stories/downloads/sdn-resources/white-papers/wp-sdn-newnorm.pdf" target="_blank" class="btn btn-default btn-lg">
 <strong>Software Defined Networking (SDN)</strong>
 </a>
+
+
+    
+<a href="https://www.sdxcentral.com/networking/sdn/definitions/what-is-openflow/" target="_blank" class="btn btn-default btn-lg">
+<strong>OpenFlow</strong>
+</a>
+
 
 <a href="https://www.comptia.org/content/guides/network-security-basics-definition-threats-and-solutions" target="_blank" class="btn btn-default btn-lg">
 <strong>COMPTIA network security basics</strong>
@@ -126,9 +178,13 @@ Cisco QoS
 <strong>GSM vs CDMA</strong>
 </a>
 
+<a href="https://www.dni.gov/files/ODNI/documents/National_Intelligence_Strategy_2019.pdf" target="_blank" class="btn btn-default btn-lg">
+<strong>National Intelligence Strategy </strong>
+</a>
 
-
-	
+<a href="https://www.dni.gov/index.php/cyber-threat-framework" target="_blank" class="btn btn-default btn-lg">
+<strong>Cyber Threat Framework </strong>
+</a>	
 
 
 
