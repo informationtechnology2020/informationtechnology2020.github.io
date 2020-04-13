@@ -12,12 +12,56 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    
+    <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+  <style>
+      h1, h2 {color: white;}  
+      body {
+          background-color: black;
+      }
+  </style>  
 </head>
-<body oncontextmenu="alert('Work as hard as you can!');return false;" onselectstart="return false" ondragstart="return false">
+<body oncontextmenu="alert('Study a lot. This is the right time to do it!');return false;" onselectstart="return false" ondragstart="return false">
 <br>
-<div class="container">
+<div class="container-fluid">
     <br>
 	<div   style="text-align:center"> <h1>CompTIA Security+.
                     <a href="https://informationtechnology2020.github.io/messersecurity.html" target="_blank">
@@ -92,7 +136,7 @@
 
 </div>
     <div class="container-fluid">
-     <a href="https://drive.google.com/file/d/1cCLgX4gDKphppjQnGuhWFNZUqC81-qw1/view?usp=sharing" target="_blank" ><img src="https://informationtechnology2020.github.io/javascript.jpg" class="img img-fluid img-rounded"></a>
+     <a href="https://drive.google.com/file/d/1cCLgX4gDKphppjQnGuhWFNZUqC81-qw1/view?usp=sharing" target="_blank" ><img src="https://source.unsplash.com/2400x1350/?books" class="img img-fluid img-rounded"></a>
 				
     </div>
 
