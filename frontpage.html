@@ -8,24 +8,68 @@
 	<meta name="description" content="Information Technology">
     	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
     	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://informationtechnology2020.github.io/security.ico" />
+    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <style>
-		body {background-color: beige;}
+		body {background-color: black;}
 	</style>
-    
+    <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+    <style>
+        h1, h2 {
+            color: white;
+        }
+    </style>
 
 </head>
 <body oncontextmenu="alert('Smile. Life is too short to be anything but happy!');return false;" onselectstart="return false" ondragstart="return false">
 <br>
-<div class="container">
+<div class="container-fluid">
 
-	<div   style="text-align:center"><h1>Welcome to InformationTechnology2020.github.io!</h1> </div>
+	<div   style="text-align:center"><h1>Information Technology 2020.</h1> </div>
 	<br>
-    <hr>
+    <hr class="border border-warning">
 	<br>
 	<div   style="text-align:center"><h2>Information Security Courses. </h2> </div>
   
@@ -57,7 +101,7 @@
 </a>
 
 <br>
-<hr>
+<hr class="border border-warning">
 
 <h2 style="text-align: center;">Microsoft Office 2016 Courses.</h2>
 <br>
