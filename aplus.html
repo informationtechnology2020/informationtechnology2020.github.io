@@ -12,7 +12,54 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+        <style>
+		body {background-color: black;}
+	</style>
+    <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+    <style>
+        h1, h2 {
+            color: white;
+        }
+    </style>
     
 </head>
 <body oncontextmenu="alert('Smile. Life is too short to be anything but happy!');return false;" onselectstart="return false" ondragstart="return false">
@@ -110,11 +157,6 @@
             </h2>
 
 
-<strong>Read all the questions and answers for the 220-1001 and 220-1002. 
-	Besides read the 220-901 and 220-902 exams, as well. Read a lot. Spend hours and hours. 
-	There are no shortcuts. You have all the reference materials to pass the A+ certification.
-	 It's up to you to study hard. Many people at our school have passed these exams. So you should be able to
-	do it too, if you study.</strong>
 
 
 	<br>
