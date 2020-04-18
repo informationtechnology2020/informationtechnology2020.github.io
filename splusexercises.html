@@ -147,15 +147,8 @@
            
            <li>Open Chrome and type <code>http://api.hackertarget.com/httpheaders/?q=http://kremlin.ru/</code> and read the obtained info. On which web server is the Russian Federation government hosted? Is it Apache, Glassfish, IIS, nginx, OpenResty, "Cloudflare"?</li>
            
-           <li>Open Chrome and type <code>http://api.hackertarget.com/httpheaders/?q=https://joebiden.com/</code> and read the obtained info. On which web server is Joe's website hosted? Is it Apache, Glassfish, IIS, nginx, OpenResty, "Cloudflare"?</li>
+           <li>Open Chrome and type <code>http://api.hackertarget.com/httpheaders/?q=https://www.idt.edu/</code> and read the obtained info. On which web server is Joe's website hosted? Is it Apache, Glassfish, IIS, nginx, OpenResty, "Cloudflare"?</li>
            
-           <li>Open Chrome and type <code>http://api.hackertarget.com/httpheaders/?q=https://berniesanders.com/</code> and read the obtained info. On which web server is the Bern website hosted? Is it Apache, Glassfish, IIS, nginx, OpenResty, "Cloudflare"?</li>
-           
-           <li>Open Chrome and type <code>http://api.hackertarget.com/httpheaders/?q=https://elizabethwarren.com/</code> and read the obtained info. On which web server is the Liz Warren website hosted? Is it Apache, Glassfish, IIS, nginx, OpenResty, "Cloudflare"?</li>
-           
-           
-           
-           <li>Open Chrome and type <code>http://api.hackertarget.com/httpheaders/?q=https://www.donaldjtrump.com/</code> and read the obtained info. On which web server is the actual president website hosted? Is it Apache, Glassfish, IIS, nginx, OpenResty, "Cloudflare"?</li>
            
            <li>Open Chrome and type <code>http://api.hackertarget.com/httpheaders/?q=https://www.lacity.org/</code> and read the obtained info. On which web server is the Los Angeles City website hosted? Is it Apache, Glassfish, IIS, nginx, OpenResty, "Cloudflare"?</li>
            
@@ -292,10 +285,8 @@
            
            </li>
            <li>And now type (paying attention to open ports, additional IP addresses):<br>
-               <code>nmap -F -6 www.berniesanders.com</code><br>
-               <code>nmap -F -6 www.elizabethwarren.com</code><br>
-               <code>nmap -F www.elizabethwarren.com</code><br>
-               <code>nmap -F www.joebiden.com</code>
+               
+               <code>nmap -F www.idtnetwork.com</code>
            
            </li>
            <li>You'll find out interesting info now, just type:<br>
@@ -315,10 +306,16 @@
                Now a quick scan: <br>
                <code>nmap -T4 -F 151.101.1.127</code>
            </li>
+           
+           <li>
+           Visit <a href="https://pentest-tools.com/network-vulnerability-scanning/tcp-port-scanner-online-nmap#" target="_blank"> this online NMAP</a> website. Choose a website (or websites) and analyze it (them).
+            
+           
+           </li>
        </ol>
              <br>
          <a href="https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/" target="_blank" class="btn btn-block btn-secondary">NMAP cheatsheet 1</a> 
-             <a href="https://blogs.sans.org/pen-testing/files/2013/10/NmapCheatSheetv1.1.pdf" target="_blank" class="btn btn-block btn-secondary">NMAP cheatsheet 2</a>
+             <a href="https://www.stationx.net/nmap-cheat-sheet/" target="_blank" class="btn btn-block btn-secondary">NMAP cheatsheet 2</a>
          </div>
     </div>
    </body>
