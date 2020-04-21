@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Created by Krebner. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="VD">
+    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script> 
+    
+</head>
+<body oncontextmenu="alert('Smile. Stay healthy. Stay safe. Stay home. Study!');return false;" onselectstart="return false" ondragstart="return false"
+	style="background-color: rgb(0, 0, 0);"
+>
+<br>
+<div class="container-fluid">
+    <br>
+	<div   style="text-align:center"> <h1 style="color: yellow;"> Installing Project 2016 on a Windows 10 VM using VMWare Workstation Player. </h1> </div>
+    <br>
+    <hr>
+    <h3 style="color: orangered;"> We first have to install VMWare Workstation Player 15. </h3> 
+    
+    <h3 style="color: greenyellow;"> The next step is to download the VMWare virtual machine from:
+        <a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/" target="_blank"> right here</a>. This may take around one hour depending on your internet connection download speed. </h3><br>
+      <h3 style="color: orange;"> Remember to verify the file integrity by using the <strong>certutil.exe</strong> command.
+        See picture below.</h3>   
+    <img src="project2016000.png" class="img img-fluid">
+        <br>
+      <h3 style="color: red;"> The zip file has to be unzipped. This takes a long time (around 20 minutes).
+          You'll find three files. </h3>  
+        <br>
+    <h3 style="color: yellow;">Now you can finally open the virtual machine with VMWare Workstation Player. You'll just need to point to the unzipped folder. The import task takes around 10 minutes. Be patient.  </h3> 
+        <br>
+      <h3 style="color: greenyellow;"> At this point, before playing the Windows 10 VM, you may want to edit the virtual machine settings to add more RAM to the W10 VM. </h3> 
+<img src="project2016001.png" class="img img-fluid">
+    <h3 style="color: yellow;">From within the VM go to <a href="https://tinyurl.com/idt2020" target="_blank">https://tinyurl.com/idt2020</a>, Project 2016 and download the Project 2016 ISO file (and mount it). Install Project 2016. </h3> 
+<img src="project2016002.png" class="img img-fluid">
+    <h3 style="color: yellow;"> </h3> 
+<img src="project2016003.png" class="img img-fluid">
+    <h3 style="color: yellow;">Start Project 2016 and do the textbook labs. </h3> 
+<img src="project2016004.png" class="img img-fluid">
+</div>
+
+<br>
+    
+
+    
+
+ <img src="https://source.unsplash.com/2400x1350/?nature,cave" class="img img-fluid">   
+<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
+And they should always be placed at the very end, near to the closing body tag. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
