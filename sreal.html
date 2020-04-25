@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> The real deal. Enjoy. </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="https://krebner.com/security.ico" />
+	<style>
+			h3{	color: yellow;	}
+
+			h2{	color: orange;	}
+
+			body {background-color: black;
+                    background-image: url("https://source.unsplash.com/2400x1350/?nature,galaxy");}
+	</style>
+      
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Apr 28, 2020 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>	
+    <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+</head>
+<body oncontextmenu="alert('Enjoy it while it is still there.');return false;" onselectstart="return false" ondragstart="return false">
+<br>
+<div class="container-fluid">
+
+	<div class="row"  style="text-align:center; font-family: cursive; "><h2 style="text-align:center; font-family: fantasy; "><strong>Note:</strong>
+        &nbsp;You are in charge of finding out the right answers. </h2>
+					     <h3>This page will disappear on Tuesday, April 28 2020 at 11:59:59 PM. 
+                             Countdown: &nbsp; <span id="demo"> </span></h3>
+	</div>
+
+<div class="row">  
+<img src="https://krebner.com/secplus0001.png" class="img img-fluid">
+<a href="https://www.csoonline.com/article/2124082/web-application-firewalls--how-to-evaluate--purchase-and-implement.html" target="_blank">*</a><hr>
+<img src="https://krebner.com/secplus0002.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0003.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0004.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0005.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0006.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0007.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0008.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0009.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0010.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0011.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0012.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0013.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0014.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0015.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0016.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0017.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0018.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0019.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0020.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0021.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0022.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0023.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0024.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0025.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0026.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0027.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0028.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0029.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0030.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0031.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0032.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0033.png" class="img img-fluid"><hr>
+<img src="https://krebner.com/secplus0034.png" class="img img-fluid"><hr>
+</div>
+
+
+</div>
+</body>
+</html>
+
+  
