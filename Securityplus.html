@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Security+. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="VD">
+    	<link rel="shortcut icon" href="https://html5css3es10.github.io/security.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+  <style>
+      h1, h2 {color: white;}  
+      body {
+          background-color: black;
+      }
+  </style>  
+</head>
+<body oncontextmenu="alert('Study a lot. This is the right time to do it!');return false;" onselectstart="return false" ondragstart="return false">
+<br>
+<div class="container-fluid">
+    <br>
+	<div   style="text-align:center"> <h1>CompTIA Security+.
+        
+        
+                    <a href="https://informationtechnology2020.github.io/messersecurity.html" target="_blank">
+           
+                        <img src="https://html5css3es10.github.io/security.ico" width="20px" alt="Messer summary notes"
+                        class="rounded-circle float-right">
+                    </a>
+        
+        <a href="https://informationtechnology2020.github.io/securityplustopics.html" target="_blank">
+           
+                        <img src="https://html5css3es10.github.io/security.ico" width="20px" alt="Messer summary notes"
+                        class="rounded-circle float-left">
+                    </a>
+        </h1>
+        
+    </div>
+    <br>
+    <hr>
+    <div class="container-fluid">
+
+				
+
+				<a href="https://www.comptia.org/certifications/security" target="_blank" class="btn btn-lg btn-primary btn-block">
+				<h3> Computing Technology Industry Association (CompTIA) Security+</h3>
+				</a>
+                
+                <a href="https://comptiacdn.azureedge.net/webcontent/docs/default-source/exam-objectives/comptia-security-sy0-501-exam-objectives.pdf?sfvrsn=877aa036_10
+" target="_blank" class="btn btn-lg btn-secondary btn-block">
+				<h3> Security+ Exam Objectives</h3>
+				</a>
+
+				<a href="https://www.washingtonpost.com/brand-studio/raytheon/inside-the-mind-of-a-hacker/?tid=bc_ray_360_pm_1" target="_blank" class="btn btn-lg btn-warning btn-block">
+				<h3>Inside the mind of a hacker</h3>
+				</a>
+
+				
+				
+
+
+				<a href="https://tinyurl.com/tjgpr3v" target="_blank" class="btn btn-lg btn-success btn-block">
+				<h3>Professor Messer Notes</h3>
+				</a>
+
+				<a href="http://comptiaexamtest.com/" target="_blank" class="btn btn-lg btn-danger btn-block">
+				<h3>Sample questions</h3>
+				</a>
+
+				
+                <a href="https://informationtechnology2020.github.io/splusexercises.html" target="_blank" class="btn btn-lg btn-info btn-block">
+				<h3>Hands-on exercises</h3>
+				</a>
+				
+				<a href="smiscelaneous.html" target="_blank" class="btn btn-lg btn-warning btn-block">
+                <h3>More information about IT Security</h3>
+                </a>
+				
+			   
+               
+                <marquee loop=1 direction="right">
+                    
+                        &#128512;
+                    
+                    
+                </marquee>
+				
+        
+
+	
+
+
+
+</div>
+
+	
+
+
+
+</div>
+    <div class="container-fluid">
+     
+         <img src="https://source.unsplash.com/2400x1350/?nature,cave" class="img img-fluid img-rounded"></a>
+				
+    </div>
+
+<br>
+
+<!-- These Javascript links are required for the proper functionality of Bootstrap. And they should always be placed at the very end, near to the closing body tag. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+  
