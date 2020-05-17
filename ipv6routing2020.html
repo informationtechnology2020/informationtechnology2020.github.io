@@ -73,10 +73,10 @@
     <img src="https://informationtechnology2020.github.io/ipv6routing2020.png" class="img img-fluid">
     
     <hr>
-<p><strong>Step 1.</strong>	&nbsp;Go to the command prompt on each PC/Server and find out the IPv6 address by typing <code>ipv6config</code>.
-    Notice that we are still missing the default gateway IPv6 address. We first have to  assign addresses to the routers.</p> 
+<p><strong>Step 1.</strong>&nbsp;	&nbsp;Go to the command prompt of each Laptop/Server and find out their IPv6 address by typing <code>ipv6config</code>.
+    Notice that they are still missing their default gateway IPv6 address. We first have to  assign addresses to the routers and then return to assign the default gateway on the Laptops/Server.</p> 
 <hr>
-<p><strong>Step 2.</strong>	&nbsp;Go to the CLI of each router and assign IPv6 addresses:</p>
+<p><strong>Step 2.</strong>&nbsp;	&nbsp;Go to the CLI of each router and assign IPv6 addresses:</p>
 
 	<p><i>Left router:</i></p>
 		<p><code>enable </code></p>
@@ -128,16 +128,16 @@
 		<p><code>end</code></p>
 		<p><code>show ipv6 int brief</code></p>
 <hr>
-<p>Step 3.	&nbsp;Copy and paste on Notepad all router's IPv6 addresses. You'll need them.</p>
+<p>Step 3.&nbsp;	&nbsp;Copy all routers' IPv6 addresses and paste them to Notepad. You'll need them.</p>
 <hr>
-<p>Step 4.	&nbsp;Go back to each PC/Server and add the default gateway IPv6 address, which is the gig0/0 interface IPv6 address.</p>
+<p>Step 4.	&nbsp;Go back to each Laptop/Server and add the default gateway IPv6 address, which is the gig0/0 interface IPv6 address.</p>
 <hr>
-<p>Step 5.	&nbsp;Type <code>ipv6config</code> on each PC/Server and make sure that you can ping its default gateway.</p>
+<p>Step 5.	&nbsp;Type <code>ipv6config</code> on each Laptop/Server. Verify that the IPv6 default gateway is there. Make sure that you can ping it.</p>
 <hr>
-<p>Step 6.	&nbsp;Make four copies of the PKT file:  ipv6staticrouting.pkt, ipv6ripv6.pkt, ipv6eigrpv6.pkt and ipv6ospfv6.pkt.</p>
+<p>Step 6.	&nbsp;Make four copies of the PKT file:  &nbsp;ipv6staticrouting.pkt,&nbsp; ipv6ripv6.pkt, &nbsp;ipv6eigrpv6.pkt &nbsp;and &nbsp;ipv6ospfv6.pkt.</p>
 <hr>
-<p>Step 7.	&nbsp;Now open each file and configure IPv6 routing (static, RIPv6, EIGRPv6 and OSPFv6).
-    The required syntax is shown below. Take it easy. Think before you type.</p>
+<p>Step 7.&nbsp;	&nbsp;Now open each file and configure IPv6 routing (static, RIPv6, EIGRPv6 and OSPFv6).
+    The required syntax is shown below. Don't forget to type <code>ipv6 unicast-routing</code> on each router to make sure that IPv6 routing has been enabled. Take it easy. Think before you type. All the needed commands are summarized below. </p>
      
     
 
