@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CCNA">
+    <meta name="keywords" content="Routing and Switching">
+    <meta name="author" content="VD">
+    <link rel="shortcut icon" href="https://krebner.com/security.ico" />
+    <title>CCNA 200-301.</title>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+    <style>
+        body {background-color: black;}
+        h3 {color: orange;}
+        h2 {color: lawngreen;font-family:cursive;}
+        h1 {color: ghostwhite;}
+        hr {border-color: cornflowerblue;}
+    </style>
+</head>
+<body oncontextmenu="alert('LOL. Life is just too short to be anything but happy!');return false;" onselectstart="return false" ondragstart="return false">
+<br>
+<div class="container">
+
+	<div   style="text-align:center"> <h1> IPv4 Subnetting Exercises.</h1> </div>
+    
+    <hr>
+    
+    <div class="row">
+        <h2><strong>Exercise 1:</strong></h2>
+        <h3>For the following IP address and subnet mask, calculate the Network ID, the Broadcast IP Address, the range of valid IP addresses and the number of available hosts within the subnet.</h3>
+        <h3>
+            <kbd>192.168.1.75 /26</kbd>
+            &nbsp;&nbsp;
+            <a href="http://jodies.de/ipcalc?host=192.168.1.75&mask1=26&mask2=" class="btn btn-success"
+               target="_blank">
+            Answer
+            </a>
+        </h3>
+        
+    
+    </div>
+    
+    <div class="row">
+        <h2><strong>Exercise 2:</strong></h2>
+        <h3>For the following IP address and subnet mask, calculate the Network ID, the Broadcast IP Address, the range of valid IP addresses and the number of available hosts within the subnet.</h3>
+        <h3>
+            <kbd>192.168.1.168 /27</kbd>
+            &nbsp;&nbsp;
+            <a href="http://jodies.de/ipcalc?host=192.168.1.168&mask1=27&mask2=" class="btn btn-success"
+               target="_blank">
+            Answer
+            </a>
+        </h3>
+        
+    
+    </div>
+    
+    <div class="row">
+        <h2><strong>Exercise 3:</strong></h2>
+        <h3>For the following IP address and subnet mask, calculate the Network ID, the Broadcast IP Address, the range of valid IP addresses and the number of available hosts within the subnet.</h3>
+        <h3>
+            <kbd>192.168.1.202 /29</kbd>
+            &nbsp;&nbsp;
+            <a href="http://jodies.de/ipcalc?host=192.168.1.202&mask1=29&mask2=" class="btn btn-success"
+               target="_blank">
+            Answer
+            </a>
+        </h3>
+        
+    
+    </div>
+    
+    <div class="row">
+        <h2><strong>Exercise 4:</strong></h2>
+        <h3>For the following IP address and subnet mask, calculate the Network ID, the Broadcast IP Address, the range of valid IP addresses and the number of available hosts within the subnet.</h3>
+        <h3>
+            <kbd>192.168.10.110 /30</kbd>
+            &nbsp;&nbsp;
+            <a href="http://jodies.de/ipcalc?host=192.168.10.110&mask1=30&mask2=" class="btn btn-success"
+               target="_blank">
+            Answer
+            </a>
+        </h3>
+        
+    
+    </div>
+    
+    <div class="row">
+        <h2><strong>Exercise 5:</strong></h2>
+        <h3>For the following IP address and subnet mask, calculate the Network ID, the Broadcast IP Address, the range of valid IP addresses and the number of available hosts within the subnet.</h3>
+        <h3>
+            <kbd>131.107.124.71 /18</kbd>
+            &nbsp;&nbsp;
+            <a href="http://jodies.de/ipcalc?host=131.107.124.71&mask1=18&mask2=" class="btn btn-success"
+               target="_blank">
+            Answer
+            </a>
+        </h3>
+        
+    
+    </div>
+    
+    <div class="row">
+        <h2><strong>Exercise 6:</strong></h2>
+        <h3>For the following IP address and subnet mask, calculate the Network ID, the Broadcast IP Address, the range of valid IP addresses and the number of available hosts within the subnet.</h3>
+        <h3>
+            <kbd>131.107.223.142 /27</kbd>
+            &nbsp;&nbsp;
+            <a href="http://jodies.de/ipcalc?host=131.107.223.142&mask1=27&mask2=" class="btn btn-success"
+               target="_blank">
+            Answer
+            </a>
+        </h3>
+        
+    
+    </div>
+    
+    <div class="row">
+        <h2><strong>Exercise 7:</strong></h2>
+        <h3>For the following IP address and subnet mask, calculate the Network ID, the Broadcast IP Address, the range of valid IP addresses and the number of available hosts within the subnet.</h3>
+        <h3>
+            <kbd>131.107.199.200 /19</kbd>
+            &nbsp;&nbsp;
+            <a href="http://jodies.de/ipcalc?host=131.107.199.200&mask1=19&mask2=" class="btn btn-success"
+               target="_blank">
+            Answer
+            </a>
+        </h3>
+        
+    
+    </div>
+    
+    <div class="row">
+        <h2><strong>Exercise 8:</strong></h2>
+        <h3>For the following IP address and subnet mask, calculate the Network ID, the Broadcast IP Address, the range of valid IP addresses and the number of available hosts within the subnet.</h3>
+        <h3>
+            <kbd>150.149.148.11 /30</kbd>
+            &nbsp;&nbsp;
+            <a href="http://jodies.de/ipcalc?host=150.149.148.11&mask1=30&mask2=" class="btn btn-success"
+               target="_blank">
+            Answer
+            </a>
+        </h3>
+        
+    
+    </div>
+    
+    <div class="row">
+        <h2><strong>Exercise 9:</strong></h2>
+        <h3>For the following IP address and subnet mask, calculate the Network ID, the Broadcast IP Address, the range of valid IP addresses and the number of available hosts within the subnet.</h3>
+        <h3>
+            <kbd>12.14.16.18 /28</kbd>
+            &nbsp;&nbsp;
+            <a href="http://jodies.de/ipcalc?host=12.14.16.18&mask1=28&mask2=" class="btn btn-success"
+               target="_blank">
+            Answer
+            </a>
+        </h3>
+        
+    
+    </div>
+    
+    <div class="row">
+        <h2><strong>Exercise 10:</strong></h2>
+        <h3>For the following IP address and subnet mask, calculate the Network ID, the Broadcast IP Address, the range of valid IP addresses and the number of available hosts within the subnet.</h3>
+        <h3>
+            <kbd>172.16.100.200 /30</kbd>
+            &nbsp;&nbsp;
+            <a href="http://jodies.de/ipcalc?host=172.16.100.200&mask1=30&mask2=" class="btn btn-success"
+               target="_blank">
+            Answer
+            </a>
+        </h3>
+        
+    
+    </div>
+
+
+
+</div>
+    <div class="container-fluid">
+        <img src="https://source.unsplash.com/4800x2700/?nature,galaxy" class="img img-fluid img-rounded">    
+    </div>
+</body>
+</html>
+
+  
