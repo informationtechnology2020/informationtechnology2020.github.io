@@ -3,7 +3,7 @@
 <head>
 	 <meta charset="utf-8">
     	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Created by Krebner. </title>
+	<title> IPv4 routing practice. </title>
 	<meta name="description" content="Information Technology">
     	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
     	<meta name="author" content="VD">
@@ -52,19 +52,54 @@
     }
   };
 </script> 
-    
+    <style>
+        i { color: aliceblue; font-size: 150%;}
+        h2, h3 {color:antiquewhite;}
+        hr {border-color: green;}
+    </style>
 </head>
-<body oncontextmenu="alert('Smile. Stay healthy. Stay safe. Stay home. Study!');return false;" onselectstart="return false" ondragstart="return false"
+<body oncontextmenu="alert('Fear not. Just study more!');return false;" onselectstart="return false" ondragstart="return false"
 	style="background-color: rgb(0, 0, 0);"
 >
 <br>
 <div class="container-fluid">
     <br>
-	<div   style="text-align:center"> <h1 style="color: yellow;"> IPv4 routing (static and dynamic). </h1> </div>
+	<div   style="text-align:center"> <h1 style="color: yellow;"> IPv4 routing (static and dynamic). </h1>
+    
+    <p><i>Download the starting .pkt template from 
+         <a href="https://informationtechnology2020.github.io/templateipv4.pkt" target="_blank"> right here</a>.
+        </i></p>
+    </div>
     <br>
     <hr>
-    <img src="https://informationtechnology2020.github.io/underconstruction.png" class="img img-fluid">
+    <img src="https://informationtechnology2020.github.io/ipv4routing2020.png" class="img img-fluid">
 </div>
+    
+    <br>
+    
+    <div class="container">
+    
+    <h2> Step 1: &nbsp; Run <code>ipconfig</code> on each PC to verify the IPv4 addresses.  </h2>
+     <hr>   
+    <h2> Step 2: &nbsp; Type <code> show ip int brief</code> on each router's CLI and verify the IPv4 addresses assignment.</h2>
+     <hr>   
+    <h2> Step 3: &nbsp; Verify connectivity between each PC and its closest router by typing <code>ping ...</code></h2>
+     <hr>   
+    <h2> Step 4: &nbsp; Once the previous verifications have been completed, create four copies of the .pkt:
+        &nbsp;ipv4static.pkt,&nbsp;&nbsp;ipv4rip.pkt&nbsp;&nbsp;ipv4eigrp.pkt,&nbsp;&nbsp;ipv6ospf.pkt.
+        
+        </h2>
+        
+    <hr>
+    
+    <blockquote>
+        <legend><h3>Commands syntax:</h3></legend>    
+        <img src="https://informationtechnology2020.github.io/ccna00032.png" class="img img-fluid">
+        <img src="https://informationtechnology2020.github.io/ccna00058.png" class="img img-fluid">
+    </blockquote>
+    
+    &nbsp;
+    </div>
 
 <br>
     
