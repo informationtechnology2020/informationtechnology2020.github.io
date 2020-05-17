@@ -1,0 +1,158 @@
+
+	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> IPv6 routing. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="VD">
+    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script> 
+    <style>
+        hr {border-color: yellow;}
+    </style>
+</head>
+<body oncontextmenu="alert('Smile. Stay healthy. Stay safe. Stay home. Study!');return false;" onselectstart="return false" ondragstart="return false"
+	style="background-color: rgb(0, 0, 0);"
+>
+<br>
+<div class="container" style="color: white;font-size: 200%;">
+    <br>
+	<div   style="text-align:center"> <h1 style="color: yellow;"> Configuring IPv6 routing. </h1> 
+        <p><i>Download the starting .pkt template from 
+         <a href="https://informationtechnology2020.github.io/templateforipv6.pkt" target="_blank"> right here</a>.
+        </i></p>
+    </div>
+  
+    <img src="ipv6routing2020.png" class="img img-fluid">
+    
+    <hr>
+<p><strong>Step 1.</strong>	&nbsp;Go to the command prompt on each PC/Server and find out the IPv6 address by typing <code>ipv6config</code>.
+    Notice that we are still missing the default gateway IPv6 address. We first have to  assign addresses to the routers.</p> 
+<hr>
+<p><strong>Step 2.</strong>	&nbsp;Go to the CLI of each router and assign IPv6 addresses:</p>
+
+	<p><i>Left router:</i></p>
+		<p><code>enable </code></p>
+		<p><code>configure terminal</code></p>
+		<p><code>int gig0/0</code></p>
+		<p><code>ipv6 address 2020:acad:baba:1::/64 eui-64</code></p>
+		<p><code>no shutdown</code></p>
+		<p><code>exit</code></p>
+		<p><code>int gig0/1</code></p>
+		<p><code>ipv6 address 2020:acad:baba:4::/64 eui-64</code></p>
+		<p><code>no shutdown</code></p>
+		<p><code>exit</code></p>
+		<p><code>end</code></p>
+		<p><code>show ipv6 int brief</code></p>
+		
+
+
+	<p><i>Middle router:</i></p>
+
+		<p><code>enable </code></p>
+		<p><code>configure terminal</code></p>
+		<p><code>int gig0/0</code></p>
+		<p><code>ipv6 address 2020:acad:baba:2::/64 eui-64</code></p>
+		<p><code>no shutdown</code></p>
+		<p><code>exit</code></p>
+		<p><code>int gig0/1</code></p>
+		<p><code>ipv6 address 2020:acad:baba:4::/64 eui-64</code></p>
+		<p><code>no shutdown</code></p>
+		<p><code>exit</code></p>
+		<p><code>int gig0/2</code></p>
+		<p><code>ipv6 address 2020:acad:baba:5::/64 eui-64</code></p>
+		<p><code>no shutdown</code></p>
+		<p><code>exit</code></p>
+		<p><code>end</code></p>
+		<p><code>show ipv6 int brief</code></p>
+
+	<p><i>Right router:</i></p>
+
+		<p><code>enable </code></p>
+		<p><code>configure terminal</code></p>
+		<p><code>int gig0/0</code></p>
+		<p><code>ipv6 address 2020:acad:baba:3::/64 eui-64</code></p>
+		<p><code>no shutdown</code></p>
+		<p><code>exit</code></p>
+		<p><code>int gig0/1</code></p>
+		<p><code>ipv6 address 2020:acad:baba:5::/64 eui-64</code></p>
+		<p><code>no shutdown</code></p>
+		<p><code>exit</code></p>
+		<p><code>end</code></p>
+		<p><code>show ipv6 int brief</code></p>
+<hr>
+<p>Step 3.	&nbsp;Copy and paste on Notepad all router's IPv6 addresses. You'll need them.</p>
+<hr>
+<p>Step 4.	&nbsp;Go back to each PC/Server and add the default gateway IPv6 address, which is the gig0/0 interface IPv6 address.</p>
+<hr>
+<p>Step 5.	&nbsp;Type <code>ipv6config</code> on each PC/Server and make sure that you can ping its default gateway.</p>
+<hr>
+<p>Step 6.	&nbsp;Make four copies of the PKT file:  ipv6staticrouting.pkt, ipv6ripv6.pkt, ipv6eigrpv6.pkt and ipv6ospfv6.pkt.</p>
+<hr>
+<p>Step 7.	&nbsp;Now open each file and configure IPv6 routing (static, RIPv6, EIGRPv6 and OSPFv6).
+    The required syntax is shown below. Take it easy. Think before you type.</p>
+     
+    
+
+</div>
+
+<br>
+   <img src="https://informationtechnology2020.github.io/ccna00109.png" class="img img-fluid"> 
+
+    
+
+ <img src="https://source.unsplash.com/2400x1350/?nature,cave" class="img img-fluid">   
+<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
+And they should always be placed at the very end, near to the closing body tag. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
