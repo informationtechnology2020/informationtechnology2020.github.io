@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Table 1-4. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="VD">
+    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script> 
+    <style>
+        h5 {color: black;}
+        
+            
+    
+    </style>
+    
+</head>
+<body oncontextmenu="alert('Be happy to be alive!');return false;" onselectstart="return false" ondragstart="return false"
+	style="background-color: rgb(255,255,255);"
+>
+<br>
+<div class="container-fluid">
+    <br>
+	<div   style="text-align:center"> <h1 style="color: black;"> Table 1-4 (PMBOK page 55). </h1> </div>
+    <br>
+    <hr>
+</div>
+    
+<div class="container-fluid">
+
+<table class="table table-striped table-bordered">
+
+<tr>
+    <thead class="thead-dark">
+    <th><h3>Knowledge Areas	</h3></th>
+	<th><h3>Initiating Process Group	</h3></th>
+	<th><h3>Planning Process Group	</h3></th>
+	<th><h3>Executing Process Group	</h3></th>
+	<th><h3>Monitoring and Controlling Process Group	</h3></th>
+	<th><h3>Closing Process Group	</h3></th>
+    </thead>
+<tr>
+
+<tr>
+	<td><h5>4. Project Integration Management		</h5></td>
+	<td><h5>4.1 Develop Project Charter		</h5></td>
+	<td><h5>4.2 Develop Project Management Plan		</h5></td>
+	<td><h5>4.3 Direct and Manage Project Work		</h5>
+        <h5>4.4 Manage Project Knowledge</h5></td>
+	<td><h5>4.5 Monitor and Control Project Work</h5>
+        <h5>4.6 Perform Integrated Change Control</h5>
+        </td>
+	<td><h5>4.7 Close Project or Phase		</h5></td>	
+</tr>
+
+<tr>
+	<td><h5>5. Project Scope Management		</h5></td>
+	<td><h5>		</h5></td>
+	<td><h5>5.1 Plan Scope Management		</h5>
+        <h5>5.2 Collect Requirements</h5>
+        <h5>5.3 Define Scope</h5>
+        <h5>5.4 Create WBS</h5>
+    </td>
+	<td><h5>		</h5></td>
+	<td><h5>5.5 Validate Scope		</h5></td>
+	<td><h5>5.6 Control Scope		</h5></td>	
+</tr>
+
+<tr>
+	<td><h5>6. Project Schedule Management		</h5></td>
+	<td><h5>		</h5></td>
+	<td><h5>6.1 Plan Schedule Management		</h5>
+        <h5>6.2 Define Activities		</h5>
+        <h5>6.3 Sequence Activities		</h5>
+        <h5>6.4 Estimate Activity Durations		</h5>
+        <h5>6.5 Develop Schedule		</h5>    
+    </td>
+	<td><h5>		</h5></td>
+	<td><h5>6.6 Control Schedule		</h5></td>
+	<td><h5>		</h5></td>	
+</tr>
+
+<tr>
+	<td><h5>7. Project Cost Management		</h5></td>
+	<td><h5>		</h5></td>
+	<td><h5>7.1 Plan Cost Management		</h5>
+        <h5>7.2 Estimate Costs		</h5>
+        <h5>7.3 Determine Budget		</h5>    
+    </td>
+	<td><h5>		</h5></td>
+	<td><h5>7.4 Control Costs		</h5></td>
+	<td><h5>		</h5></td>	
+</tr>
+
+<tr>
+	<td><h5>8. Project Quality Management		</h5></td>
+	<td><h5>		</h5></td>
+	<td><h5>8.1 Plan Quality Management		</h5></td>
+	<td><h5>8.2 Manage Quality		</h5></td>
+	<td><h5>8.3 Control Quality		</h5></td>
+	<td><h5>		</h5></td>	
+</tr>
+
+<tr>
+	<td><h5>9. Project Resource Management		</h5></td>
+	<td><h5>		</h5></td>
+	<td><h5>9.1 Plan Resource Management		</h5>
+        <h5>9.2 Estimate Activity Resources		</h5>
+    </td>
+	<td><h5>9.3 Acquire Resources		</h5>
+        <h5>9.4 Develop Team		</h5>
+        <h5>9.5 Manage Team		</h5>
+    </td>
+	<td><h5>9.6 Control Resources		</h5></td>
+	<td><h5>		</h5></td>	
+</tr>
+
+<tr>
+	<td><h5>10. Project Communications Management		</h5></td>
+	<td><h5>		</h5></td>
+	<td><h5>10.1 Plan Communications Management		</h5></td>
+	<td><h5>10.2 Manage Communications		</h5></td>
+	<td><h5>10.3 Monitor Communications		</h5></td>
+	<td><h5>		</h5></td>	
+</tr>
+
+<tr>
+	<td><h5>11. Project Risk Management		</h5></td>
+	<td><h5>		</h5></td>
+	<td><h5>11.1 Plan Risk Management		</h5>
+        <h5>11.2 Identify Risks   </h5>  
+        <h5>11.3 Perform Qualitative Risk Analysis     </h5> 
+        <h5>11.4 Perform Quantitative Risk Analysis    </h5> 
+        <h5>11.5 Plan Risk Responses   </h5> 
+    </td>
+	<td><h5>11.6 Implement Risk Responses		</h5></td>
+	<td><h5>11.7 Monitor Risks		</h5></td>
+	<td><h5>		</h5></td>	
+</tr>
+
+<tr>
+	<td><h5>12. Project Procurement Management		</h5></td>
+	<td><h5>		</h5></td>
+	<td><h5>12.1 Plan Procurement Management 		</h5></td>
+	<td><h5>12.2 Conduct Procurements		</h5></td>
+	<td><h5>12.3 Control Procurements		</h5></td>
+	<td><h5>		</h5></td>	
+</tr>
+
+<tr>
+	<td><h5>13. Project Stakeholder Management		</h5></td>
+	<td><h5>13.1 Identify Stakeholders		</h5></td>
+	<td><h5>13.2 Plan Stakeholder Engagement		</h5></td>
+	<td><h5>13.3 Manage Stakeholder Engagement		</h5></td>
+	<td><h5>13.4 Monitor Stakeholder Engagement		</h5></td>
+	<td><h5>		</h5></td>	
+</tr>
+
+
+
+
+</table>
+    
+    
+    
+    
+    
+</div>
+
+<br>
+    
+
+    
+
+ <img src="business-idea-1240825.jpg" class="img img-fluid">   
+<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
+And they should always be placed at the very end, near to the closing body tag. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
