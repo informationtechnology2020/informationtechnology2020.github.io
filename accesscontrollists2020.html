@@ -103,8 +103,8 @@
     </h3>
     
         <h3>
-            Create a named ACL on the right router to block DNS traffic from computers 192.168.1.30 and 192.168.2.30. Verify that
-            it works.
+            Create a named ACL on the right router to block DNS traffic from computers 192.168.1.30 and 192.168.2.30 to
+            the DNS Server (192.168.3.100). Verify that it works.
         
         </h3>
     
@@ -150,6 +150,28 @@
         
         <h3> Using the .pkt file from the previous exercise, create a named ACL on any of the routers to block DHCP traffic coming from the left network. You should first release
         and then renew the PC IP addresses to verify that the ACL actually works.</h3>
+    
+    </div>
+    
+    <div class="container-fluid">
+    
+        <h2>Exercise 6:</h2>
+        
+        <h3>
+      Download the starting template from 
+        <a href="https://informationtechnology2020.github.io/templateipv6.acls.pkt" target="_blank">right here</a>.
+        Take note of the IP addresses and verify that all PCs can access all servers. 
+        Create named ACLs to meet these requirements:
+        </h3>
+        
+        <ul>
+            <li><h3> No computers from the 2020:acad:baba:1::/64 network should be able to access the Web Server (2020:acad:baba:3::456/64).                </h3></li>
+            <li><h3> No computers from the 2020:acad:baba:2::/64 network should be able to access the FTP service running on 2020:acad:baba:3::789/64.              </h3></li>
+            <li><h3> All other traffic that is not denied is allowed from those two networks.             </h3></li>
+            <li><h3> Verify that the conditions have been met.               </h3></li>
+        
+        
+        </ul>
     
     </div>
 
