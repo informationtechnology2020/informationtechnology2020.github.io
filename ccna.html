@@ -55,6 +55,11 @@
         body {background-color: white;}
         h3 {color: orange;}
     </style>
+	<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 </head>
 <body oncontextmenu="alert('Alexandre Deulofeu predijo este pandemonio que estamos viviendo.');return false;">
     <div class="container-fluid">
@@ -68,11 +73,20 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="https://learningnetwork.cisco.com/s/ccna-exam-topics" target="_blank"><span style="color: yellow;">Exam Topics   </span></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="https://www.netacad.com/portal/self-enroll/c/1022312" target="_blank"><span style="color: orange;">Packet Tracer   </span></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="https://tinyurl.com/yavf3r82" target="_blank"><span style="color: greenyellow;">Textbook   </span></a></li>
-					<li class="nav-item" role="presentation"><a class="nav-link" href="https://informationtechnology2020.github.io/ccnadrawings.html" target="_blank"><i class="fas fa-paint-brush"></i></a></li>
+					<li class="nav-item" role="presentation"><a class="nav-link" href="https://informationtechnology2020.github.io/ccnadrawings.html" target="_blank"
+					data-toggle="tooltip" data-placement="right" title="Drawings"><i class="fas fa-paint-brush"></i></a></li>
                     <!--
                         <li class="nav-item" role="presentation"><a class="nav-link" href="https://informationtechnology2020.github.io/ccnadetails.html" target="_blank"><span style="color: lightblue;">Details   </span></a></li>
                     -->
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="https://informationtechnology2020.github.io/ccna2020exercises.html" target="_blank"><i class="fa fa-cog fa-spin  fa-fw"></i></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="https://informationtechnology2020.github.io/ccna2020exercises.html" target="_blank"
+					data-toggle="tooltip" data-placement="right" title="Labs"><i class="fa fa-cog fa-spin  fa-fw"></i></a>
+					</li>
+					
+					 <li class="nav-item" role="presentation"><a class="nav-link" href="https://www.krebner.com/ccnaslides.zip" target="_blank" data-toggle="tooltip" data-placement="right" title="Slides">
+					 <i class="fal fa-industry"></i></a>
+					 </li>
+					
+					
                 </ul>
             </div>
         </div>
