@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Asset Security. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="VD">
+    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script> 
+    
+</head>
+<body oncontextmenu="alert('Smile. Stay healthy. Stay safe. Stay home. Study!');return false;" onselectstart="return false" ondragstart="return false"
+	style="background-color: white;"
+>
+<br>
+<div class="container-fluid">
+    <br>
+	<div   style="text-align:center"> <h1 style="color: black;"> Domain 2: &nbsp; Asset Security. </h1> </div>
+    <br>
+    <hr>
+    <ol>
+        
+        
+        <li><h2> Information goes through a life cycle that starts with its acquisition and ends with its
+disposal.</h2></li><hr>
+<li><h2> Each phase of the information life cycle requires different considerations when
+assessing risks and selecting controls.</h2></li><hr>
+<li><h2> New information is prepared for use by adding metadata, including classification
+labels.</h2></li><hr>
+<li><h2> Ensuring the consistency of data must be a deliberate process in organizations that
+use data replication.</h2></li><hr>
+<li><h2> Data aggregation may lead to an increase in classification levels.</h2></li><hr>
+<li><h2> Cryptography can be an effective control at all phases of the information life cycle.</h2></li><hr>
+<li><h2> The data retention policy drives the timeframe at which information transitions from
+the archival phase to the disposal phase of its life cycle.</h2></li><hr>
+<li><h2> Information classification corresponds to the information’s value to the organization.</h2></li><hr>
+<li><h2> Each classification should have separate handling requirements and procedures
+pertaining to how that data is accessed, used, and destroyed.</h2></li><hr>
+<li><h2> Senior executives are ultimately responsible to the shareholders for the successes and
+failures of their corporations, including security issues.</h2></li><hr>
+<li><h2> The data owner is the manager in charge of a specific business unit and is ultimately
+responsible for the protection and use of a specific subset of information.</h2></li><hr>
+<li><h2> Data owners specify the classification of data, and data custodians implement and
+maintain controls to enforce the set classification levels.</h2></li><hr>
+<li><h2> The data retention policy must consider legal, regulatory, and operational
+requirements.</h2></li><hr>
+<li><h2> The data retention policy should address what data is to be retained, where, how, and
+for how long.</h2></li><hr>
+<li><h2> Electronic discovery (e-discovery) is the process of producing for a court or external
+attorney all electronically stored information (ESI) pertinent to a legal proceeding.</h2></li><hr>
+<li><h2> Normal deletion of a file does not permanently remove it from media.</h2></li><hr>
+<li><h2> NIST SP 800-88, Revision 1, "Guidelines for Media Sanitization", describes the best
+practices for combating data remanence.</h2></li><hr>
+<li><h2> Overwriting data entails replacing the 1's and 0's that represent it on storage media
+with random or fixed patterns of 1’s and 0’s to render the original data unrecoverable.</h2></li><hr>
+<li><h2> Degaussing is the process of removing or reducing the magnetic field patterns on
+conventional disk drives or tapes.</h2></li><hr>
+<li><h2> Privacy pertains to personal information, both from your employees and your
+customers.</h2></li><hr>
+<li><h2> Generally speaking, organizations should collect the least amount of private personal
+data required for the performance of their business functions.</h2></li><hr>
+<li><h2> Data at rest refers to data that resides in external or auxiliary storage devices, such as
+hard drives or optical discs.</h2></li><hr>
+<li><h2> Every major operating system supports whole-disk encryption, which is a good way to
+protect data at rest.</h2></li><hr>
+<li><h2> Data in motion is data that is moving between computing nodes over a data network
+such as the Internet.</h2></li><hr>
+<li><h2> TLS, IPSec, and VPNs are typical ways to use cryptography to protect data in
+motion.</h2></li><hr>
+<li><h2> Data in use is the term for data residing in primary storage devices, such as volatile
+memory (RAM), memory caches, or CPU registers.</h2></li><hr>
+<li><h2> Scoping is taking a broader standard and trimming out the irrelevant or otherwise
+unwanted parts.</h2></li><hr>
+<li><h2> Tailoring is when you make changes to specific provisions in a standard so they better
+address your requirements.</h2></li><hr>
+<li><h2> A data leak means that the confidentiality of the data has been compromised.</h2></li><hr>
+<li><h2> Data leak prevention (DLP) comprises the actions that organizations take to prevent
+unauthorized external parties from gaining access to sensitive data.</h2></li><hr>
+<li><h2> Network DLP (NDLP) applies data protection policies to data in motion.</h2></li><hr>
+<li><h2> Endpoint DLP (EDLP) applies data protection policies to data at rest and data in use.</h2></li><hr>
+<li><h2> Mobile devices are easily lost or stolen and should proactively be configured to
+mitigate the risks of data loss or leakage.</h2></li><hr>
+<li><h2> Paper products oftentimes contain information that deserves controls commensurate
+to the sensitivity and criticality of that information.</h2></li><hr>
+    
+  
+        </ol>
+</div>
+
+<br>
+    
+
+    
+
+ <img src="https://images.unsplash.com/photo-1589072894364-cdafe42024b2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1350&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=2400" class="img img-fluid">   
+<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
+And they should always be placed at the very end, near to the closing body tag. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
