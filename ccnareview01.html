@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> CCNA. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="VD">
+    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script> 
+    
+</head>
+<body oncontextmenu="alert('Smile. Stay healthy. Stay safe. Stay home. Study!');return false;" onselectstart="return false" ondragstart="return false"
+	style="background-color: white;"
+>
+<br>
+<div class="container">
+    <br>
+	<div   style="text-align:center"> <h1 style="color: black;"> CCNA Review.</h1>
+    
+            <h2>    Assigning passwords to a router.</h2>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <img src="https://informationtechnology2020.github.io/ccnareview01.png" class="img img-fluid">
+    <br>
+    <h3>Download the starting .pkt file from
+     <a href="https://informationtechnology2020.github.io/ccnareview01.pkt" target="_blank">right here</a>.
+    </h3>
+    
+    <h3><u> Step 1: </u></h3>
+    
+    <h3>Go to the laptop and click on the terminal (<i>not on the command prompt!</i>), leave the default settings as
+    they are (bits per second, data bits, parity, stop bits and flow control) and click OK.</h3>
+    
+    <h3> Type <strong>no</strong> when asked <i>Would you like to enter the initial configuration
+        dialog?</i></h3>
+    
+    <h3> Type these commands:</h3>
+    
+    <code><h3>   enable               </h3></code>
+    
+    <code><h3>   configure terminal               </h3></code>
+    
+    <code><h3>   enable secret ccna               </h3></code>
+    
+    <code><h3>    line console 0              </h3></code>
+    
+    <code><h3>    password ccnp              </h3></code>
+    
+    <code><h3>    login              </h3></code>
+    
+    <code><h3>    exit              </h3></code>
+    
+    <code><h3>  hostname router001                </h3></code>
+    
+    <code><h3>   ip domain-name krebner.com               </h3></code>
+    
+    <code><h3>   crypto key generate rsa               </h3></code>
+    
+    <code><h3>   1024               </h3></code>
+    
+    <code><h3>    line vty 0 15              </h3></code>
+    
+    <code><h3>     login local             </h3></code>
+    
+    <code><h3>    exit              </h3></code>
+    
+    <code><h3>    username wendell password odom              </h3></code>
+    
+    <code><h3>   int gig0/0               </h3></code>
+    
+    <code><h3>   ip address 192.168.1.254 255.255.255.0               </h3></code>
+    
+    <code><h3>  no shut                </h3></code>
+    
+    <code><h3>   end               </h3></code>
+    
+    <code><h3>  copy run start                </h3></code>
+    
+    <br>
+    <h3><u> Step 2: </u></h3>
+    
+    <h3>Now go the command prompt of the PC and type:</h3>
+    
+    <h3><code>  ipconfig        </code></h3>
+    
+     <h3><code>  ping 192.168.1.254        </code></h3>
+    
+     <h3><code>  ssh -l wendell 192.168.1.254        </code></h3>
+    
+     <h3><code>  odom        </code></h3>
+    
+    
+     <h3><code>   en       </code></h3>
+    
+     <h3><code>  ccna        </code></h3>
+    
+    <h3><code>    show run    | section line con 0 </code></h3>
+    
+    <h3><code>  configure terminal        </code></h3>
+    
+    <h3><code>  service password-encryption        </code></h3>
+    
+    <h3><code>   exit       </code></h3>
+    
+    <h3><code> show run    | section line con 0         </code></h3>
+    
+    <br>
+    <h3><u> Step 3: </u></h3>
+    
+    <h3> Close the .pkt file and save it.</h3>
+    
+</div>
+
+<br>
+    
+
+    
+
+   
+<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
+And they should always be placed at the very end, near to the closing body tag. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
