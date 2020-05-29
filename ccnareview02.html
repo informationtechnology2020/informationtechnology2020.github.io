@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Routing. </title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="VD">
+    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script> 
+    
+</head>
+<body oncontextmenu="alert('Smile. Stay healthy. Stay safe. Stay home. Study!');return false;" onselectstart="return false" ondragstart="return false"
+	style="background-color: white;"
+>
+<br>
+<div class="container">
+    <br>
+	<div   style="text-align:center"> <h1 style="color: black;"> CCNA Review.</h1>
+    
+            <h2>    IPv4 static and dynamic routing.</h2>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <img src="https://informationtechnology2020.github.io/ccnareview02.png" class="img img-fluid">
+    <br>
+    <h3>Download the starting .pkt file from
+        <a href="https://informationtechnology2020.github.io/ccnareview02.pkt" target="_blank">right here</a>.
+    </h3>
+    <hr>
+    <h3><u>Static Routing.</u></h3>
+    
+    <h3><i>Type on the left router:</i></h3>
+    
+        <h3><code> enable          </code></h3>
+        <h3><code> configure terminal         </code></h3>
+        <h3><code> ip route 0.0.0.0 0.0.0.0 10.0.0.2         </code></h3>
+    <h3><code>   end       </code></h3>
+        <h3><code>   copy run start       </code></h3>
+    
+    <h3><i>Type on the middle router:</i></h3>
+    
+        <h3><code> enable          </code></h3>
+        <h3><code> configure terminal         </code></h3>
+        <h3><code> ip route 192.168.1.0 255.255.255.0 10.0.0.1         </code></h3>
+        <h3><code>  ip route 192.168.3.0 255.255.255.0 20.0.0.2        </code></h3>
+        <h3><code>   end       </code></h3>
+        <h3><code>   copy run start       </code></h3>
+    
+    
+    <h3><i>Type on the right router:</i></h3>
+    
+        <h3><code> enable          </code></h3>
+        <h3><code> configure terminal         </code></h3>
+        <h3><code> ip route 0.0.0.0 0.0.0.0 20.0.0.1         </code></h3>
+    <h3><code>   end       </code></h3>
+        <h3><code>   copy run start       </code></h3>
+    
+    <h3><strong>Test routing. Just ping the server from the PCs.</strong></h3>
+    
+    <hr>
+    <h3><u>RIPv2 Dynamic Routing.</u></h3>
+    
+    <h3><i>Type on the left router:</i></h3>
+    
+        <h3><code> enable          </code></h3>
+    <h3><code> configure terminal         </code></h3>
+        <h3><code>no ip route 0.0.0.0 0.0.0.0 10.0.0.2         </code></h3>
+        <h3><code> router rip         </code></h3>
+    <h3><code>  version 2        </code></h3>
+    <h3><code>  network 192.168.1.0        </code></h3>
+    <h3><code>    network 10.0.0.0      </code></h3>
+    <h3><code>   end       </code></h3>
+        <h3><code>   copy run start       </code></h3>
+    
+    <h3><i>Type on the middle router:</i></h3>
+    
+        <h3><code> enable          </code></h3>
+    <h3><code> configure terminal         </code></h3>
+        <h3><code>no ip route 192.168.1.0 255.255.255.0 10.0.0.1         </code></h3>
+        <h3><code> no ip route 192.168.3.0 255.255.255.0 20.0.0.2        </code></h3>
+        <h3><code> router rip         </code></h3>
+    <h3><code>  version 2        </code></h3>
+    <h3><code>  network 192.168.2.0        </code></h3>
+    <h3><code>    network 10.0.0.0      </code></h3>
+    <h3><code>    network 20.0.0.0      </code></h3>
+    <h3><code>   end       </code></h3>
+        <h3><code>   copy run start       </code></h3>
+    
+    
+    <h3><i>Type on the right router:</i></h3>
+    
+        <h3><code> enable          </code></h3>
+    <h3><code> configure terminal         </code></h3>
+        <h3><code> no ip route 0.0.0.0 0.0.0.0 20.0.0.1         </code></h3>
+        <h3><code> router rip         </code></h3>
+    <h3><code>  version 2        </code></h3>
+    <h3><code>  network 192.168.3.0        </code></h3>
+    <h3><code>    network 20.0.0.0      </code></h3>
+    <h3><code>   end       </code></h3>
+        <h3><code>   copy run start       </code></h3>
+    
+    <h3><strong>Test routing. Just ping the server from the PCs.</strong></h3>
+    
+    <hr>
+    <h3><u>EIGRP Dynamic Routing.</u></h3>
+    
+    <h3><i>Type on the left router:</i></h3>
+    
+    <h3><code> enable          </code></h3>
+    <h3><code> configure terminal         </code></h3>
+        <h3><code> no router rip         </code></h3>
+        <h3><code> router eigrp 10         </code></h3>
+        <h3><code> network 192.168.1.0 255.255.255.0         </code></h3>
+    <h3><code> network 10.0.0.0 255.0..0.0         </code></h3>
+     <h3><code>   end       </code></h3>
+        <h3><code>copy run start          </code></h3>
+    
+    
+    <h3><i>Type on the middle router:</i></h3>
+    
+    <h3><code> enable          </code></h3>
+    <h3><code> configure terminal         </code></h3>
+        <h3><code> no router rip         </code></h3>
+        <h3><code> router eigrp 10         </code></h3>
+        <h3><code> network 192.168.2.0 255.255.255.0         </code></h3>
+    <h3><code> network 10.0.0.0 255.0..0.0         </code></h3>
+     <h3><code> network 20.0.0.0 255.0..0.0         </code></h3>
+     <h3><code>   end       </code></h3>
+        <h3><code>copy run start          </code></h3>
+        
+    
+    
+    <h3><i>Type on the right router:</i></h3>
+    
+    <h3><code> enable          </code></h3>
+    <h3><code> configure terminal         </code></h3>
+        <h3><code> no router rip         </code></h3>
+        <h3><code> router eigrp 10         </code></h3>
+        <h3><code> network 192.168.3.0 255.255.255.0         </code></h3>
+    <h3><code> network 20.0.0.0 255.0..0.0         </code></h3>
+     <h3><code>   end       </code></h3>
+        <h3><code>copy run start          </code></h3>
+    
+    <h3><strong>Test routing. Just ping the server from the PCs.</strong></h3>
+    
+    <hr>
+    <h3><u>OSPF Dynamic Routing.</u></h3>
+    
+    <h3><i>Type on the left router:</i></h3>
+    
+    <h3><code> enable          </code></h3>
+    <h3><code> configure terminal         </code></h3>
+        <h3><code> no router eigrp 10         </code></h3>
+        <h3><code> router ospf 11        </code></h3>
+        <h3><code> network 192.168.1.0 255.255.255.0   area 0      </code></h3>
+    <h3><code> network 10.0.0.0 255.0..0.0   area 0       </code></h3>
+     <h3><code>   end       </code></h3>
+        <h3><code>copy run start          </code></h3>
+    
+    
+    <h3><i>Type on the middle router:</i></h3>
+    
+    <h3><code> enable          </code></h3>
+    <h3><code> configure terminal         </code></h3>
+        <h3><code> no router eigrp 10         </code></h3>
+       <h3><code> router ospf 11        </code></h3>
+        <h3><code> network 192.168.2.0 255.255.255.0 area 0         </code></h3>
+    <h3><code> network 10.0.0.0 255.0..0.0  area 0        </code></h3>
+     <h3><code> network 20.0.0.0 255.0..0.0  area 0        </code></h3>
+     <h3><code>   end       </code></h3>
+        <h3><code>copy run start          </code></h3>
+        
+    
+    
+    <h3><i>Type on the right router:</i></h3>
+    
+    <h3><code> enable          </code></h3>
+    <h3><code> configure terminal         </code></h3>
+        <h3><code> no router eigrp 10         </code></h3>
+        <h3><code> router ospf 11        </code></h3>
+        <h3><code> network 192.168.3.0 255.255.255.0  area 0        </code></h3>
+    <h3><code> network 20.0.0.0 255.0..0.0  area 0        </code></h3>
+     <h3><code>   end       </code></h3>
+        <h3><code>copy run start          </code></h3>
+    
+    <h3><strong>Test routing. Just ping the server from the PCs.</strong></h3>
+    
+    
+</div>
+
+<br>
+    
+
+    
+
+   
+<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
+And they should always be placed at the very end, near to the closing body tag. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
