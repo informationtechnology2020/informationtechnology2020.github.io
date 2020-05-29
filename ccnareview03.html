@@ -54,7 +54,7 @@
 </script> 
     
 </head>
-<body oncontextmenu="alert('Smile. Stay healthy. Stay safe. Stay home. Study!');return false;" onselectstart="return false" ondragstart="return false"
+<body oncontextmenu="alert('Access Control Lists. Practice this stuff!');return false;" onselectstart="return false" ondragstart="return false"
 	style="background-color: white;"
 >
 <br>
@@ -80,6 +80,38 @@
     
     <h3><u>Step 3:</u></h3>
     <h3>Verify that the ACL worked.</h3>
+    
+    <hr>
+    <br>
+    <h3>Commands to be written on the right router:</h3>
+    
+    <h3><code> enable </code></h3>
+    
+    <h3><code> configure terminal </code></h3>
+    
+    <h3><code> ip   access-list    extended   block_http_ftp </code></h3>
+
+	<h3><code> 10    deny  tcp   192.168.1.0 0.0.0.255    host 192.168.3.100     eq 80 </code></h3>
+
+	<h3><code> 20    deny  tcp   192.168.1.0 0.0.0.255    host 192.168.3.100     eq 20 </code></h3>
+
+	<h3><code>30    deny  tcp   192.168.1.0 0.0.0.255    host 192.168.3.100     eq 21  </code></h3>
+
+	<h3><code>200  permit  ip  any  any  </code></h3>
+
+	<h3><code> exit </code></h3>
+
+	<h3><code> int gig0/1 </code></h3>
+
+	<h3><code> ip access-group  block_http_ftp  in </code></h3>
+    
+    <h3><code>end  </code></h3>
+    
+    <h3><code>show access-lists  </code></h3>
+    
+    <h3><code>copy run start  </code></h3>
+    
+   
     
 </div>
 
