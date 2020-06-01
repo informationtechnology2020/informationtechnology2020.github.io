@@ -57,11 +57,26 @@
     <style>
         body {font-size: 200%;}
     </style>
-    
+    <style>
+.parallax {
+  /* The image used */
+  background-image: url("digital1.jpg");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </head>
 <body oncontextmenu="alert('Get this certification!');return false;" onselectstart="return false" ondragstart="return false"
 	style="background-color: rgb(255,255,255);"
 >
+<div class="parallax"></div>
 <br>
 <div class="container-fluid">
     
@@ -256,7 +271,7 @@
 
     
 
- <img src="https://images.unsplash.com/photo-1581349070612-9da72df9bf20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=2700&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=4800" class="img img-fluid">   
+ <div class="parallax"></div>
 <!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
 And they should always be placed at the very end, near to the closing body tag. -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
