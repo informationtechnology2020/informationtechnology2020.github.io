@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="icon" href="https://krebner.com/security.ico">
-		<title>CISSP 2020.</title>
+		<title>Communication and Network Security.</title>
    <script>
   
   window.onload = function() {
@@ -102,7 +102,7 @@
 		
 		<div class="container-fluid text-center">
 
-                <h1>Certified Information Systems Security Professional (CISSP).</h1>   
+                <h1>Communication and Network Security.</h1>   
         
 
         </div>
@@ -110,16 +110,195 @@
         <br>
 		<hr>		 
 		
-        	<div class="container">
+        	<div class="container-fluid">
+<ol>
+<li><h3> A protocol is a set of rules that dictates how computers communicate over networks. </h3></li>
+<li><h3> The application layer, layer 7, has services and protocols required by the user's
+applications for networking functionality.</h3></li>
+<li><h3> The presentation layer, layer 6, formats data into a standardized format and deals
+with the syntax of the data, not the meaning.</h3></li>
+<li><h3> The session layer, layer 5, sets up, maintains, and breaks down the dialog (session)
+between two applications. It controls the dialog organization and synchronization.</h3></li>
+<li><h3> The transport layer, layer 4, provides end-to-end transmissions.</h3></li>
+<li><h3> The network layer, layer 3, provides routing, addressing, and fragmentation of
+packets. This layer can determine alternative routes to avoid network congestion.</h3></li>
+<li><h3> Routers work at the network layer, layer 3.</h3></li>
+<li><h3> The data link layer, layer 2, prepares data for the network medium by framing it.
+This is where the different LAN and WAN technologies work.</h3></li>
+<li><h3> The physical layer, layer 1, provides physical connections for transmission and
+performs the electrical encoding of data. This layer transforms bits to electrical
+signals.</h3></li>
+<li><h3> TCP/IP is a suite of protocols that is the de facto standard for transmitting data
+across the Internet. TCP is a reliable, connection-oriented protocol, while IP is an
+unreliable, connectionless protocol.</h3></li>
+<li><h3> Data is encapsulated as it travels down the network stack on the source computer,
+and the process is reversed on the destination computer. During encapsulation, each
+layer adds its own information so the corresponding layer on the destination
+computer knows how to process the data.</h3></li>
+<li><h3> Two main protocols at the transport layer are TCP and UDP.</h3></li>
+<li><h3> UDP is a connectionless protocol that does not send or receive acknowledgments
+when a datagram is received. It does not ensure data arrives at its destination. It
+provides "best-effort" delivery.</h3></li>
+<li><h3> TCP is a connection-oriented protocol that sends and receives acknowledgments. It
+ensures data arrives at the destination.</h3></li>
+<li><h3> ARP translates the IP address into a MAC address (physical Ethernet address), while
+RARP translates a MAC address into an IP address.</h3></li>
+<li><h3> ICMP works at the network layer and informs hosts, routers, and devices of network
+or computer problems. It is the major component of the ping utility.</h3></li>
 
+<li><h3> DNS resolves hostnames into IP addresses and has distributed databases all over the
+Internet to provide name resolution.</h3></li>
+<li><h3> Altering an ARP table so an IP address is mapped to a different MAC address is called
+ARP poisoning and can redirect traffic to an attacker's computer or an unattended
+system.</h3></li>
+<li><h3> Packet filtering (screening routers) is accomplished by ACLs and is a first-generation
+firewall. Traffic can be filtered by addresses, ports, and protocol types.</h3></li>
+<li><h3> Tunneling protocols move frames from one network to another by placing them
+inside of routable encapsulated frames.</h3></li>
+<li><h3> Packet filtering provides application independence, high performance, and scalability,
+but it provides low security and no protection above the network layer.</h3></li>
+<li><h3> Dual-homed firewalls can be bypassed if the operating system does not have packet
+forwarding or routing disabled.</h3></li>
+<li><h3> Firewalls that use proxies transfer an isolated copy of each approved packet from one
+network to another network.</h3></li>
+<li><h3> An application proxy requires a proxy for each approved service and can understand
+and make access decisions on the protocols used and the commands within those
+protocols.</h3></li>
+<li><h3> Circuit-level firewalls also use proxies but at a lower layer. Circuit-level firewalls do
+not look as deep within the packet as application proxies do.</h3></li>
+<li><h3> A proxy firewall is the middleman in communication. It does not allow anyone to
+connect directly to a protected host within the internal network. Proxy firewalls are
+second-generation firewalls.</h3></li>
+<li><h3> Application proxy firewalls provide high security and have full application-layer
+awareness, but they can have poor performance, limited application support, and
+poor scalability.</h3></li>
+<li><h3> Stateful inspection keeps track of each communication session. It must maintain a
+state table that contains data about each connection. It is a third-generation firewall.</h3></li>
+<li><h3> VPN can use PPTP, L2TP, TLS, or IPSec as tunneling protocols.</h3></li>
+<li><h3> PPTP works at the data link layer and can only handle one connection. IPSec works
+at the network layer and can handle multiple tunnels at the same time.</h3></li>
+<li><h3> Dedicated links are usually the most expensive type of WAN connectivity method
+because the fee is based on the distance between the two destinations rather than on
+the amount of bandwidth used. T1 and T3 are examples of dedicated links.</h3></li>
+<li><h3> Frame relay and X.25 are packet-switched WAN technologies that use virtual circuits
+instead of dedicated ones.</h3></li>
+<li><h3> A switch in star topologies serves as the central meeting place for all cables from
+computers and devices.</h3></li>
+<li><h3> A switch is a device with combined repeater and bridge technology. It works at the
+data link layer and understands MAC addresses.</h3></li>
 
-			
+<li><h3> Routers link two or more network segments, where each segment can function as an
+independent network. A router works at the network layer, works with IP addresses,
+and has more network knowledge than bridges, switches, or repeaters.</h3></li>
+<li><h3> A bridge filters by MAC addresses and forwards broadcast traffic. A router filters by
+IP addresses and does not forward broadcast traffic.</h3></li>
+<li><h3> Layer 3 switching combines switching and routing technology.</h3></li>
+<li><h3> Attenuation is the loss of signal strength when a cable exceeds its maximum length.</h3></li>
+<li><h3> STP and UTP are twisted-pair cabling types that are the most popular, cheapest, and
+easiest to work with. However, they are the easiest to tap into, have crosstalk issues,
+and are vulnerable to EMI and RFI.</h3></li>
+<li><h3> Fiber-optic cabling carries data as light waves, is expensive, can transmit data at high
+speeds, is difficult to tap into, and is resistant to EMI and RFI. If security is extremely
+important, fiber-optic cabling should be used.</h3></li>
+<li><h3> ATM transfers data in fixed cells, is a WAN technology, and transmits data at very
+high rates. It supports voice, data, and video applications.</h3></li>
+<li><h3> FDDI is a LAN and MAN technology, usually used for backbones, that uses tokenpassing
+technology and has redundant rings in case the primary ring goes down.</h3></li>
+<li><h3> Token Ring, 802.5, is an older LAN implementation that uses a token-passing
+technology.</h3></li>
+<li><h3> Ethernet uses CSMA/CD, which means all computers compete for the shared
+network cable, listen to learn when they can transmit data, and are susceptible to data
+collisions.</h3></li>
+<li><h3> Circuit-switching technologies set up a circuit that will be used during a data
+transmission session. Packet-switching technologies do not set up circuits—instead,
+packets can travel along many different routes to arrive at the same destination.</h3></li>
+<li><h3> ISDN has a BRI rate that uses two B channels and one D channel, and a PRI rate
+that uses up to 23 B channels and one D channel. They support voice, data, and
+video.</h3></li>
+<li><h3> PPP is an encapsulation protocol for telecommunication connections. It replaced
+SLIP and is ideal for connecting different types of devices over serial lines.</h3></li>
+<li><h3> PAP sends credentials in cleartext, and CHAP authenticates using a
+challenge/response mechanism and therefore does not send passwords over the
+network.</h3></li>
+<li><h3> SOCKS is a proxy-based firewall solution. It is a circuit-based proxy firewall and does
+not use application-based proxies.</h3></li>
+<li><h3> IPSec tunnel mode protects the payload and header information of a packet, while
+IPSec transport mode protects only the payload.</h3></li>
+<li><h3> A screened-host firewall lies between the perimeter router and the LAN, and a
+screened subnet is a DMZ created by two physical firewalls.</h3></li>
+<li><h3> NAT is used when companies do not want systems to know internal hosts' addresses,
+and it enables companies to use private, nonroutable IP addresses.</h3></li>
 
-               		<img src="digital1.svg">
-				
-				
-
-				
+<li><h3> The 802.15 standard outlines wireless personal area network (WPAN) technologies,
+and 802.16 addresses wireless MAN technologies.</h3></li>
+<li><h3> Environments can be segmented into different WLANs by using different SSIDs.</h3></li>
+<li><h3> The 802.11b standard works in the 2.4-GHz range at 11 Mbps, and 802.11a works
+in the 5-GHz range at 54 Mbps.</h3></li>
+<li><h3> IPv4 uses 32 bits for its addresses, whereas IPv6 uses 128 bits; thus, IPv6 provides
+more possible addresses with which to work.</h3></li>
+<li><h3> Subnetting allows large IP ranges to be divided into smaller, logical, and easier-tomaintain
+network segments.</h3></li>
+<li><h3> SIP (Session Initiation Protocol) is a signaling protocol widely used for VoIP
+communications sessions.</h3></li>
+<li><h3> Open relay is an SMTP server that is configured in such a way that it can transmit email
+messages from any source to any destination.</h3></li>
+<li><h3> SNMP uses agents and managers. Agents collect and maintain device-oriented data,
+which is held in management information bases. Managers poll the agents using
+community string values for authentication purposes.</h3></li>
+<li><h3> Three main types of multiplexing are statistical time division, frequency division, and
+wave division.</h3></li>
+<li><h3> Real-time Transport Protocol (RTP) provides a standardized packet format for
+delivering audio and video over IP networks. It works with RTP Control Protocol,
+which provides out-of-band statistics and control information to provide feedback on
+QoS levels.</h3></li>
+<li><h3> 802.1AR provides a unique ID for a device. 802.1AE provides data encryption,
+integrity, and origin authentication functionality at the data link level. 802.1AF
+carries out key agreement functions for the session keys used for data encryption.
+Each of these standards provides specific parameters to work within an 802.1X EAPTLS
+framework.</h3></li>
+<li><h3> Lightweight EAP was developed by Cisco and was the first implementation of EAP
+and 802.1X for wireless networks. It uses preshared keys and MS-CHAP to
+authenticate client and server to each other.</h3></li>
+<li><h3> In EAP-TLS the client and server authenticate to each other using digital certificates.
+The client generates a pre-master secret key by encrypting a random number with the
+server's public key and sends it to the server.</h3></li>
+<li><h3> EAP-TTLS is similar to EAP-TLS, but only the server must use a digital certification
+for authentication to the client. The client can use any other EAP authentication
+method or legacy PAP or CHAP methods.</h3></li>
+<li><h3> Network convergence means the combining of server, storage, and network
+capabilities into a single framework.</h3></li>
+<li><h3> Mobile telephony has gone through different generations and multiple access
+technologies: 1G (FDMA), 2G (TDMA), 3G (CDMA), and 4G (OFDM).</h3></li>
+<li><h3> Link encryption is limited to two directly connected devices, so the message must be
+decrypted (and potentially re-encrypted) at each hop.</h3></li>
+<li><h3> The Point-to-Point Tunneling Protocol is an example of a link encryption
+technology.</h3></li>
+<li><h3> End-to-end encryption involves the source and destination nodes, so the message is
+not decrypted by intermediate nodes.</h3></li>
+<li><h3> Transport Layer Security (TLS) is an example of an end-to-end encryption
+technology.</h3></li>
+<li><h3> Multipurpose Internet Mail Extensions (MIME) is a technical specification
+indicating how multimedia data and e-mail binary attachments are to be transferred.</h3></li>
+<li><h3> Secure MIME (S/MIME) is a standard for encrypting and digitally signing e-mail
+and for providing secure data transmissions using public key infrastructure (PKI).</h3></li>
+<li><h3> Pretty Good Privacy (PGP) is a freeware e-mail security program that uses PKI based
+on a web of trust.</h3></li>
+<li><h3> S/MIME and PGP are incompatible because the former uses centralized, hierarchical
+Certificate Authorities (CAs) while the latter uses a distributed web of trust.</h3></li>
+<li><h3> HTTP Secure (HTTPS) is HTTP running over Secure Sockets Layer (SSL) or
+Transport Layer Security (TLS).</h3></li>
+<li><h3> SSL was formally deprecated in June of 2015.</h3></li>
+<li><h3> Cookies are text files that a browser maintains on a user's hard drive or memory
+segment in order to remember the user or maintain the state of a web application.</h3></li>
+<li><h3> Secure Shell (SSH) functions as a type of tunneling mechanism that provides
+terminal-like access to remote computers.</h3></li>
+<li><h3> A denial-of-service (DoS) attack results in a service or resource being degraded or
+made unavailable to legitimate users.</h3></li>
+<li><h3> DNS hijacking is an attack that forces the victim to use a malicious DNS server
+instead of the legitimate one.</h3></li>
+<li><h3> DNS hijacking is an attack that forces the victim to use a malicious DNS server
+instead of the legitimate one.</h3></li>
+</ol>				
 
 	</div>
 			
