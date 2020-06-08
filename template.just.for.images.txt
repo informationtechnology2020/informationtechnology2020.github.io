@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Chapter 3. Scanning. Enumeration.</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head>
-    <body>
-        
-        <div class="container">
-        
-        <!-- Page Content -->
-
-
-  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Chapter 3: &nbsp;Scanning and Enumeration.</h1>
-
-  <hr class="mt-2 mb-5">
-
-  <div class="row text-center text-lg-left">
-
-   <div class="col-lg-3 col-md-4 col-6"> <a href="scanning00.png" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="scanning00.png" alt=""> Scanning.  </a> </div>
+<div class="col-lg-3 col-md-4 col-6"> <a href="scanning00.png" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="scanning00.png" alt=""> Scanning.  </a> </div>
 <div class="col-lg-3 col-md-4 col-6"> <a href="tcpsegment.png" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="tcpsegment.png" alt=""> TCP Segment.  </a> </div>
 <div class="col-lg-3 col-md-4 col-6"> <a href="tcpheaderflags.png" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="tcpheaderflags.png" alt=""> TCP Header Flags.  </a> </div>
 <div class="col-lg-3 col-md-4 col-6"> <a href="tcpthreewayhandshake.png" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="tcpthreewayhandshake.png" alt=""> 3-way handshake.  </a> </div>
@@ -59,22 +40,3 @@
 <div class="col-lg-3 col-md-4 col-6"> <a href="ldapntpsmtpenumeration.png" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="ldapntpsmtpenumeration.png" alt=""> LDAP NTP SMTP </a> </div>
 <div class="col-lg-3 col-md-4 col-6"> <a href="telnet2.png" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="telnet2.png" alt=""> Telnet SMTP...  </a> </div>      
   
-
-	
-	
-
-
-
-   </div>
-  </div>
-
-
-<!-- /.container -->
-        
-        
-        
-        </div>
-    
-    </body>
-
-</html>
