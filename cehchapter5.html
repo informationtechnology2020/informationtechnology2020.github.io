@@ -23,7 +23,7 @@
 <div class="parallax"></div> <br>
 
 <div style="height:300px;background-color:white;font-size:36px">
-Microsoft Windows stores authentication credentials—hashes of passwords—in the SAM file,
+Microsoft Windows stores authentication credentials - hashes of passwords - in the SAM file,
 located in the C:\windows\system32\config folder. The biggest cause of concern for this method
 of password storage, and so on, is the complexity of the hash algorithm used. Windows 2000 and
 Windows NT–type machines used something called LAN Manager, and then NT LAN Manager,
@@ -60,7 +60,7 @@ client can decrypt the message (and it should since it knows the password), the 
 to the server requesting a TGS service ticket. The server responds with the service ticket, and the
 client is allowed to log on and access network resources. Once again, the password itself is never
 sent. Instead, a hash value of the password, encrypted with a secret key known only by both
-parties and good only for that session, is all that’s sent.
+parties and good only for that session, is all that's sent.
 </div>
 
 <div class="parallax"></div> <br>
@@ -83,7 +83,7 @@ HKEY_CURRENT_CONFIG (HKCC).
 <div style="height:300px;background-color:white;font-size:36px">
 
 
-Passwords in Linux can be stored in one of two places—the passwd or shadow file. All
+Passwords in Linux can be stored in one of two places - the passwd or shadow file. All
 passwords are displayed openly as hashes to anyone who has read privileges to the passwd file.
 In the shadow file, the passwords are stored and displayed encrypted, and shadow is accessible
 only by root.
@@ -104,8 +104,8 @@ machine.
 
 <div style="height:300px;background-color:white;font-size:36px">
 Authentication involves three main options: something you are, something you have, and
-something you know. Some authentication measures use something you are—biometrics
-(fingerprints and such)—to validate identity and grant access. Others use something you have,
+something you know. Some authentication measures use something you are - biometrics
+(fingerprints and such) - to validate identity and grant access. Others use something you have,
 such as a token of some sort (like a swipe badge or an ATM card), for authentication. But most
 security comes down to something you know, and that something is a password.
 </div>
@@ -125,7 +125,7 @@ all come installed with default passwords.
 ECC defines four main attack types for password cracking: non-electronic, active online,
 passive online, and offline. The non-electronic attack involves social engineering practices, such
 as shoulder surfing and dumpster diving. The active online attack is carried out by directly
-communicating with the victim’s machine. Per ECC, active online attacks include dictionary and
+communicating with the victim's machine. Per ECC, active online attacks include dictionary and
 brute-force attacks, hash injections, phishing, Trojans, spyware, keyloggers, and password
 guessing. Active online attacks take a much longer time than passive attacks and are also much
 easier to detect. A passive online attack basically amounts to sniffing a wire in the hopes of
@@ -141,7 +141,7 @@ Password cracking offline can be done in one of three main ways: dictionary atta
 attack, and brute-force attack. A dictionary attack is the easiest and by far the fastest attack
 available, using a list of passwords in a text file, which is then hashed by the same
 algorithm/process the original password was put through. A hybrid attack takes words from a list
-and substitutes numbers and symbols for alphabetic characters—perhaps a zero for an O and an
+and substitutes numbers and symbols for alphabetic characters - perhaps a zero for an O and an
 @ for an a. Hybrid attacks may also append numbers and symbols to the end of dictionary file
 passwords. A brute-force attack uses every conceivable combination of letters, numbers, and
 special characters compared against the hash to determine a match. It is very time-consuming,
@@ -163,7 +163,7 @@ make one, you can use tools like rtgen and Winrtgen.
 <div style="height:300px;background-color:white;font-size:36px">
 There are two types of privilege escalation. Vertical privilege escalation occurs when a lowerlevel
 user executes code at a higher privilege level than they should have access to. Horizontal
-privilege escalation isn’t really escalation at all but rather simply executing code at the same user
+privilege escalation isn't really escalation at all but rather simply executing code at the same user
 level but from a location that should be protected from access. 
 </div>
 
@@ -175,7 +175,7 @@ obtaining administrator (root) privileges on a machine. The first is to crack th
 administrator or root account. The second is to take advantage of a vulnerability found in the OS,
 or in an application, that will allow you access as a privileged user (DLL hijacking involves
 replacing legitimate DLLs with malicious copies in the application root folder). The third method
-is to use a tool that will ideally provide you the access you’re looking for (such as Metasploit).
+is to use a tool that will ideally provide you the access you're looking for (such as Metasploit).
 The last method is to just ask the current user to run an application for you.
 </div>
 
@@ -183,8 +183,8 @@ The last method is to just ask the current user to run an application for you.
 
 <div style="height:300px;background-color:white;font-size:36px">
 The step of executing applications includes pretty much everything you can think of, hackingwise.
-Obviously it applies to “malicious” programming—starting things such as keyloggers,
-spyware, back doors, and crackers—but the idea is the same regardless: once you have access to
+Obviously it applies to “malicious” programming - starting things such as keyloggers,
+spyware, back doors, and crackers - but the idea is the same regardless: once you have access to
 the system, execute at or above your privilege level to accomplish what you need to do.
 Examples of remote execution tools include RemoteExec (www.isdecisions.com), PDQ Deploy
 (www.adminarsenal.com), and Dameware Remote Support (www.dameware.com).
@@ -207,8 +207,8 @@ Stealth.
 
 <div style="height:300px;background-color:white;font-size:36px">
 In addition to hiding files for further manipulation/use on the machine, covering your tracks
-while stomping around in someone else’s virtual play yard is also a cornerstone of success. There
-are three main logs in the Windows OS to look at when covering your tracks—the application,
+while stomping around in someone else's virtual play yard is also a cornerstone of success. There
+are three main logs in the Windows OS to look at when covering your tracks - the application,
 system, and security logs.  Other tools of note include elsave, WinZapper, and Evidence
 Eliminator. 
 </div>
@@ -218,7 +218,7 @@ Eliminator.
 <div style="height:300px;background-color:white;font-size:36px">
 A rootkit is a collection of software put in place by an attacker that is designed to obscure
 system compromise. In other words, if a system has a properly introduced rootkit installed, the
-user and security monitors won’t even know anything is wrong. Rootkits are designed to provide
+user and security monitors won't even know anything is wrong. Rootkits are designed to provide
 back doors for the attacker to use later and include measures to remove and hide evidence of any
 activity. Some of the rootkits ECC is very concerned you know about are Azazel, Avatar, Necurs
 and ZeroAccess.
