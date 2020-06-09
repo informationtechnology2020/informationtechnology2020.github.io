@@ -1,77 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	 <meta charset="utf-8">
-    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Certified Ethical Hacker. </title>
-	<meta name="description" content="Information Technology">
-    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("https://informationtechnology2020.github.io/digital1.jpg");
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <script>
-  
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script> 
-    
+  /* Set a specific height */
+  min-height: 350px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </head>
-<body oncontextmenu="alert('Enjoy the fact that you are alive!');return false;" onselectstart="return false" ondragstart="return false"
-	style="background-color: white;;"
->
-<br>
-<div class="container-fluid">
-    
-	
+<body onContextMenu="alert('Hi there!');return false;">
+<p style="text-align:center;font-size:46px"> Chapter 5: &nbsp;Attacking a System.</p>
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Microsoft Windows stores authentication credentials—hashes of passwords—in the SAM file,
+located in the C:\windows\system32\config folder. The biggest cause of concern for this method
+of password storage, and so on, is the complexity of the hash algorithm used. Windows 2000 and
+Windows NT–type machines used something called LAN Manager, and then NT LAN Manager,
+to hash passwords. 
 </div>
-<img src="cehchapter5.png" class="img img-fluid">   
-    
 
-    
+<div class="parallax"></div> <br>
 
- 
-<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
-And they should always be placed at the very end, near to the closing body tag. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div style="height:300px;background-color:white;font-size:36px">
+Even after the password has been obtained, though, the addition of salting (additional
+protection by adding random data as additional input before being hashed) and the use of better
+methods for authentication (NTLMv2 and Kerberos, if you sniff the hash value) make life for a
+password cracker pretty tough. 
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Windows default authentication protocol/method is Kerberos.
+Kerberos makes use of both symmetric and asymmetric encryption technologies to securely
+transmit passwords and keys across a network. The entire process is made up of a Key
+Distribution Center (KDC), an Authentication Service (AS), a Ticket Granting Service (TGS),
+and the Ticket Granting Ticket (TGT).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+A basic Kerberos exchange follows a few easy but secure steps. The client first asks the KDC
+(which holds the AS and TGS) for a ticket, which will be used to authenticate throughout the
+network. This request is in clear text. The server will respond with a secret key, which is hashed
+by the password copy kept on the server (in Active Directory). This is known as the TGT. If the
+client can decrypt the message (and it should since it knows the password), the TGT is sent back
+to the server requesting a TGS service ticket. The server responds with the service ticket, and the
+client is allowed to log on and access network resources. Once again, the password itself is never
+sent. Instead, a hash value of the password, encrypted with a secret key known only by both
+parties and good only for that session, is all that’s sent.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+The Windows registry is a collection of all the settings and configurations that make the
+system run. Hierarchical in nature, it stores a variety of configuration settings and options. In it,
+you can find settings for low-level operating system components, applications running on the
+machine, drivers, the SAM file, and the user interface. Two basic elements make up a registry
+setting: keys and values. A key can be thought of as a location pointer (much like a folder in the
+regular file structure), and the value of that key defines the setting. Keys are arranged in a
+hierarchy, with root keys at the top, leading downward to more specific settings. The root-level
+keys in the registry are HKEY_LOCAL_MACHINE (HKLM), HKEY_CLASSES_ROOT
+(HKCR), HKEY_CURRENT_USER (HKCU), HKEY_USERS (HKU), and
+HKEY_CURRENT_CONFIG (HKCC).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+
+Passwords in Linux can be stored in one of two places—the passwd or shadow file. All
+passwords are displayed openly as hashes to anyone who has read privileges to the passwd file.
+In the shadow file, the passwords are stored and displayed encrypted, and shadow is accessible
+only by root.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+System attacks fall in the “gaining access” ethical hacking phase. The full methodology
+includes reconnaissance, scanning, gaining access, maintaining access, and clearing tracks.
+Gaining access includes cracking passwords and escalating privileges. After privilege escalation,
+you leave the gaining access phase and move into maintaining access, which includes executing
+applications and hiding files. The covering tracks phase includes taking care of log files on the
+machine.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Authentication involves three main options: something you are, something you have, and
+something you know. Some authentication measures use something you are—biometrics
+(fingerprints and such)—to validate identity and grant access. Others use something you have,
+such as a token of some sort (like a swipe badge or an ATM card), for authentication. But most
+security comes down to something you know, and that something is a password.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Default passwords are in place by the manufacturer to allow the installing administrator to log
+in initially and set up the device or service, and they are sometimes simply forgotten about after
+installation. Routers, switches, wireless access points, database engines, and software packages
+all come installed with default passwords.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+ECC defines four main attack types for password cracking: non-electronic, active online,
+passive online, and offline. The non-electronic attack involves social engineering practices, such
+as shoulder surfing and dumpster diving. The active online attack is carried out by directly
+communicating with the victim’s machine. Per ECC, active online attacks include dictionary and
+brute-force attacks, hash injections, phishing, Trojans, spyware, keyloggers, and password
+guessing. Active online attacks take a much longer time than passive attacks and are also much
+easier to detect. A passive online attack basically amounts to sniffing a wire in the hopes of
+either intercepting a password in clear text or attempting a replay attack or a man-in-the-middle
+(MITM) attack. Offline attacks occur when the hacker steals a copy of the password file and
+works the cracking efforts on a separate system.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:330px;background-color:white;font-size:36px">
+Password cracking offline can be done in one of three main ways: dictionary attack, hybrid
+attack, and brute-force attack. A dictionary attack is the easiest and by far the fastest attack
+available, using a list of passwords in a text file, which is then hashed by the same
+algorithm/process the original password was put through. A hybrid attack takes words from a list
+and substitutes numbers and symbols for alphabetic characters—perhaps a zero for an O and an
+@ for an a. Hybrid attacks may also append numbers and symbols to the end of dictionary file
+passwords. A brute-force attack uses every conceivable combination of letters, numbers, and
+special characters compared against the hash to determine a match. It is very time-consuming,
+chewing up a lot of computation cycles, thus making this the longest of the three methods;
+however, given enough time, every password can be cracked using brute force.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+A rainbow table is a huge compilation of hashes of every password imaginable. The amount
+of time it takes a cracker to work is dramatically decreased by not having to generate all these
+hashes over and over again. While GPU systems virtually eliminate their need, if you wish to
+make one, you can use tools like rtgen and Winrtgen.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+There are two types of privilege escalation. Vertical privilege escalation occurs when a lowerlevel
+user executes code at a higher privilege level than they should have access to. Horizontal
+privilege escalation isn’t really escalation at all but rather simply executing code at the same user
+level but from a location that should be protected from access. 
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+There are four real hopes for
+obtaining administrator (root) privileges on a machine. The first is to crack the password of an
+administrator or root account. The second is to take advantage of a vulnerability found in the OS,
+or in an application, that will allow you access as a privileged user (DLL hijacking involves
+replacing legitimate DLLs with malicious copies in the application root folder). The third method
+is to use a tool that will ideally provide you the access you’re looking for (such as Metasploit).
+The last method is to just ask the current user to run an application for you.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+The step of executing applications includes pretty much everything you can think of, hackingwise.
+Obviously it applies to “malicious” programming—starting things such as keyloggers,
+spyware, back doors, and crackers—but the idea is the same regardless: once you have access to
+the system, execute at or above your privilege level to accomplish what you need to do.
+Examples of remote execution tools include RemoteExec (www.isdecisions.com), PDQ Deploy
+(www.adminarsenal.com), and Dameware Remote Support (www.dameware.com).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+One way to hide files on Windows machines is through the use of an alternate data stream
+(ADS) in the form of New Technology File System (NTFS) file streaming. ADS is a feature of
+the Windows-native NTFS to ensure compatibility with Apple file systems (called HFS). NTFS
+file streaming allows you to hide virtually any file behind any other file, rendering it invisible to
+directory searches. Another file-hiding technique is steganography, which hides files in plain
+sight, buried as part of an image, video, or other file. Tools for hiding files of all sorts in regular
+image files or other files include ImageHide, Snow, Mp3Stego, Blindside, S-tools, wbStego, and
+Stealth.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+In addition to hiding files for further manipulation/use on the machine, covering your tracks
+while stomping around in someone else’s virtual play yard is also a cornerstone of success. There
+are three main logs in the Windows OS to look at when covering your tracks—the application,
+system, and security logs.  Other tools of note include elsave, WinZapper, and Evidence
+Eliminator. 
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+A rootkit is a collection of software put in place by an attacker that is designed to obscure
+system compromise. In other words, if a system has a properly introduced rootkit installed, the
+user and security monitors won’t even know anything is wrong. Rootkits are designed to provide
+back doors for the attacker to use later and include measures to remove and hide evidence of any
+activity. Some of the rootkits ECC is very concerned you know about are Azazel, Avatar, Necurs
+and ZeroAccess.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Per the CEH objectives, there are six types of rootkits: hypervisor level, hardware (firmware),
+boot loader level, application level, kernel level, and library level. Rootkits can be detected
+through a variety of tools and methods, but reloading from clean backups is the only real
+recovery method.
+</div>
+
+<div class="parallax"></div> <br>
+
+
+
 </body>
 </html>
