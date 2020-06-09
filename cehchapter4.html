@@ -1,77 +1,373 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	 <meta charset="utf-8">
-    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Certified Ethical Hacker. </title>
-	<meta name="description" content="Information Technology">
-    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Sniffing and Evasion.</title>
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <script>
-  
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script> 
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://code.jquery.com/resources/demos/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+ crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+    <style>
     
+        
+    </style>
 </head>
-<body oncontextmenu="alert('Enjoy the fact that you are alive!');return false;" onselectstart="return false" ondragstart="return false"
-	style="background-color: white;;"
->
-<br>
-<div class="container-fluid">
-    
-	
-</div>
-<img src="cehchapter4.png" class="img img-fluid">   
-    
-
-    
-
+<body>
  
-<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
-And they should always be placed at the very end, near to the closing body tag. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div id="accordion" style="text-align:center;font-size: 150%;">
+
+  <h2><strong>Chapter 4. Sniffing and Evasion.</strong> &nbsp; </h2>
+  <div>
+   <p>
+    <strong>Sniffing and Evasion.</strong>
+    
+    </p>
+  </div>
+
+  <h2>Sniffing</h2>
+  <div>
+   <p>
+ Sniffing (also known as wiretapping by law enforcement) is the art of capturing packets as they
+pass on a wire, or over the airwaves, to review for interesting information. 
+</p>
+<p>
+The process of sniffing comes down to a few items of great importance: what state the network interface card
+(NIC) is in, what access medium you are connected to, and what tool you’re running.   
+    </p>
+  </div>
+
+  <h2>Sniffers</h2>
+  <div>
+   <p>
+   A sniffer needs your card to run in promiscuous mode. This simply means that, regardless of
+address, if the frame is passing on the wire, the NIC will grab it and pull it in for a look. 
+    </p>
+  </div>
+
+
+
+    <h2>Pcap</h2>
+  <div>  
+
+ <p>Pcap is needed for your card to effectively slip into promiscuous mode. </p>
+
+ <p>On Windows, the de facto driver/library choice is WinPcap.</p>
+
+ <p>On Linux, it’s libpcap.</p>    
+    
+  </div>
+    
+    <h2>Collision Domains.</h2>
+  <div>
+   
+<p>As long as your system is within the same collision domain, right out of the box and without
+you changing a thing, your NIC will see every message intended for anyone else in the domain.
+</p>
+<p>Collision domains are composed of all the machines sharing any given transport medium.
+</p>
+<p> All systems connected to a hub share the same collision domain. 
+</p>
+<p>Switches split collision domains so that each system connected to the switch resides in its own little collision domain—the switch
+will only send frames down a wire for a given computer only if they’re intended for the recipient.
+</p>
+<p>If you’re connected to a switch, you receive only those messages intended for your own NIC.
+ </p>   
+    
+  </div>
+    
+  <h2>Sniffing.</h2>
+  <div>
+   <p>
+There are some important protocols in the upper layers for you to pay attention to in sniffing.
+</p>
+<p>Simple Mail Transport Protocol (SMTPv1) was designed to carry an e-mail message. Because it
+was written to carry nothing but ASCII, everything sent via SMTP, with no encryption added at
+another layer, is sent as clear text. </p>
+
+<p>FTP requires a user ID and password to access the server (usually), but the information is passed in clear text over the wire. </p>
+
+<p>TFTP passes everything in clear text, and you can pull keystrokes from a sniffed Telnet session.</p>
+
+<p>SNMPv1 and NNTP send their passwords and data over clear text, as does IMAP and POP3.</p>
+    
+    
+  </div>
+    
+     <h2>Address Resolution Protocol.</h2>
+  <div>
+   
+<p>ARP (Address Resolution Protocol) resolves IP addresses to machine (MAC) addresses.</p>
+
+<p>As a frame is being built inside the sending machine, the system sends an ARP_REQUEST to find out
+what MAC address inside the subnet can process the message.</p>
+
+<p> The machine on the local subnet with the requested IP will respond with an ARP_REPLY. </p>
+
+<p>The protocol retains a cache on machines as it works, and it works on a broadcast basis. </p>
+
+<p>The cache is dynamic—that is, the information in it doesn’t stay there forever, and when your system gets an updated ARP
+message, it will overwrite the cache with the new information. </p>
+
+<p>A<strong> gratuitous ARP</strong> is a special packet that updates the ARP cache of other systems before they even ask for it—in other words,
+before they send an ARP_REQUEST.</p>
+    
+    
+  </div> 
+    
+    <h2>Interception</h2>
+  <div>
+ 
+      <p>Lawful interception is the process of legally intercepting communications between two (or
+more) parties for surveillance on telecommunications, VoIP (Voice over IP), data, and
+multiservice networks. </p>
+
+  <p>Wiretapping (monitoring a phone or Internet conversation) can be active
+or passive. </p>
+
+  <p>Active wiretapping involves interjecting something into the communication (traffic),
+for whatever reason. Passive only monitors and records the data. </p>
+
+  <p><strong>PRISM</strong> (Planning Tool for
+Resource Integration, Synchronization, and Management) is the data tool used to collect foreign
+intelligence passing through U.S. network resources.</p>
+    
+  </div>  
+    
+    
+   <h3>Passive and Active Sniffing</h3>
+  <div>
+   
+<p>EC-Council breaks sniffing down into two main categories: passive and active.</p>
+<p> Passive sniffing is exactly what it sounds like: plug in a sniffer and, without any other interaction needed
+on your part, start pulling data packets to view at your leisure.</p>
+<p> Passive sniffing works only if your machine’s NIC is part of the same collision domain as the targets you want to listen to (and
+it’s configured to listen). </p>
+<p>Active sniffing requires some additional work on your part, either from
+a packet injection or manipulation stance or from forcing network devices to play nicely with
+your efforts.</p>
+ <p>Active sniffing usually means the collision domain you are part of is segmented
+from those you want to look in to (which means you’re probably attached to a switch), and you’ll
+have to take proactive steps in order to sniff.</p>    
+    
+  </div>   
+    
+    <h3>Active Sniffing</h3>
+  <div>
+  
+ <p>One trick for active sniffing purposes is to get a switch to close the port you are connected to
+each and every time it closes the port you want to sniff.</p>
+ <p> A span port (also called port mirroring)
+is one in which the switch configuration has been altered to send a copy of all frames from one
+port, or a succession of ports, to another. </p>
+
+ <p>Another option you have is to fill the content addressable memory (CAM) table, such that the
+switch can’t keep up and floods all packets. This process is known as MAC flooding.</p>
+ <p> Etherflood
+and Macof are examples of tools you can MAC flood with. Switch port stealing refers to the
+process of flooding the CAM with unsolicited ARPs regarding specific ports, thus creating a race
+condition.</p>
+    
+    
+  </div>  
+    
+    <h3>ARP Poisoning.</h3>
+  <div>
+   <p>ARP poisoning is the process of maliciously changing an ARP cache on a machine to inject
+faulty entries.</p>
+ <p>Most modern switches have built-in defenses for too many ARP broadcasts
+coming across the wire (for example, you can configure Dynamic ARP Inspection using DHCP
+snooping inside Cisco’s IOS). </p>
+<p>Also, administrators can put to use a wide variety of network
+monitoring tools, such as XArp, to watch for this, and some network administrators are smart
+enough to manually add the default gateway MAC permanently (using the command arp -s) into
+the ARP cache on each device. </p>
+<p>A couple of tools that make ARP flooding as easy as pressing a
+button are Cain and Abel, WinArpAttacker, Ufasoft, and dsniff (a collection of Linux tools that
+includes a tool called ARPspoof).</p>
+    
+    
+  </div>  
+    
+ 
+  <h3>DHCP Starvation.</h3>
+  <div>
+ <p>  DHCP starvation is an attack whereby the malicious agent attempts to exhaust all available
+addresses from the server. </p>
+ <p>Packets in the DHCP exchange include DHCPDISCOVER, DHCP
+OFFER, DHCPREQUEST, and DHCPACK. </p>
+<p>The packets in DHCPv6 have different names than
+those of DHCPv4. DHCPDISCOVER, DHCPOFFER, DHCPREQUEST, and DHCPACK are
+known as Solicit, Advertise, Request (or Confirm/Renew), and Reply, respectively. </p>
+<p>Tools such
+as Yersinia and DHCPstarv can carry out DHCP starvation attacks, and configuring DHCP
+snooping on your network device is considered the proper mitigation against this attack. </p>
+<p>Another
+fun DHCP attack is using a rogue DHCP server. An attacker sets up his own DHCP server on the
+network and starts handing out bad IP addresses to legitimate systems connecting to the network.
+Whether in conjunction with the DHCP starvation attack or not, this could allow an attacker to
+redirect communications sessions.</p>
+
+  </div>
+    
+    
+  <h3>MAC Spoofing, IRDP Spoofing, DNS Poisoning</h3>
+  <div>
+   <p>MAC spoofing (a.k.a. MAC duplication) is a simple process of figuring out the MAC address
+of the system you wish to sniff traffic from and changing your MAC to match it. 
+</p>
+<p>IRDP ICMP Router Discovery Protocol) spoofing
+is an attack where the hacker sends spoofed ICMP Router Discovery Protocol messages through
+the network, advertising whatever gateway he wants all the system to start routing messages to.
+See this <a href="https://tinyurl.com/irdpdisable" target="_blank">
+  "How to disable IRDP" </a> article.
+</p>
+<p>DNS poisoning is much the same as ARP poisoning, just with DNS entries.
+    
+    </p>
+  </div>    
+    
+    <h3>Wireshark.</h3>
+  <div>
+   <p>
+    <strong>Wireshark </strong> is probably the most popular sniffer available, can capture packets from wired or
+wireless networks, and provides a fairly easy-to-use interface. 
+</p>
+<p>Wireshark also offers an almost
+innumerable array of filters you can apply to any given sniffing session, and you can fine-tune
+your results to exactly what you’re looking for.
+</p>
+<p> Filters are of great use when you set up a packet
+capture for a long period of time, and they will show up in bunches on your exam. 
+    </p>
+  </div>
+    
+
+  <h3> I D S</h3>
+  <div>
+   <p>
+Intrusion detection systems (IDSs) are hardware and/or software devices that examine streams
+of packets for unusual or malicious behavior.  </p>
+<p>Sometimes this is done via a signature list, where
+the IDS compares packets against a list of known traffic patterns that indicate an attack. 
+ When a
+match is made, the alarm sounds.</p>
+<p> Other IDSs may be anomaly (or behavior) based, making
+decisions on alerts based on learned behavior and “normal” patterns—anything out of the
+ordinary for a normal day sounds the alarm. </p>
+<p>A host-based IDS (also known as
+HIDS) is usually a software program that resides on the host itself. A network-based IDS sits on
+the network perimeter.
+    
+    </p>
+  </div>
+    
+    <h3> Snort</h3>
+  <div>
+   
+    
+<p>Snort is an open source IDS that is a powerful sniffer as well as a traffic-logging, protocolanalyzing
+tool that can detect buffer overflows, port scans, operating system fingerprinting, and
+almost every conceivable external attack or probe you can imagine.</p>
+<p> <u>Snort runs in three different
+modes.</u> </p>
+<p><strong>Sniffer mode</strong> is exactly what it sounds like and lets you watch packets in real time as
+they come across your network tap. </p>
+<p><strong>Packet Logger mode</strong> saves packets to disk for review at a
+later time. </p>
+<p><strong>Network Intrusion Detection System mode</strong> analyzes network traffic against various
+rule sets you pick from, depending on your network’s situation.</p>
+    
+  </div>  
+    
+    <h3>Snort Rules</h3>
+  <div>
+   
+    <p>A Snort rule action
+can be Alert (in a variety of configured methods, alert when the condition is met), Log (simply
+make a note when the condition is met), or Pass (ignore the packet).</p>
+<p> Be familiar with the basics
+of Snort rule syntax, as well as the raw output from the packet capture. </p>
+<p>Pay special attention in
+the output to port numbers; most questions can be answered just by knowing what port numbers
+go with which protocol and where to find them in the output.</p>
+ <p>Also, always watch the directional
+arrows in test questions.</p>
+   
+     <!--
+ <img src="https://hydrasky.com/wp-content/uploads/2017/09/Selection_036.png" class="img img-fluid">
+      <p>or</p>
+      <img src="https://www.researchgate.net/publication/281564631/figure/fig1/AS:669059632869383@1536527655710/Example-of-Snort-IDS-Rule-The-rule-options-of-Snort-consist-of-two-parts-a-keyword-and.jpg"
+           class="img img-fluid">
+-->
+  </div>  
+    
+     <h3> Firewalls</h3>
+  <div>
+   <p>
+  A firewall is an appliance within a network that is designed to protect internal resources from
+unauthorized external access. Firewalls work with a set of rules, explicitly stating what is allowed
+to pass from one side of the firewall to the other. Additionally, most firewalls work with an
+implicit deny principle, which means if there is not a rule defined to allow the packet to pass, it is
+blocked—there is no need to create a rule to deny packets.  
+    </p>
+  </div>
+    
+      <h3>Firewalls</h3>
+  <div>
+   <p>
+Originally, firewalls were all packet-filtering firewalls. They basically looked at the headers
+of packets coming through a port and decided whether to allow them based on the ACLs
+configured.</p>
+
+<p> Stateful inspection firewalls gave the firewall the means to track the entire status of a
+connection. ECC also calls these stateful multilayer inspection firewalls, with the capability from
+the Network layer up to the Application layer (although their focus is in Layers 3 and 4).
+
+
+   
+    </p>
+  </div>
+    
+      <h3>Honeypots</h3>
+  <div>
+   <p>
+    A honeypot is a system set up as a decoy to entice attackers. There are two types of
+honeypots.</p>
+  <p>A high-interaction honeypot simulates all services and applications and is designed to
+be completely compromised.
+Examples include Symantec, Decoy Server, and Honeynets.</p>
+ <p> A low interaction
+honeypot simulates a limited number of services and cannot be compromised
+completely (by design). Examples of these include Specter, Honeyd, and KFSensor.
+    </p>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+ 
+ 
 </body>
 </html>
