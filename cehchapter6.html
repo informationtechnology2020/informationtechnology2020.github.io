@@ -1,77 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	 <meta charset="utf-8">
-    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Certified Ethical Hacker. </title>
-	<meta name="description" content="Information Technology">
-    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("https://informationtechnology2020.github.io/digital1.jpg");
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <script>
-  
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script> 
-    
+  /* Set a specific height */
+  min-height: 300px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </head>
-<body oncontextmenu="alert('Enjoy the fact that you are alive!');return false;" onselectstart="return false" ondragstart="return false"
-	style="background-color: white;;"
->
-<br>
-<div class="container-fluid">
-    
-	
+<body onContextMenu="alert('Hi there!');return false;">
+
+<p style="text-align:center;font-size:46px">Chapter 6:&nbsp;Web-Based Hacking.</p>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Web organizations assist in a wide array of efforts to improve the Internet. IEFT
+(https://www.ietf.org/, Internet Engineering Task Force) creates engineering documents to help
+make the Internet work better from an engineering point of view. The IETF’s official documents
+are published free of charge as RFCs (Requests For Comments).
 </div>
-<img src="cehchapter6.png" class="img img-fluid">   
-    
 
-    
+<div class="parallax"></div> <br>
 
- 
-<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
-And they should always be placed at the very end, near to the closing body tag. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div style="height:300px;background-color:white;font-size:36px">
+ The World Wide Web
+Consortium (W3C, https://www.w3.org) is an international community where “member
+organizations, a full-time staff, and the public work together to develop Web standards.” W3C
+engages in education and outreach, develops software, and serves as an open forum for
+discussion about the Web.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+OWASP (https://www.owasp.org, Open Web Application Security Project) is a 501(c)(3)
+worldwide not-for-profit charitable organization focused on improving the security of software.
+OWASP publishes reports, documents, and training efforts to assist in web security, including
+the “Top 10” security issues facing web applications and servers, and WebGoat (a deliberately
+insecure web application designed to teach web application security lessons).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+ The current Top 10
+list includes A1 – Injection Flaws, A2 – Broken Authentication and Session Management, A3 –
+Sensitive Data Exposure, A4 – XML External Entities (XXE), A5 – Broken Access Control, A6
+– Security Misconfiguration, A7 – Cross-Site Scripting (XSS), A8 – Insecure Deserialization, A9
+– Using Components with Known Vulnerabilities, and A10 – Insufficient Logging and
+Monitoring.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+At its most basic, a web server acts like any other server you already know about; it responds
+to requests from clients and provides a file or service in answer. Apache configuration is almost
+always done as part of a module within special files (http.conf, for instance, can be used to set
+server status), and the modules are appropriately named (mod_negotiation, for instance). Also,
+almost everything questioned on IIS configuration is going to come down to privileges, and IIS
+itself will spawn all shells as LOCAL_SYSTEM. Apache is built modularly, with a core to hold
+all the “magic” and modules to perform a wide variety of functions. Additionally, because of its
+open source nature, there is a huge library of publicly available add-ons to support functions and
+services.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Whether it’s an Apache or an IIS server, misconfiguration of the settings is the most common
+vulnerability that will be exploited. Areas of concern include error messaging, default passwords,
+SSL certificates, scripts, remote administrative functions, configuration files, and services on the
+machine. Settings such as properly configuring (restricting?) remote administration, eliminating
+unnecessary services, and changing any default passwords or accounts are pretty obvious.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+An HTML entity is a way of telling the browser to display certain characters it would
+otherwise look at as a tag or part of the programming itself. Examples include &nbsp; and &lt;.
+HTTP request methods include GET, HEAD, POST, PUT, DELETE, TRACE, and CONNECT.
+Both POST and GET are client-side ideas that can be manipulated with a web proxy. While GET
+is visible in a browser, POST is equally visible within a good-old Wireshark capture. An HTTP
+HEAD requests headers and metadata. It works exactly like an HTTP GET, except it doesn’t
+return any body information to display within your browser. An HTTP GET basically requests
+data from a resource. However, HTTP GET can be used to send data as well, and when sending
+data, the GET method adds the data to the URL.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+A POST, on the other hand, is a much better method of submitting data to a resource for
+processing. It can also be used to elicit a response, but its primary purpose is to provide data for
+the server to work with. POST is generally considered safer than GET because it is not stored in
+browser history or necessarily in the server logs, and it doesn’t display returned data in the URL.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+There are many attack vectors regarding web servers: password attacks, denial of service, man
+in the middle (sniffing), DNS poisoning (a.k.a. hijacking), and phishing. DNS amplification is an
+attack manipulating recursive DNS to DoS a target. The bad guy uses a botnet to amplify DNS
+answers to the target until it can’t do anything else.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Directory traversal is one form of attack that’s common and successful, at least on older
+servers. In this attack, the hacker attempts to access restricted directories and execute commands
+outside intended web server directories. Also known as the dot-dot-slash attack, directory
+climbing, and backtracking, this attack basically sends HTTP requests asking the server to drop
+back to the root directory and give access to other folders.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+ This dot-dot-slash attack is also
+known as a variant of Unicode or unvalidated input attack. Unicode is a standard for ensuring
+consistent encoding and text representation and can be accepted by servers for malicious
+purposes. Unvalidated input means the server has not been configured to accept only specific
+input during an HTTP GET, so an attacker can craft the request to ask for command prompts, to
+try administrative access passwords, and so on.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+ECC sometimes likes asking about parameter or URL tampering. In short, this just involves
+manipulating parameters within the URL string in hopes of modifying data, such as permissions
+and elevation of privileges, prices and quantities of goods, and credentials. The trick is to simply
+look at the URL and find parameters you can adjust and re-send.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Other web attacks covered by ECC are fairly self-explanatory. A misconfiguration attack
+takes advantage of configuration items on the server not being configured correctly. A password
+attack and an SSH brute-force attack? Exactly what they sound like. Web defacement results in
+the page being…well, defaced: an attacker maliciously alters the visual appearance of the page.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Metasploit will cover lots of options for you, including exploitation of known vulnerabilities
+and attacking passwords over Telnet, SSH, and HTTP. A basic Metasploit exploit module
+consists of five actions: select the exploit you want to use, configure the various options within
+the exploit, select a target, select the payload (that is, what you want to execute on the target
+machine), and then launch the exploit. The framework base accepts inputs from custom plug-ins,
+interfaces (how you interact with the framework), security tools, web services, and modules
+(each with its own specific purpose).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Web 2.0 refers to a somewhat different method of creating websites and applications: while
+1.0 relies on static HTML, 2.0 uses “dynamic” web pages. Because they’re dynamic in nature,
+2.0 apps allow users to upload and download to a site simultaneously, which provides much
+better infrastructure for social media and other user participation efforts. Per ECC, because Web
+2.0 apps provide for more dynamic user participation, they also offer more attack surface.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+One successful web application attack deals with injecting malicious commands into the input
+string. The objective is much like that of the parameter-tampering methods discussed earlier in
+this chapter: to pass exploit code to the server through poorly designed input validation in the
+application. This can occur using a variety of different methods, including file injection (where
+the attacker injects a pointer in the web form input to an exploit hosted on a remote site),
+command injection (where the attacker injects commands into the form fields instead of the
+expected test entry), and shell injection (where the attacker attempts to gain shell access using
+Java or other functions).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+LDAP injection is an attack that exploits applications that construct LDAP statements based
+on user input. In an LDAP injection attack, the attacker changes what’s entered into the form
+field by adding the characters)(&) after the username and then providing any password.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+SOAP injection is another related attack. Simple Object Access Protocol (SOAP) is designed
+to exchange structured information in web services in computer networks and uses XML to
+format information. You can inject malicious query strings (much like SQL injection, as a matter
+of fact) that may allow you to bypass authentication and access databases behind the scenes.
+SOAP is compatible with HTTP and SMTP, and messages are typically one way in nature.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+A buffer overflow attack, also known as smashing the stack, is an attempt to write more data
+into an application’s prebuilt buffer area in order to overwrite adjacent memory, execute code, or
+crash a system (application).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Cross-site scripting (XSS) involves injecting a script into a form field intended for something
+else. One of the classic attacks of XSS involves getting access to “document .cookie” and
+sending it to a remote host.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+A cross-site request forgery (CSRF) is a fun attack that forces an end user to execute
+unwanted actions on a web application on which they’re currently authenticated. CSRF tricks the
+victim into submitting a malicious request. It inherits the identity and privileges of the victim to
+perform an undesired function on the victim’s behalf.
+<br>
+ CSRF attacks can be mitigated by
+configuring a web server to send random challenge tokens. If every user request includes the
+challenge token, it becomes easy to spot illegitimate requests not initiated by the user.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+A session fixation attack is somewhat similar to CSRF. The attacker logs in to a legitimate
+site and pulls a session ID, and then sends an e-mail with a link containing the fixed session ID.
+When the user clicks it and logs in to the same legitimate site, the hacker can now log in and run
+with the user’s credentials.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+A cookie is a small text-based file that is stored on your system for use by the web server the
+next time you log in. It can contain information such as authentication details, site preferences,
+shopping cart contents, and session details. Cookies are sent in the header of an HTTP response
+from a web server and may or may not have an expiration date. The original intent was to
+provide a continuous, stable web view for customers and to make things easier for return surfers.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+SQL injection is, by far, the most common and most successful injection attack technique in
+the world. Structured Query Language (SQL) is a computer language designed for managing
+data in a relational database system. The relational database is simply a collection of tables
+(consisting of rows, which hold individual fields containing data) tied together using some
+common field (key) that you can update and query. Each table has a name given to it that is
+referenced when you perform queries or updates. SQL comes into play when you are adding,
+deleting, moving, updating, or viewing the data in those tables and fields.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+SQL queries generally begin with the SELECT command. SELECT is used to choose the data
+you’d like to perform an action on. In addition to SELECT, there are several additional options
+and commands of great interest to a hacker. For example, DROP TABLE tablename will delete
+the table tablename from the database. INSERT and UPDATE are also easy to understand.
+SQL injection occurs when the attacker injects SQL queries directly into the input form.
+Properly constructed, the SQL command bypasses the intent of the front end and executes
+directly on the SQL database. 
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+To find out whether a site is susceptible to SQL injection, check
+your target for a web login page, and instead of entering what’s asked for on the web form,
+simply try a single quote (') and see what kind of error message, if any, you receive. If that
+doesn’t work, try entering anything'or 1=1- and see what you get. The attack names and
+definitions for SQL are union query, tautology, blind SQL injection, and error-based SQL
+injection.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Another neat little attack is called HTTP response splitting. The attack works by adding
+header response data to an input field so the server splits the response in a couple directions. If it
+works, the attacker controls the content of the second header, which can be used for any number
+of things—like redirecting the user to a malicious site the attacker runs.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+A common method of security testing (hacking) a web application is to simply try using it in a
+manner in which it wasn’t intended to be used.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Countermeasures for web server and application attacks include correct placement of the
+servers and maintaining a strong patch management effort. Others include turning off
+unnecessary services, ports, and protocols; removing outdated, unused accounts and properly
+configuring default accounts that must remain; setting up appropriate file and folder permissions
+and disabling directory listing as much as possible; and ensuring you have a means to detect
+attacks and to respond to them.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Sqlmap, Havij, and sqlninja are all automated scanners designed to look specifically for
+injection vulnerabilities. SQLBrute is a tool that allows you to blast through predefined SQL
+injection queries against a target. Others tools include Pangolin, SQLExec, Absinthe, and
+BobCat.
+</div>
+
+<div class="parallax"></div>
+
 </body>
 </html>
