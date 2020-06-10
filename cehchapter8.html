@@ -1,77 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	 <meta charset="utf-8">
-    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Certified Ethical Hacker. </title>
-	<meta name="description" content="Information Technology">
-    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("https://informationtechnology2020.github.io/space-1970121.jpg");
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <script>
-  
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script> 
-    
+  /* Set a specific height */
+  min-height: 300px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </head>
-<body oncontextmenu="alert('Enjoy the fact that you are alive!');return false;" onselectstart="return false" ondragstart="return false"
-	style="background-color: white;;"
->
-<br>
-<div class="container-fluid">
-    
-	
+<body onContextMenu="alert('Hi there!');return false;">
+
+<p style="text-align:center;font-size:46px">Chapter 8:&nbsp;Mobile Communications and the IoT.</p>
+
+<div class="parallax"></div> <br>
+
+<div style="height:250px;background-color:white;font-size:36px">
+Web organizations assist in a wide array of efforts to improve the Internet. IEFT
+(<a href="https://www.ietf.org/" target="_blank"> https://www.ietf.org/</a>, Internet Engineering Task Force) creates engineering documents to help
+make the Internet work better from an engineering point of view. The IETF's official documents
+are published free of charge as RFCs (Requests For Comments).
 </div>
-<img src="cehchapter8.png" class="img img-fluid">   
-    
 
-    
+<div class="parallax"></div> <br>
 
- 
-<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
-And they should always be placed at the very end, near to the closing body tag. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div style="height:250px;background-color:white;font-size:36px">
+
+The Open Web Application Security Project (OWASP) has an arm dedicated specifically to
+mobile security (<a href="https://www.owasp.org/index.php/OWASP_Mobile_Security_Project" target="_blank">https://www.owasp.org/index.php/OWASP_Mobile_Security_Project</a>) and
+publishes a Top 10 list of mobile risks. 
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Here are the current top 10
+(<a href="https://www.owasp.org/index.php/Mobile_Top_10_2016-Top_10" target="_blank">https://www.owasp.org/index.php/Mobile_Top_10_2016-Top_10</a>): M1 -- Improper Platform
+Usage, M2 -- Insecure Data Storage, M3 -- Insecure Communication, M4 -- Insecure
+Authentication, M5 -- Insufficient Cryptography, M6 -- Insecure Authorization, M7 -- Client
+Code Quality, M8 -- Code Tampering, M9 -- Reverse Engineering, and M10 -- Extraneous
+Functionality.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+When it comes to mobile platforms, there are two major players in the field - Android and
+iOS. Android was created by Google specifically for mobile devices, and it contains an OS,
+middleware, and a suite of built-in applications for the mobile user. iOS is Apple’s operating
+system for mobile devices - that is, the iPhone and iPad (you will also find iOS on Apple TV and
+iPods). 
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+
+Many of the vulnerabilities and attack vectors we talked about on everything else also apply
+to mobile. Perhaps the most obvious attack vector comes from the apps themselves. Others
+include social engineering, phishing, and physical security. Android’s Device Administration
+API (<a href="https://developer.android.com/guide/topics/admin/device-admin" target="_blank">
+    https://developer.android.com/guide/topics/admin/device-admin</a>) provides system-level
+device administration that can be used to create "security-aware" apps that may prove useful
+within an organization.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+BYOD - Bring Your Own Device - allows users to bring their own smartphones and tablets
+to the organization’s network. The problem with it is security and control. Mobile Device
+Management (MDM), much like Group Policy and such in the Microsoft Windows world, is an
+effort to add some control to enterprise mobile devices. MDM helps in pushing security policies,
+application deployment, and monitoring of mobile devices. Most MDM solutions offer the same
+basic features: passcodes for device unlocking, remote locking, remote wipe, root or jailbreak
+detection, policy enforcement, inventory, and monitoring/reporting. Some of the solutions are
+XenMobile, IBM MaaS360, AirWatch, and MobiControl.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+
+3G, 4G, and Bluetooth are other connectivity means to know. 3G and 4G refer to third- and
+fourth-generation mobile telecommunications, respectively, and offer broadband-type speeds for
+data usage on mobile devices (cell phones and such). Bluetooth refers to a very open wireless
+technology for data exchange over a relatively short range (10 meters or less). Bluetooth devices
+are easy to connect one to another and can even be set to look for other devices for you
+automatically. Bluetooth devices have two modes: discovery mode and pairing mode. Discovery
+mode determines how the device reacts to inquiries from other devices looking to connect, and it
+has three actions. The discoverable action obviously has the device answer to all inquiries,
+limited discoverable restricts that action, and nondiscoverable tells the device to ignore all
+inquiries.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Whereas discovery mode details how the device lets others know it’s available, pairing mode
+details how the device will react when another Bluetooth system asks to pair with it. There are
+basically only two versions: yes, I will pair with you, and no, I will not. Nonpairable rejects
+every connection request, whereas pairable accepts all of them.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Attacks on mobile devices abound. First and foremost, phishing attacks and social
+engineering are merciless when it comes to mobile devices. SMS phishing leverages text
+messaging to attack users and devices. The list of Trojans available is almost without end.
+Notable Android Trojans include Obad, Fakedefender, TRAMP.A, and ZitMo. Spyware is really
+scary, and tools like Mobile Spy and Spyera make it really easy to listen in on or even watch
+what the target is doing. Tools like AndroidLost, Find My Phone, and Where’s My Droid were
+designed to help users find lost phones, but they (and many, many others) can be used to track
+where users happen to be at.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+The mobile device can also be used as an attack platform. Tools like Network Spoofer allow
+you to control how websites appear on a desktop/laptop. DroidSheep allows you to perform
+sidejacking by listening to wireless packets and pulling session IDs. Nmap works great on a
+mobile device, and sniffers are a dime a dozen. Heck, you can even install Kali Linux on the
+thing and turn it into a full-featured hacking machine. NetCut (www.arcai.com/netcut/) claims to
+be able to identify all systems on your current Wi-Fi, identify which one you don’t like, and,
+with the click of a button, cut them off Wi-Fi.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+The major Bluetooth attacks are Bluesmacking (denial-of-service attack against the device),
+Bluejacking (sending unsolicited messages to, and from, mobile devices), Bluesniffing (effort to
+discover Bluetooth-enabled devices - much like war driving in wireless hacking), Bluebugging
+(accessing a Bluetooth-enabled device and remotely using its features), Bluesnarfing (theft of
+data from a mobile device due to an open connection - such as remaining in discovery mode),
+and Blueprinting (footprinting for Bluetooth).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+The Internet of Things (IoT) can be defined as a collection of devices using sensors, software,
+storage, and electronics to collect, analyze, store, and share data among themselves or to a user.
+It refers to a network of devices with IP addresses that have the capability of sensing, collecting,
+and sending data to each other - basically a web of connected devices made possible by
+machine-to-machine communications, large availability of storage, and internetworked
+communications. IoT technologies extend Internet connectivity beyond "standard" devices, such
+as desktops, laptops, smartphones, and tablets, to any range of traditionally non-network-enabled
+physical devices and everyday objects.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+IoT architecture comes down to three basic components - things using sensing technology,
+IoT gateways, and the cloud (or put another way, data storage availability). A thing inside the
+IoT is defined as any device implanted somewhere with the ability (and purpose) of
+communicating on the network. Embedded with technology, IoT devices can communicate and
+interact over the Internet, and oftentimes can be remotely monitored and controlled. Each of
+these things has some form of sensing technology. In other words, sensors are embedded in the
+device to measure and forward data.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+IoT OS examples include RIOT OS, ARM mbed OS, RealSense OS X, Nucleus RTOS,
+Brillo, Contiki, Zephyr, Ubuntu Core, Integrity RTOS, and Apache Mynewt. There are four IoT
+communication models - device to device, device to gateway, device to cloud, and back-end data
+sharing. All work exactly as their names suggest, with only a couple of knowledge nuggets you
+can tuck away for test purposes. Device to gateway adds a collective before sending to cloud,
+which can be used to offer some security controls, and back-end data sharing is almost exactly
+like device to cloud; however, it adds the ability for third parties to collect and use the data.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Once a thing has sensed and collected data, it forwards that data to the next component, the
+IoT gateway. This is designed to send collected data from devices to the user or to the third
+component, data storage or cloud, for use later. The cloud stores and analyzes data, providing
+information back for future queries.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+ The Vehicle Ad Hoc Network (VANET) is the
+communications network used by our vehicles. It refers to the spontaneous creation of a wireless
+network for vehicle-to-vehicle (V2V) data exchange.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+In addition to the basic components, EC-Council lists a few architecture layers inside IoT:
+Edge Technology Layer, Access Gateway Layer, Internet Layer, Middleware Layer, and
+Application Layer. IEEE maintains a journal of all things IoT
+(https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6488907), and ITU has a great
+collection of news articles about current IoT efforts (https://www.itu.int/en/ITUT/
+ssc/resources/Pages/topic-001.aspx).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:800px;background-color:white;font-size:36px">
+
+Here is the OWASP Top 10 for IoT
+(https://www.owasp.org/index.php/Top_IoT_Vulnerabilities):
+* I1 -- Insecure Web Interface An insecure web interface can be present when issues such
+as account enumeration, lack of account lockout, and weak credentials are present.
+* I2 -- Insufficient Authentication/Authorization Authentication may not be sufficient
+when weak passwords are used or are poorly protected.
+* I3 -- Insecure Network Services Insecure network services may be susceptible to buffer
+overflow attacks or attacks that create a denial-of-service condition, leaving the device
+inaccessible to the user.
+* I4 -- Lack of Transport Encryption/Integrity Verification Lack of transport
+encryption allows data to be viewed as it travels over local networks or the Internet.
+* I5 -- Privacy Concerns Privacy concerns generated by the collection of personal data in
+addition to the lack of proper protection of that data is prevalent.
+* I6 -- Insecure Cloud Interface An insecure cloud interface is present when easy-toguess
+credentials are used or account enumeration is possible.
+* I7 -- Insecure Mobile Interface An insecure mobile interface is present when easy-toguess
+credentials are used or account enumeration is possible.
+* I8 -- Insufficient Security Configurability Insufficient security configurability is
+present when users of the device have limited or no ability to alter its security controls.
+* I9 -- Insecure Software/Firmware The lack of ability for a device to be updated
+presents a security weakness on its own.
+* I10 -- Poor Physical Security Physical security weaknesses are present when an attacker
+can disassemble a device to easily access the storage medium and any data stored on that
+medium.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+All previous, and subsequent, attacks mentioned in this book probably have a role in the IoT
+world as well. For example, DDoS (distributed denial of service) in IoT isn’t any different from
+any other DDoS against or using "normal" devices. In one version of this, noted as the Sybil
+attack in EC-Council’s curriculum, multiple forged identities are used to create the illusion of
+traffic congestion that affects everyone else in the local IoT network. EC-Council also notes
+HVAC attacks in IoT attacks. It’s pretty much exactly what it sounds like - hack IoT devices in
+order to shut down air conditioning services.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+A couple other attacks specifically called out are rolling code and BlueBorne. The code used
+by your key fob to unlock (and in some cases) start your car is called a rolling (or hopping) code.
+An attack can sniff for the first part of the code, jam the key fob, and sniff/copy the second part
+on subsequent attempts, allowing the attacker to steal the code - and your car. A BlueBorne
+attack is basically an amalgamation of techniques and attacks against known, already existing
+Bluetooth vulnerabilities. One of the better ways to pull this one off is to use hardware
+specifically designed for it, like the HackRF One (https://greatscottgadgets.com).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+ Mirai malware
+purposefully looks for and interjects itself onto IoT devices. After successful infiltration, it
+basically propagates and creates gigantic botnets - with the primary purpose of DDoS attacks
+thereafter.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+The IoT hacking methodology phases are information gathering, vulnerability scanning,
+launching attacks, gaining access, and maintaining access. Shodan (https://www.shodan.io/) is
+often referred to as the search engine for everything and is a good start in information gathering.
+Some other tools to assist in information gathering include Censys (https://censys.io) and
+Thingful (www.thingful.net).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+The second phase in IoT hacking methodology, vulnerability scanning, is exactly as it sounds.
+There are several vulnerability scanners and assessment tools for IoT devices, and more are
+coming every day. EC-Council lists Nmap as an option. Beyond Trust offer a couple of tools for
+IoT scanning, including RIoT Vulnerability Scanner
+(https://www.beyondtrust.com/resources/data-sheet/retina-iot-riot-scanner/) and beSTORM
+(https://www.beyondsecurity.com/bestorm.html). Some other tools are IoTsploit
+(https://iotsploit.com) and IoT Inspector (www.iot-inspector.com).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+In the launching attacks phase, IoT hacking tools include Firmalyzer (https://firmalyzer.com,
+for performing active security assessments on IoT devices), KillerBee (https://github.com),
+JTAGulator (www.grandideastudio.com), and Attify Zigbee Framework
+(https://www.attify.com, providing a suite of tools for testing Zigbee devices).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+The last two phases are gaining access and then maintaining access. Telnet is often leveraged
+in IoT devices and provides a rather easy means to gain access. Once there you can, of course,
+install backdoors, malware, or force firmware updates to ensure you can maintain a presence.
+Sniffers for IoT traffic include Foren6 (http://cetic.github.io/foren6/), Z-Wave
+(www.suphammer.com), and CloudShark (https://www.cloudshark.org).
+</div>
+
+<div class="parallax"></div> 
+
+
 </body>
 </html>
