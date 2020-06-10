@@ -1,77 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	 <meta charset="utf-8">
-    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Certified Ethical Hacker. </title>
-	<meta name="description" content="Information Technology">
-    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("https://informationtechnology2020.github.io/technology1.jpg");
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <script>
-  
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script> 
-    
+  /* Set a specific height */
+  min-height: 300px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </head>
-<body oncontextmenu="alert('Enjoy the fact that you are alive!');return false;" onselectstart="return false" ondragstart="return false"
-	style="background-color: white;;"
->
-<br>
-<div class="container-fluid">
-    
-	
+<body onContextMenu="alert('Hi there!');return false;">
+
+<p style="text-align:center;font-size:46px">Chapter 7:&nbsp;Wireless Networking Hacking.</p>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+In the wireless world, the 802.11 series of standards is very important. 802.11a can attain speeds
+up to 54 Mbps and uses the 5 GHz range. 802.11b has speeds of 11 Mbps at 2.4 GHz, and
+802.11g is 54 Mbps at 2.4 GHz. 802.11n has speeds over 100 Mbps and uses a variety of ranges
+in MIMO format between 2.4 GHz and 5 GHz. Two other standards of note are 802.11i (an
+amendment to the original 802.11 series standard that specifies security mechanisms for use on
+the WLAN) and 802.16 (global development of broadband wireless metropolitan area networks,
+WiMAX). 802.11an and 802.11ax are next on the horizon.
 </div>
-<img src="cehchapter7.png" class="img img-fluid">   
-    
 
-    
+<div class="parallax"></div> <br>
 
- 
-<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
-And they should always be placed at the very end, near to the closing body tag. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-</html>
+<div style="height:300px;background-color:white;font-size:36px">
+Modulation - the practice of manipulating properties of a waveform - is the encoding method
+of choice in wireless networks. Both orthogonal frequency-division multiplexing (OFDM) and
+direct-sequence spread spectrum (DSSS) use various pieces of a waveform to carry a signal.
+OFDM works with several waveforms, simultaneously carrying messages back and forth: the
+transmission media is divided into a series of frequency bands that don't overlap each other, and
+each of them can then be used to carry a separate signal. DSSS works differently by combining
+all the available waveforms into a single purpose; the entire frequency bandwidth can be used at
+once for the delivery of a message.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+In ad hoc mode, wireless systems connect directly to other systems, as if a cable were strung
+between the two. Infrastructure mode uses an access point (AP) to funnel all wireless
+connections through, and clients associate and authenticate to it. Wireless networks can consist
+of a single access point or multiple ones, thus creating overlapping cells and allowing a user to
+roam freely without losing connectivity. The client needs to associate with an access point first
+and then disassociate when it moves to the next one.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+When there is a single access point, its footprint is called a basic service area (BSA).
+Communication between this single AP and its clients is known as a basic service set (BSS). If
+you extend the range of your network by adding multiple access points, the setup is known as an
+extended service set (ESS). As a client moves from one AP in your subnet to another, so long as
+everything is configured correctly, it'll disassociate from one AP and (re)associate with another
+seamlessly. This movement across multiple APs within a single ESS is known as "roaming."
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Wireless network design needs to take into account not only the type of antenna used but
+where it is placed and what is set up to contain or corral the signal. Physical installation of access
+points is a major concern because you will want to avoid spillage of the signal and loss of power.
+Most standard APs use an omnidirectional antenna, which means the signal emanates from the
+antenna in equal strength 360 degrees from the source. Directional antennas allow you to focus
+the signal in a specific direction, which greatly increases signal strength and distance. Other
+antennas you can use are dipole and parabolic grid. Dipole antennas have, quite obviously, two
+signal "towers" and work omnidirectionally. Parabolic grid antennas work a lot like satellite
+dishes and can have phenomenal range (up to 10 miles) but aren't in use much.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+To identify a wireless network to clients who may be interested in joining, a service set
+identifier (SSID) must be assigned. The SSID is not a password and provides no security at all
+for your network. It is a text word (32 characters or less) that only distinguishes your wireless
+network from others. SSIDs are broadcast by default and are easily obtainable even if you try to
+turn off the broadcast (in an effort dubbed "SSID cloaking"). The SSID is part of the header on
+every packet, so its discovery by a determined attacker is a given, and securing it is virtually a
+moot point.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Wireless authentication can happen in more than a few ways, from the simplistic to the
+complicated. There are three main methods: Open System Authentication, Shared Key
+Authentication, and Centralized Authentication (for example, RADIUS). In Open System
+Authentication, a client can simply send an 802.11 authentication frame with the appropriate
+SSID to an AP and have it answer with a verification frame. In Shared Key Authentication, the
+client would participate in a challenge/request scenario, with the AP verifying a decrypted "key"
+for authentication. And you can even tie the whole thing together with an authentication server
+(RADIUS), forcing the client into an even more complicated authentication scenario. Association
+is the action of a client connecting to an AP, whereas authentication actually identifies the client
+before it can access anything on the network.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+WEP stands for Wired Equivalent Privacy and provides weak security for the wireless
+network. Using 40-bit to 232-bit keys in an RC4 encryption algorithm, WEP's primary weakness
+lies in its reuse of initialization vectors (IVs) - an attacker can simply collect enough packets to
+decode the WEP shared key. WEP was never intended to fully protect your data; it was designed
+to give people using a wireless network the same level of protection that someone surfing over
+an Ethernet wired hub would expect. WEP's initialization vectors are relatively small and, for the
+most part, get reused pretty frequently. Additionally, they're sent in clear text as part of the
+header. An attacker simply needs to generate enough packets in order to analyze the IVs and
+come up with the key used.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+A better choice in encryption technology is Wi-Fi Protected Access (WPA) or WPA2. WPA
+makes use of Temporal Key Integrity Protocol (TKIP), a 128-bit key, and the client's MAC
+address to accomplish much stronger encryption. The short of it is, WPA changes the key out
+(hence the "temporal" part of the name) every 10,000 packets or so, instead of sticking with one
+and reusing it. Additionally, the keys are transferred back and forth during an Extensible
+Authentication Protocol (EAP) authentication session, which makes use of a four-step handshake
+process in proving the client belongs to the AP, and vice versa.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+WPA2 is much the same process; however, it was designed with the government and the
+enterprise in mind. In something called WPA2 Enterprise, you can tie EAP or a RADIUS server
+into the authentication side of WPA2, allowing you to make use of Kerberos tickets and
+additional offerings. WPA2 uses AES for encryption, ensuring FIPS 140-2 compliance. As for
+integrity, WPA2 addresses this by using the Cipher Block Chaining Message Authentication
+Code Protocol (CCMP), with message integrity codes (MICs), in a process called cipher block
+chaining message authentication code (CBC-MAC).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+An AirPcap dongle is a USB wireless adapter that offers several advantages as well as
+software support. WIGLE (http://wigle.net) helps in identifying geographic locations of wireless
+networks; teams of hackers have mapped out wireless network locations using GPS and a tool
+called NetStumbler. NetStumbler (www.netstumbler.com) can be used for identifying poor
+coverage locations within an ESS, detecting interference causes, and finding any rogue access
+points in the network. It's Windows based, easy to use, and compatible with 802.11a, b, and g.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Kismet is another wireless discovery option. It works on Linux-based systems and, unlike
+NetStumbler, works passively, meaning it detects access points and clients without actually
+sending any packets. It can detect access points that have not been configured (and would then
+be susceptible to the default out-of-the-box admin password) and will determine which type of
+encryption you might be up against. It works by "channel hopping" to discover as many
+networks as possible and has the ability to sniff packets and save them to a log file, readable by
+Wireshark or tcpdump.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Another great network discovery tool is NetSurveyor. This free Windows-based tool provides
+many of the same features as NetStumbler and Kismet. Additionally, it supports almost all
+wireless adapters without any significant additional configuration - which is of great benefit to
+hackers who can't afford, or don't have, an AirPcap card. NetSurveyor acts as a great tool for
+troubleshooting and verifying optimal installation of wireless networks. A few of the tools
+specifically made for wireless sniffing include NetStumbler, Kismet, OmniPeek, AirMagnet
+WiFi Analyzer Pro, and WiFi Pilot.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+The rogue access point is an easy attack on a wireless network whereby an attacker sets up an
+access point near legitimate APs and tricks users into associating and authenticating with it.
+Sometimes referred to as an "evil twin," an attack like this is easy to attempt. The use of rogue
+APs (evil twins) may also be referenced as a "mis-association attack." Additionally, faking a
+well-known hotspot on a rogue AP (for example, McDonald's or Starbucks free Wi-Fi spots) is
+referred to as a "honeyspot attack."
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Denial-of-service efforts are also easy attacks to attempt. In addition to other attacks, you can
+jam the wireless signal altogether, using some type of jamming device and, usually, a high-gain
+antenna/amplifier. All wireless devices are susceptible to some form of jamming and/or
+interference - it's simply a matter of placing enough signal out in the airwaves that the NICs
+can't keep up.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Cracking WEP is ridiculously easy and can be done with any number of tools. The idea
+revolves around generating enough packets to effectively guess the encryption key. The weak
+initialization vectors we discussed already are the key; that is, they're reused and sent in clear
+text. Tools for cracking WEP include Cain and Abel and Aircrack (both use Korek, but Aircrack
+is faster) as well as KisMAC, WEPCrack, and Elcomsoft's Wireless Security Auditor tool.
+KisMAC runs on macOS and can be used to brute-force WEP or WPA. On WEP, Aircrack can
+use a dictionary technique, or a variety of weirdly named algorithmic processes called PTW,
+FMS, and the Korek technique, while only dictionary can be used against WPA and WPA2.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
