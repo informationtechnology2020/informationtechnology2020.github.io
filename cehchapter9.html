@@ -1,77 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	 <meta charset="utf-8">
-    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Certified Ethical Hacker. </title>
-	<meta name="description" content="Information Technology">
-    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("https://informationtechnology2020.github.io/sky1.jpg");
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <script>
-  
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script> 
-    
+  /* Set a specific height */
+  min-height: 300px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </head>
-<body oncontextmenu="alert('Enjoy the fact that you are alive!');return false;" onselectstart="return false" ondragstart="return false"
-	style="background-color: white;;"
->
-<br>
-<div class="container-fluid">
-    
-	
+<body onContextMenu="alert('Hi there!');return false;">
+
+<p style="text-align:center;font-size:46px">Chapter 9:&nbsp;Security in Cloud Computing.</p>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Virtualization (started back in the 1960s by companies like General Electric, Bell Labs, and
+IBM) is a practice whereby the physical aspects of the hardware are virtually presented to
+operating systems in a way that allows more than one virtual machine (with their own operating
+systems) to run simultaneously on the same physical box. 
 </div>
-<img src="cehchapter9.png" class="img img-fluid">   
-    
 
-    
+<div class="parallax"></div> <br>
 
- 
-<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
-And they should always be placed at the very end, near to the closing body tag. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div style="height:300px;background-color:white;font-size:36px">
+Cloud computing provides user and
+enterprise subscribers on-demand delivery of various IT services as a metered service over a
+network. Cloud computing offers everything from on-demand self-service, storage, and resource
+pooling to elasticity, automation in management, and broad network access.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+ To further define
+what exactly it is, we need to consider the three major types of cloud computing - IaaS, PaaS,
+and SaaS. Cloud computing can be thought of as the ultimate in separation of duties. It moves
+system services that would otherwise be hosted internally to an external provider. It also
+separates the role of data owner from the role of data custodian.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Infrastructure as a Service (IaaS) basically provides virtualized computing resources over the
+Internet. A third-party provider hosts infrastructure components, applications, and services on
+behalf of its subscribers, with a hypervisor (such as VMware, Oracle VirtualBox, Xen, or KVM)
+running the virtual machines as guests. IaaS is a good choice not just for day-to-day
+infrastructure service, but also for temporary or experimental workloads that may change
+unexpectedly. IaaS subscribers typically pay on a per-use basis (within a certain timeframe, for
+instance, or sometimes by the amount of virtual machine space used).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Platform as a Service (PaaS) is geared toward software development, as it provides a
+development platform that allows subscribers to develop applications without building the
+infrastructure it would normally take to develop and launch software. Hardware and software are
+hosted by the provider on its own infrastructure so customers do not have to install or build
+homegrown hardware and software for development work. PaaS doesn't usually replace an
+organization's actual infrastructure; instead, it just offers key services the organization may not
+have onsite.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Software as a Service (SaaS) is simply a software distribution model - the provider offers ondemand
+applications to subscribers over the Internet. SaaS benefits include easier administration,
+automated patch management, compatibility, and version control.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Along with the types of cloud, there are four main deployment models: public, private,
+community, and hybrid. A public cloud model is one where services are provided over a network
+that is open for public use (like the Internet). A private cloud model is, not surprisingly, private
+in nature. The cloud is operated solely for a single organization (a.k.a. single-tenant
+environment) and is usually not a pay-as-you-go operation. A community cloud model is one
+where the infrastructure is shared by several organizations, usually with the same policy and
+compliance considerations. A hybrid cloud model is exactly what it sounds like - a composition
+of two or more cloud deployment models.
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+NIST (National Institutes of Standards and Technology) released Special Publication 500-
+292: NIST Cloud Computing Reference Architecture to provide a "fundamental reference point
+to describe an overall framework that can be used government wide." This publication defined
+five major roles within a cloud architecture: cloud carrier (the organization that has the
+responsibility of transferring the data; that is, the intermediary for connectivity and transport
+between subscriber and provider), cloud consumer (the individual or organization that acquires
+and uses cloud products and services), cloud provider (the purveyor of products and services),
+cloud broker (acts to manage use, performance, and delivery of cloud services, as well as the
+relationships between providers and subscribers), and cloud auditor (an independent assessor of
+cloud service and security controls).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+FedRAMP is probably the most recognized and referenced regulatory effort regarding cloud
+computing. The Federal Risk and Authorization Management Program (FedRAMP) is a
+government-wide program that provides a standardized approach to security assessment,
+authorization, and continuous monitoring for cloud products and services. FedRAMP not only
+provides an auditable framework for ensuring basic security controls for any government cloud
+effort, but also offers weekly tips for security and configuration and even has free training
+available on the site.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:350px;background-color:white;font-size:36px">
+ PCI Data Security Standard (PCI DSS) Cloud Special Interest Group's
+Cloud Computing Guidelines also provides notables assistance and information for the cloud.
+The Cloud Security Alliance (CSA) is the leading professional organization devoted to
+promoting cloud security best practices and organizing cloud security professionals. In addition
+to providing a certification on cloud security and offering an array of cloud-centric training, they
+published a general cloud enterprise architecture model to help professionals conceptualize the
+components of a successful cloud implementation. They also publish documentation on
+everything from privacy concerns to security controls, focus, and implementation.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Cloud security is really talking about two sides of the same coin - you must be concerned
+with the security of the provider as well as that of the subscriber. Both the provider and
+subscriber are responsible for security. Using virtualization introduces a hypervisor layer
+between the physical hardware and subscribed servers. Therefore, if you comprise the
+hypervisor, you compromise them all.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+The Trusted Computing Model refers to an attempt to resolve computer security problems
+through hardware enhancements and associated software modifications. The Trusted Computing
+Group (TCG) is made up of a bunch of hardware and software providers who cooperate to come
+up with specific plans. Roots of Trust (RoT) is a set of functions within the Trusted Computing
+Model that are always trusted by the computer's operating system (OS).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+
+Tools to assist in cloud security include CloudInspect and CloudPassage Halo. Core's
+CloudInspect is "a tool that profits from the Core Impact & Core Insight technologies to offer
+penetration-testing as a service from Amazon Web Services for EC2 users." It's designed for
+AWS cloud subscribers and runs as an automated, all-in-one testing suite specifically for your
+cloud subscription. CloudPassage's Halo "provides instant visibility and continuous protection
+for servers in any combination of data centers, private clouds and public clouds. The Halo
+platform is delivered as a service, so it deploys in minutes and scales on-demand. Halo uses
+minimal system resources, so layered security can be deployed where it counts, right at every
+workload - servers, instances and containers." Other cloud-specific tools and toolsets mentioned
+include Dell Cloud Manager, Qualys Cloud Suite, Trend Micro's Instant-On Cloud Security, and
+Panda Cloud Office Protection.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:800px;background-color:white;font-size:36px">
+
+Cloud Security Alliance released a publication titled "The Dirty Dozen: 12 Top Cloud
+Security Threats" (also referred to as "The Treacherous 12") and EC-Council has its own list of
+top threats. Important ones to remember include:
+* Data breach or loss The malicious theft, erasure, or modification of almost anything in
+the cloud you can think of. While cloud providers deploy their own tools, methods, and
+controls to protect their overall environment, it's generally and ultimately up to the
+subscribers themselves to protect their own data in the cloud. CSA recommends
+multifactor authentication and encryption as protection against data breaches.
+* Abuse of cloud resources If attackers can create anonymous access to cloud services,
+they could then leverage the tremendous resources to do whatever they want. Typically
+this threat isn't necessarily a specific concern of cloud subscribers, but it's a very valid
+concern for the provider. The provider should perform active monitoring to detect any
+abuse instances as well as have a means to protect/recover from them. Generally
+speaking, threats of abuse of cloud services apply to the IaaS and PaaS models.
+* Insecure interfaces and APIs Cloud services rely heavily on APIs and web services to
+function and operate, and without them, functions like auto-scaling, authentication,
+authorization, and sometimes the operations of cloud applications themselves will fail.
+Insecure interfaces and APIs can circumvent user-defined policies and really mess around
+with input data verification efforts. Both provider and subscriber should ensure strong
+security controls are in place, such as strong encryption and authorization access to APIs
+and connectivity. This threat applies to all models of cloud.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Other threats mentioned that warrant inclusion in our discussion are insufficient due diligence
+(for example, moving an application from one cloud environment to another and not knowing the
+security differences between the two), shared technology issues (multitenant environments may
+not provide proper isolation between systems and applications), and unknown risk profiles
+(subscribers simply do not know exactly what security provisions are made in the background of
+and by the provider). Many others, such as malicious insiders, inadequate design, and DDoS are
+valid for both cloud services and traditional data centers.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+SOAP (Simple Object Access Protocol) is an API that makes it easier for application
+components to cooperate and exchange information on systems connected over a network. A
+wrapping attack occurs when a SOAP message is intercepted and the data in the envelope is
+changed and then sent/replayed.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+In addition to every other attack mentioned previously in this book, two that ECC mentions
+explicitly are session riding and side channel attacks. Session riding is simply CSRF under a
+different name and deals with cloud services instead of traditional data centers. Side channel
+attacks, also known as a cross-guest VM breach, deal with the virtualization itself: if an attacker
+can somehow gain control of an existing VM (or place his own) on the same physical host as the
+target, he may be able to attempt a litany of attacks and efforts.
+
+</div>
+
+<div class="parallax"></div> 
+
 </body>
 </html>
