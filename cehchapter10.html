@@ -1,77 +1,480 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	 <meta charset="utf-8">
-    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Certified Ethical Hacker. </title>
-	<meta name="description" content="Information Technology">
-    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <script>
-  
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script> 
+    <title>Trojans.</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("sunset-1373171.jpg");
     
+    
+
+  /* Set a specific height */
+  min-height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+    <style>
+        background-image {opacity: 0.5;}
+    </style>
 </head>
-<body oncontextmenu="alert('Enjoy the fact that you are alive!');return false;" onselectstart="return false" ondragstart="return false"
-	style="background-color: white;;"
->
-<br>
-<div class="container-fluid">
-    
-	
-</div>
-<img src="cehchapter10.png" class="img img-fluid">   
+     <!--     
+    background-image: url("https://informationtechnology2020.github.io/digital1.jpg");
+    -->
+<body onContextMenu="alert('Hi there!');return false;">
+<div class="container-fluid"> 
     
 
+<div class="parallax"></div> <br>
+    <br>
+<p style="text-align:center;font-size:46px"><strong>Chapter 10</strong>:&nbsp;Trojans and other attacks.</p>
+    <br>
+    <hr>
+
+<div style="height:400px;background-color:white;font-size:36px">
+
+
+<strong>Malware</strong> is generally defined as software designed to harm or secretly access a computer system
+without the owner's informed consent. Some states also define malware as computer
+contaminant. <strong>Malvertising</strong> involves embedding malware into ad networks in an effort to throw
+malware across many legitimate sites. Other definition terms of note include <strong>overt channels</strong>
+(legitimate communication channels used by programs across a system or a network) and <strong>covert
+channels</strong> (used to transport data in unintended ways).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+
+Most malware is <i>simply</i> downloaded from the Internet with or without the user's knowledge.
+Sometimes legitimate sites get compromised, leading to infections on visiting systems. Other
+times drive-by downloading infects the system, usually via some weird Java vulnerability
+delivered through an ad stream or something like it. Peer-to-peer applications or web application
+"features" are often hijacked to distribute malware, and an IRC channel is always a great way to
+distribute malware. Sending malware (usually a Trojan) via e-mail, file sharing, or a browser is
+also a good distribution method.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+<strong>Wrappers</strong> are programs that allow you to bind an executable of your choice (<strong>Trojan</strong>) to an
+innocent file your target won't mind opening. <strong>EliteWrap</strong> is an example. <strong>Crypters</strong> are software
+tools that use a combination of encryption, obfuscation, and code manipulation to render
+malware as undetectable to AV and other security-monitoring products. Exploit kit examples
+    include:  <strong>Infinity, Bleeding Life, Crimepack, </strong> and <strong> Blackhole Exploit Kit.</strong>
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+
+A <strong>Trojan</strong> is software that appears to perform a desirable function for the user prior to running
+or installing it but instead performs a function, usually without the user's knowledge, that steals
+information or otherwise harms the system (or data). Although a <strong>backdoor</strong> isn't a Trojan, and a
+Trojan isn't a backdoor, they're tied together in this discussion and on your exam: the <strong>Trojan</strong> is
+the means of delivery, and the <strong>backdoor</strong> provides the open access.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:700px;background-color:white;font-size:36px">
+
+Trojan types include:
+    <ul>
+        
+       <li> Defacement Trojans    </li> 
+       <li>  Proxy server Trojans    </li> 
+        <li>Botnet Trojans (Tor-based
+<strong>Chewbacca</strong> and <strong>Skynet</strong>)      </li>
+        <li>  Remote access Trojans (<strong>RAT</strong>, <strong>MoSucker</strong>, <strong>Optix Pro</strong>, and <strong>Blackhole</strong>)   </li>
+        
+
+        <li>E-banking Trojans (<strong>Zeus</strong> and <strong>Spyeye</strong>)     </li>
+        
+        <li>  Covert Channel Tunneling Trojan (CCTT) is one
+form of remote access Trojan that uses a variety of exploitation techniques to create data transfer
+channels in previously authorized data streams. It's designed to provide an external shell from
+within the internal environment.   </li>
+        
     
+    
+    </ul>
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:1600px;background-color:white;font-size:36px">
+
+A <strong>command shell Trojan</strong> is intended to provide a backdoor to the system that you connect to
+via command-line access. <strong>Netcat</strong> is known as the "Swiss Army knife" of TCP/IP hacking and
+provides all sorts of control over a remote shell on a target. <strong>Netcat</strong> can be used for outbound or
+inbound connections, over TCP or UDP, to or from any port on the machine. It offers DNS
+forwarding, port mapping and forwarding, and proxying. You can even use it as a port scanner if
+you're really in a bind.
+Port numbers in use by Trojans should be memorized for your exam:
+    
+    <table class="table table-striped table-bordered">
+    <tr>
+        <th>Trojan</th>    <th>Port Number</th>
+    </tr>
+    
+    <tr>
+        <td> Death   </td>    <td> 2  </td>
+    </tr>
+        
+        <tr>
+        <td> Senna Spy   </td>    <td>20   </td>
+    </tr>
+        
+        <tr>
+        <td>Hackers Paradise    </td>    <td> 31, 456  </td>
+    </tr>
+        
+        <tr>
+        <td> TCP Wrappers   </td>    <td> 421  </td>
+    </tr>
+        
+        <tr>
+        <td> Doom, Satanz BackDoor   </td>    <td> 666  </td>
+    </tr>
+        
+        <tr>
+        <td>Silencer, WebEx    </td>    <td> 1001  </td>
+    </tr>
+        
+        <tr>
+        <td> RAT   </td>    <td> 1095-1098  </td>
+    </tr>
+        
+        <tr>
+        <td> SubSeven   </td>    <td> 1243  </td>
+    </tr>
+        
+        <tr>
+        <td> Shivka-Burka   </td>    <td> 1600  </td>
+    </tr>
+        
+        <tr>
+        <td> Trojan Cow   </td>    <td> 2001  </td>
+    </tr>
+        
+        <tr>
+        <td> Deep Throat   </td>    <td> 6670-71  </td>
+    </tr>
+        
+        <tr>
+        <td>  Tini  </td>    <td> 7777  </td>
+    </tr>
+        
+        <tr>
+        <td> NetBus   </td>    <td>  12345, 12346 </td>
+    </tr>
+        
+        <tr>
+        <td> Whack a Mole   </td>    <td> 12361-63  </td>
+    </tr>
+        
+        <tr>
+        <td> Back Orifice   </td>    <td> 31337, 31338  </td>
+    </tr>
+    
+    
+    
+    
+    
+    </table>
+    
+    
+    
+    
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+<strong>Netstat</strong> will show all connections in one of several states -- everything from SYN_SEND
+(indicating active open) to CLOSED (the server has received an ACK from the client and closed
+the connection). <strong>Fport</strong> is a free tool from McAfee that reports all open TCP/IP and UDP ports
+and maps them to the owning applications. 
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+<strong>Process Explorer</strong> is a free tool from Microsoft
+(formerly from SysInternals, Mark Russinovich) that can tell you almost anything you'd want to know about a
+running process. Some of the options for monitoring the registry are <strong>SysAnalyzer</strong>, <strong>Tiny Watcher</strong>,
+<strong>Active Registry Monitor</strong>, and <strong>Regshot</strong>.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+Windows will automatically run everything located in Run, RunServices, RunOnce, and
+RunServicesOnce, and you'll find that most questions on the exam are centered around or show
+you settings from <strong>HKEY_LOCAL_MACHINE</strong>.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+A <strong>virus</strong> is a <i>self-replicating program</i> that reproduces its code by attaching copies into other
+executable codes. In other words, viruses create copies of themselves in other programs, then
+activate on some sort of trigger event (such as a specific user task, a particular time, or an event
+of some sort). One method for getting viruses onto a system is known as a virus hoax or fake
+antivirus. The process involves letting a target know about a terrible virus running rampant
+through the world, then providing them an antivirus program (or signature file) to protect
+themselves with.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:1800px;background-color:white;font-size:36px">
+Here are the virus types for exam memorization:
+<ul>
+<li> <strong>Ransomware:</strong> This malware locks you out of your own system resources and demands
+an online payment of some sort in order to release them back to you. The ransomware
+"family" includes examples such as <strong>Cryptorbit, CryptoLocker, CryptoDefense</strong>, and
+    police-themed. Specific versions to know include <strong>WannaCry</strong> and <strong>Petya</strong>.
+</li><li> <strong>Boot sector virus:</strong> Also known as a system virus, this virus type actually moves the boot
+sector to another location on the hard drive, forcing the virus code to be executed first.
+</li><li> <strong>Shell virus:</strong> Working just like the boot sector virus, this virus type wraps itself around an
+application's code, inserting its own code before the application's. Every time the
+application is run, the virus code is run first.
+</li><li> <strong>Cluster virus:</strong> This virus modifies directory table entries so that user or system processes
+are pointed to the virus code itself instead of the application or action intended.
+</li><li> <strong>Multipartite virus:</strong> Attempts to infect both files and the boot sector at the same time.
+This generally refers to a virus with multiple infection vectors.
+</li><li> <strong>Macro virus:</strong> Usually written with Visual Basic for Applications (VBA), this virus type
+infects template files created by Microsoft Office, normally Word and Excel.
+</li><li> <strong>Polymorphic code virus:</strong> This virus type mutates its code using a built-in polymorphic
+engine. These viruses are difficult to find and remove because their signatures constantly
+change. No part of the virus stays the same from infection to infection.
+</li><li> <strong>Encryption virus:</strong> Shockingly, these viruses use encryption to hide the code from
+antivirus scanners.
+</li><li> <strong>Metamorphic virus:</strong> This virus type rewrites itself every time it infects a new file.
+</li><li> <strong>Stealth virus:</strong> Also known as a "tunneling virus," this one attempts to evade antivirus
+(AV) applications by intercepting the AV's requests to the operating system (OS) and
+returning them to itself instead of OS.
+</li><li> <strong>Cavity virus:</strong> Cavity viruses overwrite portions of host files so as not to increase the
+actual size of the file. This is done using the null content sections of the file and leaves the
+file's actual functionality intact.
+</li><li> <strong>Sparse infector virus:</strong> This virus type only infects occasionally.
+</li><li> <strong>File extension virus:</strong> These viruses change the file extensions of files to take advantage
+of most people having file extension view turned off.
+    </li>
+    </ul>
+    </div>
+ <div class="parallax"></div> <br>
+    
+ <div style="height:1200px;background-color:white;font-size:36px">    
+    
+    
+    
+    
+A <strong>worm</strong> is a self-replicating malware computer program that uses a computer network to send
+copies of itself to other systems without human intervention. Usually it doesn't alter files, but it
+resides in active memory and duplicates itself, eating up resources and wreaking havoc along the
+way. The most common use for a worm in the hacking world is the creation of botnets. "Ghost
+Eye Worm" is a hacking tool that uses random messaging on Facebook and other sites to
+perform malicious actions.
+    Other worms include the following:
+    <ul>
+<li> <strong>Code Red:</strong> Exploited indexing software on IIS servers in 2001.
+</li><li> <strong>Darlloz:</strong> The worm for the "Internet of Things," darlloz is a Linux-based worm that
+targets running ARM, MIPS, and PowerPC architectures. See: <a href="https://en.wikipedia.org/wiki/Linux.Darlloz" target="_blank">
+        https://en.wikipedia.org/wiki/Linux.Darlloz</a>.
+</li><li> <strong>Slammer:</strong> Also known as SQL Slammer, this was a denial-of-service worm attacking
+buffer overflow weaknesses in Microsoft SQL Services.
+</li><li> <strong>Nimda:</strong> A successful file infection virus that modified and touched nearly all web content
+on a machine.
+</li><li> <strong>Bug Bear:</strong> Propagating over open network shares and e-mail, Bug Bear terminated AV
+applications and set up a backdoor for later use.
+</li><li> <strong>Pretty Park:</strong> Pretty Park spread via e-mail (attempting a send every 30 minutes) and took
+advantage of IRC to propagate stolen passwords and the like.
+</li>
+</ul>
+
+
+</div>
+
+<div class="parallax"></div> <br>
+    
+ <div style="height:300px;background-color:white;font-size:36px">    
+    
+Tools like <strong>binText</strong> and <strong>UPX</strong> can help in malware analysis. Others that can help are <strong>IDA Pro</strong>
+(<a href="https://www.hex-rays.com" target="_blank">www.hex-rays.com</a>), <strong>VirusTotal</strong> 
+     (<a href="https://www.virustotal.com" target="_blank">www.virustotal.com</a>), 
+     <strong>Anubis</strong> (<a href="https://wepawet.cs.ucsb.edu/" target="_blank">Anubis ISecLab</a>), and
+<strong>Threat Analyzer</strong> (<a href="https://www.threattracksecurity.com" target="_blank">https://www.threattracksecurity.com</a>).
+
+     
+       
+    
+    </div> 
+    
+<div class="parallax"></div> <br> 
+    
+    <div style="height:750px;background-color:white;font-size:36px">  
+    
+         The standard <strong>DoS</strong> attack seeks to accomplish nothing more than taking down a resource or
+denying access to it by authorized users. 
+        <br>
+        The distributed denial-of-service (<strong>DDoS</strong>) attack comes
+not from one system but many, and they're usually part of a <strong>botnet</strong>. 
+        <br>
+        The <strong>botnet</strong> is a network of
+zombie computers the hacker can use to start a distributed attack from (examples of botnet
+software/Trojans are <strong>Shark</strong> and <strong>Poison Ivy</strong>). 
+        <br>
+        For study purposes, the preferred communications
+channel used to signal the bots is IRC or Internet Chat Query (ICQ). Another way of saying
+"botnet" may be the distributed reflection denial of service (<strong>DRDoS</strong>) attack, also known as a
+<i>spoof attack</i>. It uses multiple <i>intermediary</i> machines to pull off the denial of service, by having
+the secondary machine send the attack at the behest of the attacker. The attacker remains hidden
+because the attack appears to originate from the secondary machine. 
+        
+    
+    </div>
+
+<div class="parallax"></div> <br>
+    
+
+<div style="height:2200px;background-color:white;font-size:36px">    
+    
+ECC lists four basic categories of Dos/DDoS as well as several examples of DoS/DDoS
+attacks. The categories are as follows:
+<ul> 
+<li> <strong>Fragmentation attacks:</strong> These attacks take advantage of the system's ability (or lack
+thereof) to reconstruct fragmented packets.
+</li><li> <strong>Volumetric attacks:</strong> Also known as bandwidth attacks, these consume all available
+bandwidth for the system or service.
+</li><li> <strong>Application attacks:</strong> These attacks consume resources necessary for the application to
+run, effectively making it unavailable to others.
+</li><li> <strong>TCP state-exhaustion attacks:</strong> These attacks go after load balancers, firewalls, and
+application servers by attempting to consume their connection state tables.
+    <hr>
+Here's a short list of attacks, with all the salient information you'll need:
+</li><li> <strong>SYN attack:</strong> The hacker will send thousands upon thousands of SYN packets to the
+machine with a false source IP address. The machine will attempt to respond with a
+SYN/ACK but will be unsuccessful (because the address is false). Eventually, all the
+machine's resources are engaged, and it becomes a giant paperweight.
+</li><li> <strong>SYN flood:</strong> In this attack, the hacker sends thousands of SYN packets to the target but
+never responds to any of the return SYN/ACK packets. Because there is a certain amount
+of time the target must wait to receive an answer to the SYN/ACK, it will eventually bog
+down and run out of available connections.
+</li><li> <strong>ICMP flood:</strong> Here, the attacker sends ICMP Echo packets to the target with a spoofed
+(fake) source address. The target continues to respond to an address that doesn't exist and
+eventually reaches a limit of packets per second sent.
+</li><li> <strong>Smurf:</strong> The attacker sends a large number of pings to the broadcast address of the subnet,
+with the source IP spoofed to that of the target. The entire subnet will then begin sending
+ping responses to the target, exhausting the resources there. A fraggle attack is similar but
+uses UDP for the same purpose.
+</li><li> <strong>Ping of death:</strong> (This isn't a valid attack with modern systems, but is still a definition you
+may need to know.) In the ping of death, an attacker fragments an ICMP message to send
+to a target. When the fragments are reassembled, the resultant ICMP packet is larger than
+the maximum size and crashes the system.
+</li><li> <strong>Teardrop:</strong> In a teardrop attack, a large number of garbled IP fragments with overlapping,
+oversized payloads are sent to the target machine. On older operating systems (such as
+Windows 3.1x, Windows 95, and Windows NT operating systems), this takes advantage
+of weaknesses in the fragment reassembly functionality of their TCP/IP stack, causing the
+system to crash or reboot.
+</li><li> <strong>Peer to peer:</strong> In this attack, clients of a peer-to-peer file-sharing hub are disconnected
+and directed to connect with the target system.
+</li><li> <strong>Permanent Phlashing:</strong> refers to a DoS attack that causes permanent damage to a system.
+Usually this includes damage to the hardware and can also be known as bricking a
+system.</li>
+    </ul>    
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+The <strong>real</strong> answer to a true DDoS is the <i>involvement of your ISP</i> up channel. It will be next to
+impossible for you, at an endpoint locale, to keep up with attacks from a sophisticated global, or
+even geographically close, botnet. The ISP may wind up blocking a lot of legitimate traffic too,
+but it may be all you can do until the storm passes.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:250px;background-color:white;font-size:36px">
+
+In <strong>session hijacking</strong>, an attacker waits for a session to begin and, after all the pesky
+authentication gets done, jumps in to steal the session for himself. The server isn't even aware of
+what happened, and the client simply connects again in a different session. 
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+The following more
+completely describes the <i>session hijack steps</i> (per EC-Council):
+    <br>
+1. Sniff the traffic between the client and the server.<br>
+2. Monitor the traffic and predict the sequence numbering.<br>
+3. Desynchronize the session with the client.<br>
+4. Predict the session token and take over the session.<br>
+5. Inject packets to the target server.<br>
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+You'll need to remember that the sequence numbers increment on acknowledgment.
+Additionally, you'll almost certainly get asked a scenario version of sequence numbering. You'll
+need to know, given an acknowledgment number and a window size, what sequence number
+would be acceptable to the system. For example, an acknowledgment of 105 with a window size
+of 200 means you could expect sequence numbering from 105 through 305.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+
+<strong>IPSec</strong> is used to secure IP communication by providing <i>encryption</i> and <i>authentication services</i>
+to each packet, and it has several architectural components you'll need to know. First, IPSec
+works in two modes: <br>
+    In <u>transport mode</u>, the payload and ESP trailer are encrypted; however, the
+IP header of the original packet is not. Transport can be used in network address translation
+(NAT) because the original packet is still routed in exactly the same manner as it would have
+been without IPSec.
+    <br>
+     <u>Tunnel mode</u>, however, encrypts the whole thing, encapsulating the entire
+original packet in a new IPSec shell. This makes IPSec incompatible with NAT.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:650px;background-color:white;font-size:36px">
+ The rest of IPSec
+architecture includes the following protocols:
+<ul>
+<li> <strong>Authentication Header:</strong> AH is a protocol within IPSec that guarantees the integrity and
+authentication of the IP packet sender.
+</li><li> <strong>Encapsulating Security Payload:</strong> ESP is a protocol that also provides origin authenticity
+and integrity, but it can take care of confidentiality (through encryption) too. ESP does not
+provide integrity and authentication for the entire IP packet in transport mode, but in
+tunnel mode protection is provided to the entire IP packet.
+</li><li> <strong>Internet Key Exchange:</strong> IKE is the protocol that produces the keys for the encryption
+process.
+</li><li> <strong>Oakley:</strong> A protocol that uses Diffie-Hellman to create master and session keys.
+</li><li> <strong>Internet Security Association Key Management Protocol:</strong> Software that facilitates
+    encrypted communication between two endpoints.</li>
+</ul>
+</div>
 
  
-<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
-And they should always be placed at the very end, near to the closing body tag. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</div>
+    <div class="parallax"></div>
 </body>
 </html>
