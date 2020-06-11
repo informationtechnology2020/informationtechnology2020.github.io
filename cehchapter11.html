@@ -1,77 +1,317 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	 <meta charset="utf-8">
-    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Certified Ethical Hacker. </title>
-	<meta name="description" content="Information Technology">
-    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+<title>Crypto.</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("vintage-649760.jpg");
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <script>
-  
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script> 
-    
+  /* Set a specific height */
+  min-height: 600px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </head>
-<body oncontextmenu="alert('Enjoy the fact that you are alive!');return false;" onselectstart="return false" ondragstart="return false"
-	style="background-color: white;;"
->
-<br>
+<body onContextMenu="alert('Hi there!');return false;">
+
+
+
+<div class="parallax"></div> <br>
+
 <div class="container-fluid">
-    
-	
+
+<p style="text-align:center;font-size:46px">Chapter 11:&nbsp;Cryptography 101.</p>
+
+<hr><br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+Cryptography is the science or study of protecting information, whether in transit or at rest, by
+using techniques to render the information unusable to anyone who does not possess the means
+to decrypt it. <br>
+
+Plain-text data (something you can read) is turned into cipher-text data (something
+you can’t read) by the application of some form of encryption. <br>
+ Encrypting data provides
+confidentiality because only those with the "key" can see it. <br>
+
+ Integrity can also be provided by
+hashing algorithms. <br>
+ Nonrepudiation is the means by which a recipient can ensure the identity of
+the sender and that neither party can deny having sent or received the message.<br>
+
 </div>
-<img src="cehchapter11.png" class="img img-fluid">   
-    
 
-    
+<div class="parallax"></div> <br>
 
- 
-<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
-And they should always be placed at the very end, near to the closing body tag. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div style="height:500px;background-color:white;font-size:36px">
+
+
+Encryption algorithms - mathematical formulas used to encrypt and decrypt data - are highly
+specialized and complex. There are two methods in which the algorithms actually work, and
+there are two methods by which keys can be used and shared. 
+<br>In stream ciphers, bits of data are
+encrypted as a continuous stream. In other words, readable bits in their regular pattern are fed
+into the cipher and are encrypted one at a time. These work at a high rate of speed.
+<br> Block ciphers
+combine data bits into blocks and feed them into the cipher. Each block of data, usually 64 bits at
+a time, is then encrypted with the key and algorithm. These ciphers are considered simpler, and
+slower, than stream ciphers.
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+
+Symmetric encryption, also known as single key or shared key, simply means one key is used
+both to encrypt and to decrypt the data. It is considered fast and strong but poses some significant
+weaknesses. It’s a great choice for bulk encryption because of its speed, but key distribution is an
+issue because the delivery of the key for the secured channel must be done offline. Additionally,
+scalability is a concern because as the network gets larger, the number of keys that must be
+generated goes up exponentially. DES, 3DES, Advanced Encryption Standard (AES),
+International Data Encryption Algorithm (IDEA), Twofish, and Rivest Cipher (RC) are
+examples.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+
+Asymmetric encryption comes down to this: what the one key encrypts, the other key
+decrypts. It’s important to remember the public key is the one used for encryption, whereas the
+private key is used for decryption. Either can be used for encryption or decryption within the
+pair, but in general remember public = encrypt, private = decrypt. 
+<br>
+Asymmetric encryption can
+provide both confidentiality and nonrepudiation and solves the problems of key distribution and
+scalability. The weaknesses include its performance (asymmetric is slower than symmetric,
+especially on bulk encryption) and processing power (asymmetric usually requires a much longer
+key length, so it’s suitable for smaller amounts of data). Diffie-Hellman, Elliptic Curve
+Cryptosystem (ECC), El Gamal, and RSA are examples.
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+A hashing algorithm is a one-way mathematical function that takes an input and produces a
+single number (integer) based on the arrangement of the data bits in the input. It provides a
+means to verify the integrity of a piece of data - change a single bit in the arrangement of the
+original data, and you’ll get a different response.
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+ The attack or effort used against a hashing
+algorithm is known as a collision or a collision attack. A collision occurs when two or more files
+create the same output, which is not supposed to happen. To protect against collision attacks and
+the use of rainbow tables, you can also use a salt, which is a collection of random bits used as a
+key in addition to the hashing algorithm. MD5, SHA-1, SHA-2, and SHA-3 are examples of hash
+algorithms.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+
+Steganography is the practice of concealing a message inside a text, image, audio, or video
+file in such a way that only the sender and recipient even know of its existence, let alone the
+manner in which to decipher it. Indications of steganography include character positions (in text
+files, look for text patterns, unusual blank spaces, and language anomalies) and large file sizes
+and color palette faults in image files. Audio and video files require some statistical analysis and
+specific tools.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+
+In image steganography, there are three main techniques: least significant bit insertion,
+masking and filtering, and algorithmic transformation. Masking hides the data in much the same
+way as a watermark on a document; however, it’s accomplished by modifying the luminescence
+of image parts. Algorithmic transformation allows steganographers to hide data in the
+mathematical functions used in image compression. Tools like OmniHide Pro and Masker do a
+good job of sticking messages into the video stream smoothly and easily. DeepSound and
+MP3Stego are both tools for audio steganography. Other tools include QuickStego
+(quickcrypto.com), gifshuffle and SNOW (darkside.com.au), Steganography Studio
+(stegstudio.sourceforge.net), and OpenStego (www.openstego.info).
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:900px;background-color:white;font-size:36px">
+
+PKI is a structure designed to verify and authenticate the identity of individuals within the
+enterprise taking part in a data exchange. It can consist of hardware, software, and policies that
+create, manage, store, distribute, and revoke keys and digital certificates. The system starts at the
+top, with a (usually) neutral party known as the certificate authority (CA) that creates and issues
+digital certificates. The CA also keeps track of all the certificates within the system and
+maintains a certificate revocation list (CRL), used to track which certificates have problems and
+which have been revoked. The CA may be internal to begin with, and there could be any number
+of subordinate CAs - known as registration authorities (RAs) - to handle things internally (most
+root CAs are removed from network access to protect the integrity of the system). In many PKI
+systems, an outside entity known as a validation authority (VA) is used to validate certificates - 
+usually done via Online Certificate Status Protocol (OCSP). A certificate authority can be set up
+to trust a CA in a completely different PKI through something called cross-certification. This
+allows both PKI CAs to validate certificates generated from either side.
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+CAs work in a trust model. This describes how entities within an enterprise deal with keys,
+signatures, and certificates, and there are three basic models. In the web of trust, multiple entities
+sign certificates for one another. In other words, users within this system trust each other based
+on certificates they receive from other users on the same system. A single authority system has a
+CA at the top that creates and issues certificates. Users trust each other based on the CA. The
+hierarchical trust system also has a CA at the top (which is known as the root CA) but makes use
+of one or more registration authorities (subordinate CAs) underneath it to issue and manage
+certificates. This system is the most secure because users can track the certificate back to the root
+to ensure authenticity without a single point of failure.
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+A digital certificate is an electronic file that is used to verify a user’s identity, providing
+nonrepudiation throughout the system. The certificate typically follows the X.509 standard,
+which defines what should and should not be in a digital certificate. Version, Serial Number,
+Subject, Algorithm ID (or Signature Algorithm), Issuer, Valid From and Valid To, Key Usage,
+Subject’s Public Key, and Optional are all fields within a digital certificate.
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+A self-signed certificate is one created and signed by the entity internally and never intended
+to be used in any other situation or circumstance. Signed certificates generally indicate a CA is
+involved and the signature validating the identity of the entity is confirmed via an external source
+ - in some instances a validation authority (VA). Signed certificates, as opposed to self-signed
+certificates, can be trusted: assuming the CA chain is validated and not corrupted, it’s good
+everywhere.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+
+A digital signature is nothing more than an algorithmic output that is designed to ensure the
+authenticity (and integrity) of the sender. FIPS 186-2 specifies that the Digital Signature
+Algorithm (DSA) be used in the generation and verification of digital signatures. DSA is a
+Federal Information Processing Standard that was proposed by the National Institute of
+Standards and Technology (NIST) in August 1991 for use in their Digital Signature Standard
+(DSS). The steps in the use of a digital signature include the hashing of the message, with the
+result of the hash being encrypted by the sender’s private key. The recipient then decrypts the
+hash result using the sender’s public key, verifying the sender’s identity.
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+Data at rest (DAR) is data that is in a stored state and not currently accessible. Protection of
+data on mobile devices from loss or theft while it is in a resting state usually entails full disk
+encryption (FDE), where pre-boot authentication (usually an account and password) is necessary
+to "unlock" the drive before the system can even boot up. FDE can be software or hardware
+based, and can use network-based authentication (Active Directory, for example) and/or local
+authentication sources (a local account or locally cached from a network source). Software-based
+FDE can even provide central management, making key management and recovery actions much
+easier.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+
+Tools helpful in encrypting files and folders for other protective services include Microsoft
+Encrypted File Systems (EFS), VeraCrypt, AxCrypt, and GNU Privacy Guard. The point is, full
+disk encryption may sound like a great idea in the boardroom, but once the drive is unlocked, the
+data inside is not protected.
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:800px;background-color:white;font-size:36px">
+Encrypted communication methods include the following: <br>
+*   Secure Shell (SSH) A secured version of Telnet, using TCP port 22, by default, and
+relying on public key cryptography for its encryption.<br>
+*   Secure Sockets Layer (SSL) Encrypts data at the transport layer and above, for secure
+communication across the Internet. It uses RSA encryption and digital certificates and can
+be used with a wide variety of upper-layer protocols. SSL uses a six-step process for
+securing a channel.<br>
+*   Transport Layer Security (TLS) Uses an RSA algorithm of 1024 and 2048 bits; TLS is
+the successor to SSL.<br>
+*   Internet Protocol Security (IPSec) Network layer tunneling protocol that can be used
+in two modes: tunnel (entire IP packet encrypted) and transport (data payload encrypted).<br>
+*   PGP (Pretty Good Privacy) Used for signing, compression, and encrypting and
+decrypting e-mails, files, directories, and even whole disk partitions, mainly in an effort to
+increase the security of e-mail communications.<br>
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+Heartbleed and POODLE were successful attacks against secure communications. Heartbleed
+exploits the heartbeat feature in OpenSSL, which tricks the server into sending 64Kb of data
+from its memory.
+<br> You can use the nmap command nmap -d --script ssl-heartbleed --scriptargs
+vulns.showall -sV [host] to search for the vulnerability: the return will say "State: NOT
+VULNERABLE" if you’re good to go. 
+<br>The Metasploit auxiliary module openssl_heartbleed can
+be used to exploit this. Open SSL versions 1.0.1 and 1.0.1f are vulnerable, and the CVE notation
+is CVE-2014-0160.
+<br>
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:700px;background-color:white;font-size:36px">
+
+POODLE (Padding Oracle On Downgraded Legacy Encryption) took advantage of backwardcompatibility
+features in TLS clients, allowing sessions to drop back to the vulnerable SSL 3.0,
+which has a design flaw that allows the padding data at the end of a block cipher to be changed
+so that the encryption cipher becomes less secure each time it is passed. Defined as "RC4
+biases," if the same secret is sent over several sessions, more and more information about it will
+leak. Mitigation for POODLE is to not use SSL 3.0 at all. You can implement
+TLS_FALLBACK_SCSV (a fake cipher suite advertised in the Client Hello message, which
+starts the SSL/TLS handshake) on areas that must remain backward compatible. Another
+mitigation is to implement something called "anti-POODLE record splitting." In short, this splits
+records into several parts, ensuring none of them can be attacked. However, although this may
+frustrate the exploit’s ability to gather data, it also may cause compatibility issues due to
+problems in server-side implementations.
+
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:500px;background-color:white;font-size:36px">
+
+Cipher attacks fall into a few categories and types. Known plain-text attacks, cipher-text-only
+attacks, and replay attacks are examples. Man-in-the-middle is usually listed as a type of attack
+by many security professionals and study guides (depending on the test version you get, it may
+even be listed as such). Just keep in mind that a man-in-the-middle situation simply means the
+attacker has positioned himself between the two communicating entities. Brute force refers to an
+attempt to try every possible combination against a target until successful.
+
+</div>
+
+</div>
+<div class="parallax"></div> 
+
 </body>
 </html>
