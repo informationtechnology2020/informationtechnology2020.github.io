@@ -1,77 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	 <meta charset="utf-8">
-    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> Certified Ethical Hacker. </title>
-	<meta name="description" content="Information Technology">
-    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    	<meta name="author" content="VD">
-    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+    <title>Social Engineering.</title>
+    <link rel="stylesheet" href="https://informationtechnology2020.github.io/bootstrap4.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("https://informationtechnology2020.github.io/digital1.jpg");
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <script>
-  
-  window.onload = function() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-    }, false);
-    document.addEventListener("keydown", function(e) {
-    //document.onkeydown = function(e) {
-      // "I" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-        disabledEvent(e);
-      }
-      // "J" key
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-        disabledEvent(e);
-      }
-      // "S" key + macOS
-      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-        disabledEvent(e);
-      }
-      // "U" key
-      if (e.ctrlKey && e.keyCode == 85) {
-        disabledEvent(e);
-      }
-      // "F12" key
-      if (event.keyCode == 123) {
-        disabledEvent(e);
-      }
-    }, false);
-    function disabledEvent(e){
-      if (e.stopPropagation){
-        e.stopPropagation();
-      } else if (window.event){
-        window.event.cancelBubble = true;
-      }
-      e.preventDefault();
-      return false;
-    }
-  };
-</script> 
-    
+  /* Set a specific height */
+  min-height: 300px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </head>
-<body oncontextmenu="alert('Enjoy the fact that you are alive!');return false;" onselectstart="return false" ondragstart="return false"
-	style="background-color: white;;"
->
-<br>
-<div class="container-fluid">
-    
-	
+<body onContextMenu="alert('Hi there!');return false;">
+
+<div class="container-fluid"> 
+
+<div class="parallax"></div> <br>
+    <p style="text-align:center;font-size:46px">Chapter 12:&nbsp;Low Technology and Social Engineering.</p>
+    <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Security assessments can be one of two types: a security audit (vulnerability assessment) or a
+penetration test. The security audit scans and tests a system or network for existing
+vulnerabilities but does not intentionally exploit any of them. This assessment is designed to
+uncover potential security holes in the system and report them to the client for their action. It
+does not fix or patch vulnerabilities, nor does it exploit them. It only points them out for the
+client's benefit.
+
 </div>
-<img src="cehchapter13.png" class="img img-fluid">   
-    
 
-    
+<div class="parallax"></div> <br>
 
- 
-<!-- These Javascript links are required for the proper functionality of Bootstrap 4. 
-And they should always be placed at the very end, near to the closing body tag. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div style="height:300px;background-color:white;font-size:36px">
+
+A penetration test actively seeks to exploit vulnerabilities encountered on target systems or
+networks. This shows the potential consequences of a hacker breaking in through unpatched
+vulnerabilities. Penetration tests are carried out by highly skilled individuals according to an
+agreement signed before testing begins. This agreement spells out the limitations, constraints,
+and liabilities between the organization and the penetration test team.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Penetration tests consist of two types of assessment: external and internal. An external
+assessment analyzes publicly available information and conducts network scanning,
+enumeration, and testing from the network perimeter—usually from the Internet. An internal
+assessment is performed from within the organization, from various network access points.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+Black-box testing occurs when the attacker has no prior knowledge of the infrastructure at all
+(your scope is defined, and you'll be provided the minimal amount of information required). This
+testing takes the longest to accomplish and simulates a true outside hacker. White-box testing
+simulates an internal user who has complete knowledge of the company's infrastructure. Graybox
+testing provides limited information on the infrastructure. Sometimes gray-box testing is
+born out of a black-box test that determines more knowledge is needed.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:400px;background-color:white;font-size:36px">
+
+Testing can also be further broken down according to the way it is accomplished. Automated
+testing uses an all-inclusive toolset. Automated tools can provide plenty of information and many
+legitimate results for a lesser price than manual testing with a full test team. However, they are
+also susceptible to false positives and false negatives and don't always stop where they're
+supposed to (software can't read your agreement contract). Manual testing is the best choice for
+security assessment. It requires good planning, design, and scheduling, and it provides the best
+benefit to the client. Manual testing is accomplished by a pen test team, following the explicit
+guidelines laid out before the assessment.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+There are three main phases to a pen test. In the pre-attack phase, reconnaissance and datagathering
+efforts are accomplished. Gathering competitive intelligence, identifying network
+ranges, checking network filters for open ports, and so on, are all carried out in this phase.
+Running whois, DNS enumeration, finding the network IP address range, and network scanning
+are all examples of tasks in this phase.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:300px;background-color:white;font-size:36px">
+
+Attempting to penetrate the network perimeter, acquire targets, execute attacks, and elevate
+privileges are steps taken in the attack phase. Verifying ACLs by crafting packets, checking to
+see whether you can use any covert tunnels inside the organization, and using XSS, buffer
+overflows, and SQL injections are all examples of tasks performed in this phase. After acquiring
+specific targets, you'll move into password cracking and privilege escalation, using a variety of
+methods. Finally, once you've gained access, it's time to execute your attack code.
+</div>
+
+<div class="parallax"></div> <br>
+
+<div style="height:900px;background-color:white;font-size:36px">
+
+The post-attack phase consists of two major steps. The first step involves cleaning up your
+testing efforts. Anything that has been uploaded to the organization's systems in the way of files
+or folders needs to be removed. Any tools, malware, backdoors, or other attack software loaded
+on the client's systems need to be taken off. Any registry changes you've made need to be reset
+to their original settings. The goal of this phase is to return everything to the pre-test state.
+The second step involves writing the pen test report, due after all testing is complete. The pen
+test report should contain the following items:
+<br> An executive summary of the organization's overall security posture. (If you're testing
+under the auspices of FISMA, DIACAP, HIPAA, or some other standard, this will be
+tailored to the standard.)
+<br> The names of all participants and the dates of all tests.
+<br> A list of findings, usually presented in order of highest risk.
+<br> An analysis of each finding and the recommended mitigation steps (if available).
+<br> Log files and other evidence from your toolset.
+
+  </div>
+</div>
+<div class="parallax"></div> 
+
+
+
 </body>
 </html>
